@@ -54,7 +54,27 @@
 ![PaletaDeColores](https://user-images.githubusercontent.com/62365372/79080989-b5f54700-7cef-11ea-9956-1b482335c36c.png)
 
 Link: [https://colorhunt.co/palette/129857](https://colorhunt.co/palette/129857)
-  
+
+
+
+## Wireframes
+
+* Home:
+https://xd.adobe.com/view/76e83c93-c458-42c2-6ab0-e0fa5a809a2c-00d9/
+
+* Detalle de producto:
+https://xd.adobe.com/view/9b32554b-8455-4083-56b2-04a8576b3fac-ed03/
+
+* Carrito de compras:
+https://xd.adobe.com/view/33e97e4e-faa1-4413-5ea2-13794e46184b-45d8/
+
+* Formulario de registro:
+https://xd.adobe.com/view/6a9e097b-e3ad-4add-7b7d-184fbbfdf6eb-1caf/
+
+* Formulario de carga de producto:
+https://xd.adobe.com/view/c24359b8-55fe-46c4-71bd-3270ef7e8727-b472/
+
+
 
 ## Tipografía
 
