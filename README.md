@@ -45,7 +45,7 @@
 
 *  https://etiquetanegra.us/
 
-* https://silenzio.com.ar/
+*  https://silenzio.com.ar/
 
   
 
@@ -58,14 +58,14 @@ Link: [https://colorhunt.co/palette/129857](https://colorhunt.co/palette/129857)
 
 ## Tipografía
 
-  * Titulo y encabezado
+  * Titulo y encabezado:
   Merriweather
-  Link: [https://fonts.google.com/specimen/Merriweather?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/Merriweather?preview.text=coco&preview.text_type=custom)
+    Link: [https://fonts.google.com/specimen/Merriweather?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/Merriweather?preview.text=coco&preview.text_type=custom)
 
-* Párrafo
-Montserrat
-Link: [https://fonts.google.com/specimen/Montserrat?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/Montserrat?preview.text=coco&preview.text_type=custom)
+  * Párrafo:
+    Montserrat
+    Link: [https://fonts.google.com/specimen/Montserrat?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/Montserrat?preview.text=coco&preview.text_type=custom)
 
 
-	PT Sans
+    PT Sans
 	Link: [https://fonts.google.com/specimen/PT+Sans?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/PT+Sans?preview.text=coco&preview.text_type=custom)
