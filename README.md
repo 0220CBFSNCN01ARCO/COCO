@@ -60,7 +60,7 @@ Link: [https://colorhunt.co/palette/129857](https://colorhunt.co/palette/129857)
 ## Wireframes
 
 * Home:
-https://xd.adobe.com/view/76e83c93-c458-42c2-6ab0-e0fa5a809a2c-00d9/
+https://xd.adobe.com/view/50845930-3ea7-49e5-70ec-ef9495373801-26b5/
 
 * Detalle de producto:
 https://xd.adobe.com/view/9b32554b-8455-4083-56b2-04a8576b3fac-ed03/
