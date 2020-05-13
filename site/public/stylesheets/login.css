@@ -64,7 +64,7 @@ article{
     display: inline;
 }
 .derecha ul li img{
-    height: 27px;
+    height: 40px;
     mix-blend-mode:multiply;
     padding: 6px;
 }
@@ -262,7 +262,7 @@ footer{
     display: inline;
 }
 .redes ul li img{
-    height: 27px;
+    height: 40px;
     mix-blend-mode:multiply;
     padding: 6px;
 }
