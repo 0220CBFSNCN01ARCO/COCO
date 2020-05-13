@@ -1,0 +1,1223 @@
+
+header{
+    font-family: "Merriweather";
+    box-sizing: border-box;
+    background-color: #ece8d9;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+    height: 90px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    float: left;
+}
+#coco{
+    mix-blend-mode:multiply;
+    position: relative;
+    left: 20px;
+}
+#coco img{
+    height: 70px;
+    display: block;
+    margin: auto;
+}
+article{
+    width: 33%;
+    float: left; 
+    font-size: 15px;
+    color: black;
+}   
+#barra{
+    width: 100%;
+    background-color:  #494949;
+    padding: 5px;
+    margin-top:0px;
+    color: white;
+    font-size: 9px;
+    text-align: center;
+}
+.menu ul{
+    list-style: none;
+    position: relative;
+    top: 17px;
+}
+.menu li{
+    display: inline;   
+}
+.menu li a{
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+}
+.derecha ul{
+    float: right;
+    list-style: none;
+    position: relative;
+    right: 30px;
+    top: 5px;
+}
+.derecha li{
+    display: inline;
+}
+.derecha ul li img{
+    height: 27px;
+    mix-blend-mode:multiply;
+    padding: 6px;
+}
+/*
+aca termina el header
+----------------------------------------------------------------------------------------------
+*/
+section{
+    background-color: #faf6e9;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    top:80px;
+    height: 3600px;
+    width: 100%;
+}
+.portada{
+    width: 100%;
+    position: relative;  
+    float: left;
+    margin-bottom: 10px;
+}
+.portada img{
+    width: 100%;
+    height: 680px;
+    display: block;
+    margin: auto;
+}
+.zapatoH{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%;
+    margin-bottom: 10px;  
+}
+.zapatoH:hover img{
+    filter: opacity(.8);
+}
+.zapatoH img{
+    height: 500px;
+    display: block;
+    margin: auto;
+    max-height: 700px;
+}
+
+.zapatoM{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%; 
+    background-color: white;
+    height: 500px;
+    margin-bottom: 10px;
+}
+.zapatoM:hover img{
+    filter: opacity(.8);
+}
+.zapatoM img{
+    position: relative;
+    height: 500px;
+    display: block;
+    margin: auto;
+    max-height: 300px;
+    top: 40px;
+}
+
+.remeraM{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%;
+    margin-bottom: 10px;  
+}
+.remeraM:hover img{
+    filter: opacity(.8);
+}
+.remeraM img{
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+
+.CamisaH{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%;  
+    margin-bottom: 10px;
+}
+.CamisaH:hover img{
+    filter: opacity(.8);
+}
+.CamisaH img{
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+
+.buzoM{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 30%;  
+    margin-bottom: 10px;
+}
+.buzoM:hover img{
+    filter: opacity(.8);
+}
+.buzoM img{
+    position: relative;
+    height: 800px;
+    display: block;
+    margin: auto;
+    right: 100px;
+}
+.buzoH{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 40%;  
+    margin-bottom: 10px;
+}
+.buzoH:hover img{
+    filter: opacity(.8);
+}
+.buzoH img{
+    height: 800px;
+    display: block;
+    margin: auto;
+}
+
+.cinturonH{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%;  
+    margin-bottom: 10px;
+}
+.cinturonH:hover img{
+    filter: opacity(.8);
+}
+.cinturonH img{
+    height: 500px;
+    display: block;
+    margin: auto;
+    max-height: 1000px;
+}
+
+.cinturonM{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 25%;  
+    margin-bottom: 10px;
+}
+.cinturonM:hover img{
+    filter: opacity(.8);
+}
+.cinturonM img{
+    height: 500px;
+    display: block;
+    margin: auto;
+    max-height: 1000px;
+}
+.jeanH{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 40%;  
+    margin-bottom: 10px;
+}
+.jeanH:hover img{
+    filter: opacity(.8);
+}
+.jeanH img{
+    height: 800px;
+    display: block;
+    margin: auto;
+}
+.jeanM{
+    position: relative;
+    float: right;
+    overflow:hidden;
+    width: 30%;  
+    margin-bottom: 10px;
+}
+.jeanM img{
+    position: relative;
+    height: 800px;
+    display: block;
+    margin: auto;
+    right: 100px;
+}
+.jeanM:hover img{
+    filter: opacity(.8);
+}
+.jeanM2{
+    position: relative;
+    float: right;
+    overflow:hidden;
+    width: 30%;  
+    margin-bottom: 10px;
+}
+.jeanM2:hover img{
+    filter: opacity(.8);
+}
+.jeanM2 img{
+    position: relative;
+    height: 800px;
+    display: block;
+    margin: auto;
+    right: 70px;
+}
+
+.marcas{
+    position: relative;
+    float: left;
+    overflow:hidden;
+    width: 15%;  
+    margin-bottom: 10px;
+    left: 60px;
+    top: 15px;
+}
+
+.marcas img{
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+
+/*
+aca termina el section
+-------------------------------------------------
+*/
+footer{
+    font-family: "Montserrat";
+    background-color: #494949;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border-top: 2px solid white;
+}
+.bleft ul{
+    list-style: none;
+    position: relative;
+    float: left;
+    top: 10px;
+    padding: 15px;
+    left: 15px;
+}
+
+.bleft li a{
+    color: white; 
+    text-decoration: none; 
+}
+.bleft li{
+    padding: 3px;
+}
+#coco2{
+    mix-blend-mode:multiply;
+    position: relative;
+    float: left;
+    top: 45px;
+    right:240px;
+}
+#coco2 img{
+    height: 120px;
+}
+.info ul{
+    list-style: none;
+    position: relative;
+    float: left;
+    top: 10px;
+    padding: 15px;
+    right: 20px;
+    text-align: right; 
+}
+.info li a{
+    color: white; 
+    text-decoration: none; 
+}
+.info li{
+    padding: 3px;
+}
+.extras ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    padding: 15px;
+    bottom: 150px;
+    left: 450px;
+}
+.extras li a{
+    color: white; 
+    text-decoration: none; 
+}
+.extras li{
+    padding: 3px;
+}
+.redes ul{
+    float: right;
+    list-style: none;
+    position: relative;
+    bottom: 60px;
+    right: 45px;
+}
+.redes li{
+    display: inline;
+}
+.redes ul li img{
+    height: 27px;
+    mix-blend-mode:multiply;
+    padding: 6px;
+}
+/*
+---------------------------------------
+barra de abajo Copyright
+*/
+#inferior{
+    width: 100%;
+    background-color:  #faf6e9;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0px;
+    border-top: 2px solid black;
+}
+
+/*
+arrancamos con cada viwepoint
+mobile s
+*/
+@media(max-width: 426px){
+    #barra{
+        width: 100%;
+        background-color:  #494949;
+        padding: 5px;
+        margin-top:0px;
+        color: white;
+        font-size: 8px;
+        text-align: center;
+    }
+    #coco{
+        mix-blend-mode:multiply;
+        position: relative;
+    }
+    #coco img{
+        position:relative;
+        height: 65px;
+        right: 6px;
+        display: block;
+        margin: auto;
+    }
+    .menu li a{
+        position:relative;
+        color: black;
+        text-decoration: none;
+        right:30px;
+        bottom:25px;
+        font-size: 13px;
+    }
+
+    .derecha ul li img{
+        position:relative;
+        height: 25px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:26px;
+    }
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:200px
+    }
+    .zapatoH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;
+        margin-bottom: 10px;  
+    }
+    .zapatoH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 700px;
+    }
+    .zapatoM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%; 
+        background-color: white;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+    
+    .zapatoM img{
+        position: relative;
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 200px;
+    }
+    .CamisaH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;  
+        margin-bottom: 10px;
+    }
+    .CamisaH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+    }
+    .remeraM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;
+        margin-bottom: 10px;  
+    }
+    .remeraM img{
+        height: 300px;
+        display: block;
+        margin: auto;
+    }
+    .buzoM img{
+        position: relative;
+        height: 300px;
+        display: block;
+        margin: auto;
+        right: 50px;
+    }
+    .buzoH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+    }
+    .cinturonH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;  
+        margin-bottom: 10px;
+    }
+    .cinturonH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .cinturonM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;  
+        margin-bottom: 10px;
+    }
+    .cinturonM img{
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .jeanH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+    }
+    .jeanM img{
+        position: relative;
+        height: 300px;
+        display: block;
+        margin: auto;
+        right: 50px;
+    }
+    .jeanM2 img{
+        position: relative;
+        height: 300px;
+        display: block;
+        margin: auto;
+        right: 40px;
+    }
+    .marcas{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 45%;  
+        margin-bottom: 10px;
+    }
+    .marcas img{
+        position: relative;
+        right:30px;
+        max-height:80px
+    }
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 2450px;
+        width: 100%;
+    }
+    .bleft ul{   
+        list-style: none;
+        position: relative;
+        float: left;
+    }
+    .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:10px;
+        bottom:30px;
+        right:20px;
+    }
+    #coco2{
+        mix-blend-mode:multiply;
+        float: left;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        right: 40px;
+    }
+    .info li{
+        
+        position:relative;
+        padding: 3px;
+        right:100px;
+        font-size:10px;
+        bottom:31px
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none;      
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:300px;
+        font-size:10px;
+        bottom:20px
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 85px;
+        right: 20px;
+    }
+    .redes ul li img{
+        height: 15px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
+        position: relative;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+}
+@media(max-width: 375px){
+    .derecha ul li img{
+        position:relative;
+        height: 19px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:26px;
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:320px;
+        font-size:10px;
+        bottom:20px
+    }
+    .redes ul li img{
+        height: 12px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    #coco img{
+        position:relative;
+        height: 65px;
+        right: 12px;
+        display: block;
+        margin: auto;
+    }
+    .bleft li{
+        position:relative;
+        font-size:10px;
+        bottom:40px;
+        right:20px;
+    }
+}
+@media(max-width: 320px){
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:150px
+    }
+    #barra{
+        width: 100%;
+        background-color:  #494949;
+        padding: 2px;
+        margin-top:0px;
+        color: white;
+        font-size: 5px;
+        text-align: center;
+    }
+    #coco img{
+        position:relative;
+        height: 50px;
+        right: 11px;
+        display: block;
+        margin: auto;
+        top:4px;
+    }
+    .menu li a{
+        position:relative;
+        color: black;
+        text-decoration: none;
+        right:30px;
+        bottom:35px;
+        font-size: 10px;
+        
+    }  
+    .menu li{
+        display: list-item;
+         
+    }
+    .derecha ul li img{
+        position:relative;
+        height: 13px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:15px;
+        top:3px;
+    }
+    header{
+        height: 70px;
+    }
+    .zapatoH img{
+        height: 200px;
+        display: block;
+        margin: auto;
+        max-height: 700px;
+    }
+    .zapatoM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%; 
+        background-color: white;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    
+    .zapatoM img{
+        position: relative;
+        height: 200px;
+        display: block;
+        margin: auto;
+        max-height: 150px;
+        top:-3px;
+    }
+    .CamisaH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 50%;  
+        margin-bottom: 10px;
+    }
+    .CamisaH img{
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+    .remeraM img{
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+    .buzoM img{
+        position: relative;
+        height: 200px;
+        display: block;
+        margin: auto;
+        right: 20px;
+    }
+    .buzoH img{
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+    .cinturonH img{
+        height: 200px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .cinturonM img{
+        height: 200px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .jeanH img{
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+    .jeanM img{
+        position: relative;
+        height: 200px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .jeanM2 img{
+        position: relative;
+        height: 200px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .marcas{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 45%;  
+        margin-bottom: 10px;
+    }
+    .marcas img{
+        position: relative;
+        right:30px;
+        max-height:70px
+    }
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 1750px;
+        width: 100%;
+    }
+    .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:9px;
+        bottom:30px;
+        right:20px;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        right: 40px;
+    }
+    .info li{ 
+        position:relative;
+        padding: 3px;
+        right:80px;
+        font-size:8px;
+        bottom:28px
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:340px;
+        font-size:8px;
+        top:1px
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 79px;
+        right: 15px;
+    }
+    .redes ul li img{
+        height: 11px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
+        position: relative;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+    #inferior{
+        font-size: 8px;
+    }
+}
+@media(max-width: 768px) and (min-width:426px){
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:350px
+    }
+    .zapatoH img{
+        position:relative;
+        height: 350px;
+        display: block;
+        margin: auto;
+        max-height: 300px;
+        right:10px;
+    }
+    .zapatoM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 25%; 
+        background-color: white;
+        height: 350px;
+        margin-bottom: 10px;
+    }
+    .zapatoM img{
+        position: relative;
+        height: 350px;
+        display: block;
+        margin: auto;
+        max-height: 180px;
+    }
+    .CamisaH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 25%;  
+        margin-bottom: 10px;
+    }
+    .CamisaH img{
+        height: 350px;
+        display: block;
+        margin: auto;
+    }
+    .remeraM img{
+        height: 350px;
+        display: block;
+        margin: auto;
+    }
+    .buzoM img{
+        position: relative;
+        height: 400px;
+        display: block;
+        margin: auto;
+        right: 20px;
+    }
+    .buzoH img{
+        height: 400px;
+        display: block;
+        margin: auto;
+    }
+    .cinturonH img{
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .cinturonM img{
+        height: 300px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .jeanH img{
+        height: 400px;
+        display: block;
+        margin: auto;
+    }
+    .jeanM img{
+        position: relative;
+        height: 400px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .jeanM2 img{
+        position: relative;
+        height: 400px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .marcas{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 30%;  
+        margin-bottom: 10px;
+    }
+    .marcas img{
+        position: relative;
+        right:30px;
+        max-height:100px
+    }
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 2200px;
+        width: 100%;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        top: 10px;
+        padding: 15px;
+        right: 160px;
+        text-align: right; 
+    }
+    .info li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .info li{
+        padding: 3px;
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 168px;
+        right:200px;
+        left:320px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .extras li{
+        padding: 3px;
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes li{
+        display: inline;
+    }
+    .redes ul li img{
+        height: 27px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+
+}
+@media(max-width: 1024px) and (min-width:769px){
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:500px
+    }
+    .zapatoH img{
+        position:relative;
+        height: 400px;
+        display: block;
+        margin: auto;
+        max-height: 300px;
+        right:10px;
+    }
+    .zapatoM{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 25%; 
+        background-color: white;
+        height: 400px;
+        margin-bottom: 10px;
+    }
+    .zapatoM img{
+        position: relative;
+        height: 400px;
+        display: block;
+        margin: auto;
+        max-height: 180px;
+    }
+    .CamisaH{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 25%;  
+        margin-bottom: 10px;
+    }
+    .CamisaH img{
+        height: 400px;
+        display: block;
+        margin: auto;
+    }
+    .remeraM img{
+        height: 400px;
+        display: block;
+        margin: auto;
+    }
+    .buzoM img{
+        position: relative;
+        height: 600px;
+        display: block;
+        margin: auto;
+        right: 20px;
+    }
+    .buzoH img{
+        height: 600px;
+        display: block;
+        margin: auto;
+    }
+    .cinturonH img{
+        height: 400px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .cinturonM img{
+        height: 400px;
+        display: block;
+        margin: auto;
+        max-height: 1000px;
+    }
+    .jeanH img{
+        height: 600px;
+        display: block;
+        margin: auto;
+    }
+    .jeanM img{
+        position: relative;
+        height: 600px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .jeanM2 img{
+        position: relative;
+        height: 600px;
+        display: block;
+        margin: auto;
+        right: 25px;
+    }
+    .marcas{
+        position: relative;
+        float: left;
+        overflow:hidden;
+        width: 30%;  
+        margin-bottom: 10px;
+        top: 15px;
+        max-height: 200px;
+    }
+    .marcas img{
+        position: relative;
+        display: block;
+        margin: auto;
+    }
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 3000px;
+        width: 100%;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:110px;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        top: 10px;
+        padding: 15px;
+        right: 160px;
+        text-align: right; 
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 150px;
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes ul li img{
+        position:relative;
+        height: 27px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+        top:15px;
+        right:40px;
+    }
+}
+
