@@ -93,6 +93,6 @@ PT Sans
 Link: [https://fonts.google.com/specimen/PT+Sans?preview.text=coco&preview.text_type=custom](https://fonts.google.com/specimen/PT+Sans?preview.text=coco&preview.text_type=custom)
 
 ## Tablero de trabajo 
-<br>
+
 * Trello: [https://trello.com/b/iyIYclYD/grupo-2-proyecto-integrador](https://trello.com/b/iyIYclYD/grupo-2-proyecto-integrador)
 
