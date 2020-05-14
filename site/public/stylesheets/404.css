@@ -1,0 +1,19 @@
+.texto{
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+.texto2{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.btn{
+    background-color:#494949 ;
+    border: #494949;
+    width: 100%;
+}
+.btn:hover{
+    background-color: gray;
+}
+
