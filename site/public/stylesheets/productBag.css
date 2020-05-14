@@ -325,10 +325,8 @@ barra de abajo Copyright
         box-sizing: border-box;
         position: relative;
         top:80px;
-        height: 1600px;
+        height: 1140px;
         width: 100%;
-        float: left;
-        font-family: "Montserrat";
     }
     .portada img{
         width: 100%;
@@ -408,17 +406,7 @@ barra de abajo Copyright
         opacity: 0.8;
     }
     
-    .col-4{
-        margin-bottom: 35px;
-        margin-top: 20px;
-        padding-left: 20px;
-    }
-    
-    .col-8{
-        margin-bottom: 50px;
-        margin-top: 20px;
-    }
-    
+  
     h2{
         font-size: 15px;
         border-bottom: 1px solid black;
@@ -444,10 +432,17 @@ barra de abajo Copyright
     
     .subtotal{
         position: relative;
-        left:12px;
-        bottom: 16px;
+        left:0px;
+        bottom: 50px;
         font-size: 20px;
         margin-top: 15px;
+    }
+
+    #subtot{
+        position: relative;
+        left:35px;
+        bottom: 35px;
+
     }
     
   
@@ -469,15 +464,10 @@ barra de abajo Copyright
         bottom: 40px;
     }
 
-    .float-right{position: relative;}
+
  
   
 
-      #subtot{
-        position: relative;
-    
-        
-    }
     .descuento{
         position: relative;
         right: 200px;
@@ -487,23 +477,301 @@ barra de abajo Copyright
     
     .tot{
         position: relative;
-        right:70px;
+        left: -190px;
+       
+        top:-30px;
         font-size: 30px;
-        margin-top: 15px;
+       
     }
     
     .toti{
         position: relative;
-        left: 120px;
+        left: 190px;
         font-size: 30px;
         margin-top: 15px;
+        top:-105px;
+       
     }
     
     #buy{
         position: relative;
         width: 100%;
-        top: 0px;
-        left: 12px;
+        top: -45px;
+        left: 15px;
+        width: 50%;
+    }
+
+    .btn{
+        position: relative;
+        left: 280px;
+        bottom: 80px;
+       
+        
+    
+    }
+    
+
+    .col-5{
+        position: relative;
+        right: 170px;
+    }
+
+    
+
+      .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:9px;
+        bottom:30px;
+        right:20px;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        right: 40px;
+    }
+    .info li{ 
+        position:relative;
+        padding: 3px;
+        right:80px;
+        font-size:8px;
+        bottom:28px
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:340px;
+        font-size:8px;
+        top:1px
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 79px;
+        right: 15px;
+    }
+    .redes ul li img{
+        height: 11px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
+        position: relative;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+    #inferior{
+        font-size: 8px;
+    }
+   
+}
+
+
+
+@media(max-width: 375px){
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 1140px;
+        width: 100%;
+    }
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:150px
+    }
+    #barra{
+        width: 100%;
+        background-color:  #494949;
+        padding: 2px;
+        margin-top:0px;
+        color: white;
+        font-size: 5px;
+        text-align: center;
+    }
+    #coco img{
+        position:relative;
+        height: 50px;
+        right: 11px;
+        display: block;
+        margin: auto;
+        top:4px;
+    }
+    .menu li a{
+        position:relative;
+        color: black;
+        text-decoration: none;
+        right:30px;
+        bottom:35px;
+        font-size: 10px;
+        
+    }  
+    .menu li{
+        display: list-item;
+         
+    }
+    .derecha ul li img{
+        position:relative;
+        height: 13px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:15px;
+        top:3px;
+    }
+    header{
+        height: 70px;
+    }
+
+    .container{
+        background-color:  #ece8d9;
+       
+    }
+    
+    .col-12{
+     
+        padding: 15px;
+        margin-top: 30px;
+        margin-left: 25px;
+        width: 50%;
+       
+    }
+    h1{
+        font-size: 15px;
+        border-bottom: 1px solid black;
+       
+        
+    }
+    
+    
+    .imagen1{
+        width: 100%;
+    
+    }
+    
+    .imagen1:hover{
+        opacity: 0.8;
+    }
+    
+  
+    h2{
+        font-size: 15px;
+        border-bottom: 1px solid black;
+    }
+    
+    .lista{
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .lista li{
+        list-style: none;
+    }
+    
+    
+    .precio{font-size: 15px;
+        position: relative;
+        right: 30px;
+    }
+    
+    H4{
+        border-bottom: 1px solid black
+    }
+    
+    .subtotal{
+        position: relative;
+        left:0px;
+        bottom: 50px;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    #subtot{
+        position: relative;
+        left:35px;
+        bottom: 35px;
+
+    }
+    
+  
+
+     
+    
+    
+    
+    .enter{
+        position: relative;
+         bottom: 10px;
+         left: 10px;
+    font-size: 13px;
+    }
+    
+    #textarea{
+        position: relative;
+        left:90px;
+        bottom: 40px;
+    }
+
+
+ 
+  
+
+    .descuento{
+        position: relative;
+        right: 200px;
+        font-size: 20px;
+    
+    }
+    
+    .tot{
+        position: relative;
+        left: -190px;
+       
+        top:-30px;
+        font-size: 30px;
+       
+    }
+    
+    .toti{
+        position: relative;
+        left: 190px;
+        font-size: 30px;
+        margin-top: 15px;
+        top:-105px;
+       
+    }
+    
+    #buy{
+        position: relative;
+        width: 100%;
+        top: -45px;
+        left: 15px;
+        width: 50%;
+    }
+
+    .btn{
+        position: relative;
+        left: 280px;
+        bottom: 80px;
+       
+        
+    
     }
     
 
@@ -575,8 +843,24 @@ barra de abajo Copyright
     }
 }
 
-@media(max-width: 320px){
 
+
+@media(max-width: 768px) {
+section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 1060px;
+        width: 100%;
+    }
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:150px
+    }
     #barra{
         width: 100%;
         background-color:  #494949;
@@ -618,440 +902,477 @@ barra de abajo Copyright
     header{
         height: 70px;
     }
-    section{
-        background-color: #faf6e9;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: relative;
-        top:80px;
-        height: 1750px;
-        width: 100%;
-    }
-    .bleft li{
-        position:relative;
-        padding: 3px;
-        font-size:9px;
-        bottom:30px;
-        right:20px;
-    }
-    #coco2 img{
-        position: relative;
-        height: 100px;
-        left:170px;
-        top:50px;
-        visibility: hidden;
-    }
-    .info ul{
-        list-style: none;
-        position: relative;
-        float: left;
-        padding: 15px;
-        right: 40px;
-    }
-    .info li{ 
-        position:relative;
-        padding: 3px;
-        right:80px;
-        font-size:8px;
-        bottom:28px
-    }
-    .extras li{
-        position:relative;
-        padding: 3px;
-        right:340px;
-        font-size:8px;
-        top:1px
-    }
-    .redes ul{
-        float: right;
-        list-style: none;
-        position: relative;
-        bottom: 79px;
-        right: 15px;
-    }
-    .redes ul li img{
-        height: 11px;
-        mix-blend-mode:multiply;
-        padding: 6px;
-    }
-    footer{
-        font-family: "Montserrat";
-        background-color: #494949;
-        overflow: hidden;
-        position: relative;
-        height: 120px;
-        width: 100%;
-        border-top: 2px solid white;
-    }
-    #inferior{
-        font-size: 8px;
-    }
-    .btn{
-        position: relative;
-        left: 230px;
-        bottom: 80px;
-        
-            }
-        
-            .subtotal{
-                position: relative;
-            
-                bottom: 60px;
-                left: 0px;
-            
-            }
-        
-            #subtot{
-                position: relative;
-            
-                bottom: 61px;
-                left: 40px;
-            }
-        
-            .tot{
-                position: relative;
-                
-                top:10px;
-                left: 0px;
-               
-            }
-        
-        
-            .toti{
-                position: relative;
-            
-                bottom: 61px;
-                left: 40px;
-              
-            }
-        
-        #buy{
-            position: relative;
-        }
 
-
-
-
-}
-
-
-@media(max-width: 375px){
-
-    #barra{
-        width: 100%;
-        background-color:  #494949;
-        padding: 2px;
-        margin-top:0px;
-        color: white;
-        font-size: 5px;
-        text-align: center;
+    .container{
+        background-color:  #ece8d9;
+       
     }
-    #coco img{
-        position:relative;
-        height: 50px;
-        right: 11px;
-        display: block;
-        margin: auto;
-        top:4px;
-    }
-    .menu li a{
-        position:relative;
-        color: black;
-        text-decoration: none;
-        right:30px;
-        bottom:35px;
-        font-size: 10px;
-        
-    }  
-    .menu li{
-        display: list-item;
-         
-    }
-    .derecha ul li img{
-        position:relative;
-        height: 13px;
-        mix-blend-mode:multiply;
-        padding: 3px;
-        left:15px;
-        top:3px;
-    }
-    header{
-        height: 70px;
-    }
-    section{
-        background-color: #faf6e9;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: relative;
-        top:80px;
-        height: 1750px;
-        width: 100%;
-    }
-    .bleft li{
-        position:relative;
-        padding: 3px;
-        font-size:9px;
-        bottom:30px;
-        right:20px;
-    }
-    #coco2 img{
-        position: relative;
-        height: 100px;
-        left:170px;
-        top:50px;
-        visibility: hidden;
-    }
-    .info ul{
-        list-style: none;
-        position: relative;
-        float: left;
-        padding: 15px;
-        right: 40px;
-    }
-    .info li{ 
-        position:relative;
-        padding: 3px;
-        right:80px;
-        font-size:8px;
-        bottom:28px
-    }
-    .extras li{
-        position:relative;
-        padding: 3px;
-        right:340px;
-        font-size:8px;
-        top:1px
-    }
-    .redes ul{
-        float: right;
-        list-style: none;
-        position: relative;
-        bottom: 79px;
-        right: 15px;
-    }
-    .redes ul li img{
-        height: 11px;
-        mix-blend-mode:multiply;
-        padding: 6px;
-    }
-    footer{
-        font-family: "Montserrat";
-        background-color: #494949;
-        overflow: hidden;
-        position: relative;
-        height: 120px;
-        width: 100%;
-        border-top: 2px solid white;
-    }
-    #inferior{
-        font-size: 8px;
-    }
-    .btn{
-        position: relative;
-        left: 230px;
-        bottom: 80px;
-        
-            }
-        
-            .subtotal{
-                position: relative;
-            
-                bottom: 60px;
-                left: 0px;
-            
-            }
-        
-            #subtot{
-                position: relative;
-            
-                bottom:43px;
-                left: 40px;
-            }
-        
-            .tot{
-                position: relative;
-                
-                bottom: 10px;
-                left: 0px;
-               
-            }
-        
-        
-            .toti{
-                position: relative;
-            
-                bottom:43px;
-                left: 40px;
-              
-            }
-        
-        #buy{
-            position: relative;
-        }
-
-
-
-
-}
-@media(max-width: 768px) and (min-width:426px){
-  
     
-    section{
-        background-color: #faf6e9;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: relative;
-        top:80px;
-        height: 1190px;
+    .col-12{
+     
+        padding: 15px;
+        margin-top: 30px;
+        margin-left: 25px;
+        width: 50%;
+       
+    }
+    h1{
+        font-size: 15px;
+        border-bottom: 1px solid black;
+       
+        
+    }
+    
+    
+    .imagen1{
         width: 100%;
+    
     }
-    #coco2 img{
-        position: relative;
-        height: 100px;
-        left:110px;
+    
+    .imagen1:hover{
+        opacity: 0.8;
     }
-    .info ul{
+    
+  
+    h2{
+        font-size: 15px;
+        border-bottom: 1px solid black;
+    }
+    
+    .lista{
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .lista li{
         list-style: none;
+    }
+    
+    
+    .precio{font-size: 15px;
         position: relative;
-        float: left;
-        top: 10px;
-        padding: 15px;
-        right: 160px;
-        text-align: right; 
+        right: 30px;
     }
-    .extras ul{
-        list-style: none;
-        position: relative;
-        float: left;
-        padding: 15px;
-        bottom: 150px;
+    
+    H4{
+        border-bottom: 1px solid black
     }
-    .redes ul{
-        float: right;
-        list-style: none;
-        position: relative;
-        bottom: 70px;
-        right: 40px;
-    }
-    .redes ul li img{
-        position:relative;
-        height: 27px;
-        mix-blend-mode:multiply;
-        padding: 6px;
-        top:15px;
-        right:40px;
-    }
-
-    .btn{
-position: relative;
-left: 640px;
-    }
-
+    
     .subtotal{
         position: relative;
-        left: 380px;
+        left:200px;
+        bottom: 50px;
+        font-size: 20px;
+        margin-top: 15px;
     }
 
     #subtot{
         position: relative;
-        left: 450px;
-    }
+        left:300px;
+        bottom: 35px;
 
-    .tot{
+    }
+    
+  
+
+     
+    
+    
+    
+    .enter{
         position: relative;
-        left: 200px;
+         bottom: 37px;
+         left: 10px;
+    font-size: 13px;
     }
-
-
-    .toti{
+    
+    #textarea{
         position: relative;
-        left: 250px;
+        left:60px;
+        bottom: 25px;
     }
 
-#buy{
-    position: relative;
-    left: 180px;
-}
-}
 
-
-@media(max-width: 1024px) and (min-width:769px){
  
-    section{
-        background-color: #faf6e9;
-        overflow: hidden;
-        box-sizing: border-box;
+  
+
+    .descuento{
         position: relative;
-        top:80px;
-        height: 1300px;
+        right: 300px;
+        font-size: 20px;
+    
+    }
+    
+    .tot{
+        position: relative;
+        left: 20px;
+       
+        top:-30px;
+        font-size: 30px;
+       
+    }
+    
+    .toti{
+        position: relative;
+        left: 70px;
+        font-size: 30px;
+        margin-top: 15px;
+        top:-30px;
+       
+    }
+    
+    #buy{
+        position: relative;
         width: 100%;
+        top: -45px;
+        left:220px;
+        width: 50%;
+    }
+
+    .btn{
+        position: relative;
+        left: 500px;
+        bottom: 70px;
+       
+        
+    
+    }
+    
+
+    .col-5{
+        position: relative;
+        right: 170px;
+    }
+
+    
+
+      .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:9px;
+        bottom:30px;
+        right:20px;
     }
     #coco2 img{
         position: relative;
         height: 100px;
-        left:110px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
     }
     .info ul{
         list-style: none;
         position: relative;
         float: left;
-        top: 10px;
         padding: 15px;
-        right: 160px;
-        text-align: right; 
+        right: 40px;
     }
-    .extras ul{
-        list-style: none;
-        position: relative;
-        float: left;
-        padding: 15px;
-        bottom: 150px;
+    .info li{ 
+        position:relative;
+        padding: 3px;
+        right:80px;
+        font-size:8px;
+        bottom:28px
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:340px;
+        font-size:8px;
+        top:1px
     }
     .redes ul{
         float: right;
         list-style: none;
         position: relative;
-        bottom: 70px;
-        right: 40px;
+        bottom: 79px;
+        right: 15px;
     }
     .redes ul li img{
-        position:relative;
-        height: 27px;
+        height: 11px;
         mix-blend-mode:multiply;
         padding: 6px;
-        top:15px;
-        right:40px;
     }
-
-    .btn{
-position: relative;
-left: 850px;
-    }
-
-    .subtotal{
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
         position: relative;
-        left: 520px;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
     }
-
-    #subtot{
-        position: relative;
-        left: 670px;
-    }
-
-    .tot{
-        position: relative;
-        left: 340px;
+    #inferior{
+        font-size: 8px;
     }
 
 
-    .toti{
-        position: relative;
-        left: 490px;
-    }
 
-#buy{
-    position: relative;
-    left: 380px;
-}
+
 }
 
+
+@media(max-width: 1024px) {
+    section{
+            background-color: #faf6e9;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            top:80px;
+            height: 1260px;
+            width: 100%;
+        }
+        .portada img{
+            width: 100%;
+            display: block;
+            margin: auto;
+            height:150px
+        }
+        #barra{
+            width: 100%;
+            background-color:  #494949;
+            padding: 2px;
+            margin-top:0px;
+            color: white;
+            font-size: 5px;
+            text-align: center;
+        }
+        #coco img{
+            position:relative;
+            height: 50px;
+            right: 11px;
+            display: block;
+            margin: auto;
+            top:4px;
+        }
+        .menu li a{
+            position:relative;
+            color: black;
+            text-decoration: none;
+            right:30px;
+            bottom:35px;
+            font-size: 10px;
+            
+        }  
+        .menu li{
+            display: list-item;
+             
+        }
+        .derecha ul li img{
+            position:relative;
+            height: 13px;
+            mix-blend-mode:multiply;
+            padding: 3px;
+            left:15px;
+            top:3px;
+        }
+        header{
+            height: 70px;
+        }
+    
+        .container{
+            background-color:  #ece8d9;
+           
+        }
+        
+        .col-12{
+         
+            padding: 15px;
+            margin-top: 30px;
+            margin-left: 25px;
+            width: 50%;
+           
+        }
+        h1{
+            font-size: 15px;
+            border-bottom: 1px solid black;
+           
+            
+        }
+        
+        
+        .imagen1{
+            width: 100%;
+        
+        }
+        
+        .imagen1:hover{
+            opacity: 0.8;
+        }
+        
+      
+        h2{
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+        
+        .lista{
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .lista li{
+            list-style: none;
+        }
+        
+        
+        .precio{font-size: 15px;
+            position: relative;
+            right: 30px;
+        }
+        
+        H4{
+            border-bottom: 1px solid black
+        }
+        
+        .subtotal{
+            position: relative;
+            left:330px;
+            bottom: 50px;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    
+        #subtot{
+            position: relative;
+            left:500px;
+            bottom: 30px;
+    
+        }
+        
+      
+    
+         
+        
+        
+        
+        .enter{
+            position: relative;
+             bottom: 37px;
+             left: 10px;
+        font-size: 13px;
+        }
+        
+        #textarea{
+            position: relative;
+            left:60px;
+            bottom: 25px;
+        }
+    
+    
+     
+      
+    
+        .descuento{
+            position: relative;
+            right: 300px;
+            font-size: 20px;
+        
+        }
+        
+        .tot{
+            position: relative;
+            left: 140px;
+           
+            top:-30px;
+            font-size: 30px;
+           
+        }
+        
+        .toti{
+            position: relative;
+            left: 270px;
+            font-size: 30px;
+            margin-top: 15px;
+            top:-25px;
+           
+        }
+        
+        #buy{
+            position: relative;
+            width: 20%;
+            top: 40px;
+            left:80px;
+            
+        }
+    
+        .btn{
+            position: relative;
+            left: 700px;
+            bottom: 70px;
+           
+            
+        
+        }
+        
+    
+        .col-5{
+            position: relative;
+            right: 170px;
+        }
+    
+        
+    
+          .bleft li{
+            position:relative;
+            padding: 3px;
+            font-size:9px;
+            bottom:30px;
+            right:20px;
+        }
+        #coco2 img{
+            position: relative;
+            height: 100px;
+            left:170px;
+            top:50px;
+            visibility: hidden;
+        }
+        .info ul{
+            list-style: none;
+            position: relative;
+            float: left;
+            padding: 15px;
+            right: 40px;
+        }
+        .info li{ 
+            position:relative;
+            padding: 3px;
+            right:80px;
+            font-size:8px;
+            bottom:28px
+        }
+        .extras li{
+            position:relative;
+            padding: 3px;
+            right:340px;
+            font-size:8px;
+            top:1px
+        }
+        .redes ul{
+            float: right;
+            list-style: none;
+            position: relative;
+            bottom: 79px;
+            right: 15px;
+        }
+        .redes ul li img{
+            height: 11px;
+            mix-blend-mode:multiply;
+            padding: 6px;
+        }
+        footer{
+            font-family: "Montserrat";
+            background-color: #494949;
+            overflow: hidden;
+            position: relative;
+            height: 120px;
+            width: 100%;
+            border-top: 2px solid white;
+        }
+        #inferior{
+            font-size: 8px;
+        }
+    
+    
+    
+    
+    }
+    
