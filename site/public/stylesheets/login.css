@@ -279,3 +279,676 @@ barra de abajo Copyright
     margin-bottom: 0px;
     border-top: 2px solid black;
 }
+
+@media(max-width: 426px){
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 450px;
+        width: 100%;
+        float: left;
+        text-align: center;
+        font-family: "Montserrat";
+    }
+    
+    #barra{
+        width: 100%;
+        background-color:  #494949;
+        padding: 5px;
+        margin-top:0px;
+        color: white;
+        font-size: 8px;
+        text-align: center;
+    }
+    #coco{
+        mix-blend-mode:multiply;
+        position: relative;
+    }
+    #coco img{
+        position:relative;
+        height: 65px;
+        right: 6px;
+        display: block;
+        margin: auto;
+    }
+    .menu li a{
+        position:relative;
+        color: black;
+        text-decoration: none;
+        right:30px;
+        bottom:25px;
+        font-size: 13px;
+    }
+
+    .derecha ul li img{
+        position:relative;
+        height: 25px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:26px;
+    }
+
+          
+.login{
+    font-size: 20px;
+   position: relative;
+   top:60px;
+   right: 30px;
+   
+  
+   
+}
+
+    .usuario{
+        
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+          bottom:30px;
+       
+        left:7px;
+        
+    }
+    .pass{
+       
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+        top:25px;
+        
+        left:7px;
+       
+        
+    }
+    
+    .boton{
+        width: 28%;
+       
+        padding: 5px 5px;
+        font-size: 40%;
+  position: relative;
+bottom: 150%;
+  left:7px;
+   
+ 
+    }
+
+
+    .parrafo{
+        font-size: 15px;
+        position: relative;
+        top:65px;
+        left:7px;
+        
+    }
+  
+.olvido{
+position: relative;
+
+
+left: 25px;
+font-size: 25%;
+color: black;
+}
+   
+
+  
+    .cuenta{
+        font-size: 50%;
+        color: black;
+        position: relative;
+        
+        left:10px;
+        bottom: 10px ;
+    }
+      .bleft ul{   
+        list-style: none;
+        position: relative;
+        float: left;
+    }
+    .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:10px;
+        bottom:30px;
+        right:20px;
+    }
+    #coco2{
+        mix-blend-mode:multiply;
+        float: left;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        right: 40px;
+    }
+    .info li{
+        
+        position:relative;
+        padding: 3px;
+        right:100px;
+        font-size:10px;
+        bottom:31px
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none;      
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:300px;
+        font-size:10px;
+        bottom:20px
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 85px;
+        right: 20px;
+    }
+    .redes ul li img{
+        height: 15px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
+        position: relative;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+}
+@media(max-width: 375px){
+    .derecha ul li img{
+        position:relative;
+        height: 19px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:26px;
+    }
+       
+.login{
+    font-size: 20px;
+   position: relative;
+   top:60px;
+   right: 30px;
+   
+  
+   
+}
+
+    .usuario{
+        
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+          bottom:30px;
+       
+        left:7px;
+        
+    }
+    .pass{
+       
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+        top:25px;
+        
+        left:7px;
+       
+        
+    }
+    
+    .boton{
+        width: 28%;
+       
+        padding: 5px 5px;
+        font-size: 40%;
+  position: relative;
+bottom: 150%;
+  left:7px;
+   
+ 
+    }
+
+
+    .parrafo{
+        font-size: 15px;
+        position: relative;
+        top:65px;
+        left:7px;
+        
+    }
+  
+.olvido{
+position: relative;
+
+
+left: 25px;
+font-size: 25%;
+color: black;
+}
+   
+
+  
+    .cuenta{
+        font-size: 50%;
+        color: black;
+        position: relative;
+        
+        left:10px;
+        bottom: 10px ;
+    }
+    
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:320px;
+        font-size:10px;
+        bottom:20px
+    }
+    .redes ul li img{
+        height: 12px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    #coco img{
+        position:relative;
+        height: 65px;
+        right: 12px;
+        display: block;
+        margin: auto;
+    }
+    .bleft li{
+        position:relative;
+        font-size:10px;
+        bottom:40px;
+        right:20px;
+    }
+}
+@media(max-width: 320px){
+    .portada img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        height:150px
+    }
+    #barra{
+        width: 100%;
+        background-color:  #494949;
+        padding: 2px;
+        margin-top:0px;
+        color: white;
+        font-size: 5px;
+        text-align: center;
+    }
+    #coco img{
+        position:relative;
+        height: 50px;
+        right: 11px;
+        display: block;
+        margin: auto;
+        top:4px;
+    }
+    .menu li a{
+        position:relative;
+        color: black;
+        text-decoration: none;
+        right:30px;
+        bottom:35px;
+        font-size: 10px;
+        
+    }  
+    .menu li{
+        display: list-item;
+         
+    }
+    .derecha ul li img{
+        position:relative;
+        height: 13px;
+        mix-blend-mode:multiply;
+        padding: 3px;
+        left:15px;
+        top:3px;
+    }
+    header{
+        height: 70px;
+    }
+
+    
+.login{
+    font-size: 20px;
+   position: relative;
+   top:60px;
+   right: 30px;
+   
+  
+   
+}
+
+    .usuario{
+        
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+          bottom:30px;
+       
+        left:7px;
+        
+    }
+    .pass{
+       
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+        top:25px;
+        
+        left:7px;
+       
+        
+    }
+    
+    .boton{
+        width: 28%;
+       
+        padding: 5px 5px;
+        font-size: 40%;
+  position: relative;
+bottom: 150%;
+  left:7px;
+   
+ 
+    }
+
+
+    .parrafo{
+        font-size: 15px;
+        position: relative;
+        top:65px;
+        left:7px;
+        
+    }
+  
+.olvido{
+position: relative;
+bottom:200px;
+
+left: 25px;
+font-size: 25%;
+color: black;
+}
+   
+
+  
+    .cuenta{
+        font-size: 50%;
+        color: black;
+        position: relative;
+        
+        left:10px;
+        bottom: 10px ;
+    }
+    
+
+      .bleft li{
+        position:relative;
+        padding: 3px;
+        font-size:9px;
+        bottom:30px;
+        right:20px;
+    }
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+        top:50px;
+        visibility: hidden;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        right: 40px;
+    }
+    .info li{ 
+        position:relative;
+        padding: 3px;
+        right:80px;
+        font-size:8px;
+        bottom:28px
+    }
+    .extras li{
+        position:relative;
+        padding: 3px;
+        right:340px;
+        font-size:8px;
+        top:1px
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 79px;
+        right: 15px;
+    }
+    .redes ul li img{
+        height: 11px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+    footer{
+        font-family: "Montserrat";
+        background-color: #494949;
+        overflow: hidden;
+        position: relative;
+        height: 120px;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+    #inferior{
+        font-size: 8px;
+    }
+}
+@media(max-width: 768px) and (min-width:426px){
+    section{
+        background-color: #faf6e9;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        top:80px;
+        height: 500px;
+        width: 100%;
+        float: left;
+        text-align: center;
+        font-family: "Montserrat";
+    }
+    
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+    }
+          
+.login{
+    font-size: 20px;
+   position: relative;
+   top:60px;
+   right: 30px;
+   
+  
+   
+}
+
+    .usuario{
+        
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+          bottom:30px;
+       
+        left:7px;
+        
+    }
+    .pass{
+       
+        width: 28%;
+       
+        padding: 5px 5px;
+
+        font-size: 40%;
+
+        position: relative;
+        top:25px;
+        
+        left:7px;
+       
+        
+    }
+    
+    .boton{
+        width: 28%;
+       
+        padding: 5px 5px;
+        font-size: 40%;
+  position: relative;
+bottom: 150%;
+  left:7px;
+   
+ 
+    }
+
+
+    .parrafo{
+        font-size: 15px;
+        position: relative;
+        top:65px;
+        left:7px;
+        
+    }
+  
+.olvido{
+position: relative;
+
+
+left: 70px;
+font-size: 35%;
+color: black;
+}
+   
+
+  
+    .cuenta{
+        font-size: 50%;
+        color: black;
+        position: relative;
+        
+        left:10px;
+        bottom: 10px ;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        top: 10px;
+        padding: 15px;
+        right: 160px;
+        text-align: right; 
+    }
+    .info li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .info li{
+        padding: 3px;
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 168px;
+        right:200px;
+        left:320px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .extras li{
+        padding: 3px;
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes li{
+        display: inline;
+    }
+    .redes ul li img{
+        height: 27px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+
+}
