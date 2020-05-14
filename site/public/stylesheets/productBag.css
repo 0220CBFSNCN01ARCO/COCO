@@ -76,11 +76,9 @@ section{
     background-color: #faf6e9;
     overflow: hidden;
     box-sizing: border-box;
-    position: relative;
     top:80px;
-    height: 1500px;
+    height: 1800px;
     width: 100%;
-    float: left;
     font-family: "Montserrat";
 }
 
@@ -89,14 +87,6 @@ section{
    
 }
 
-.col-12{
- 
-    padding: 15px;
-    margin-top: 30px;
-    margin-left: 25px;
-    width: 50%;
-   
-}
 h1{
     font-size: 25px;
     border-bottom: 1px solid black;
@@ -104,6 +94,9 @@ h1{
     
 }
 
+#compra button{
+    width:100%;
+}
 
 .imagen1{
     width: 100%;
@@ -114,16 +107,6 @@ h1{
     opacity: 0.8;
 }
 
-.col-4{
-    margin-bottom: 35px;
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-.col-8{
-    margin-bottom: 50px;
-    margin-top: 20px;
-}
 
 h2{
     font-size: 20px;
@@ -144,14 +127,12 @@ h2{
     right: 30px;
 }
 
-H4{
-    border-bottom: 1px solid black
-}
+
 
 .subtotal{
     position: relative;
-    left: 620px;
-    bottom: 16px;
+    left: 850px;
+    bottom: 100px;
     font-size: 20px;
     margin-top: 15px;
 }
@@ -159,51 +140,45 @@ H4{
 #subtot{
     font-size: 20px;
     position: relative;
-    left: 850px;
+    left: 990px;
+    bottom: 150px;
 
 }
 
-.btn{
-    position: relative;
-    left: 1020px;
-    bottom: 50px;
     
 
-}
+
 
 .enter{
     position: relative;
-     bottom: 10px;
-     left: 10px;
-font-size: 18px;
+   left: 850px;
+   top:2px;
 }
 
 #textarea{
     position: relative;
-    left: 15px;
-    bottom: 2px;
+    left: 950px;
+    bottom:40px;
 }
 
 .descuento{
     position: relative;
-    left: 10px;
+    left: 850px;
 
 }
 
 .tot{
     position: relative;
-    left: 430px;
+    left: 850px;
     font-size: 25px;
-    margin-top: 15px;
-    top:10px;
+    bottom: 160px;
 }
 
 .toti{
     position: relative;
-    left: 670px;
+    left: 970px;
     font-size: 25px;
-    margin-top: 15px;
-    top:10px;
+    bottom: 212px;
 }
 
 #buy{
@@ -211,8 +186,8 @@ font-size: 18px;
     width: 10%;
     height: 40px;
 
-    left: 540px;
-    top:70px;
+    left: 1010px;
+    bottom: 220px;
     
 }
 
@@ -318,285 +293,79 @@ barra de abajo Copyright
     margin-bottom: 0px;
     border-top: 2px solid black;
 }
-@media(max-width: 320px){
-    section{
-        background-color: #faf6e9;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: relative;
-        top:80px;
-        height: 1140px;
-        width: 100%;
-    }
-    .portada img{
-        width: 100%;
-        display: block;
-        margin: auto;
-        height:150px
-    }
-    #barra{
-        width: 100%;
-        background-color:  #494949;
-        padding: 2px;
-        margin-top:0px;
-        color: white;
-        font-size: 5px;
-        text-align: center;
-    }
-    #coco img{
-        position:relative;
-        height: 50px;
-        right: 11px;
-        display: block;
-        margin: auto;
-        top:4px;
-    }
-    .menu li a{
-        position:relative;
-        color: black;
-        text-decoration: none;
-        right:30px;
-        bottom:35px;
-        font-size: 10px;
-        
-    }  
-    .menu li{
-        display: list-item;
-         
-    }
-    .derecha ul li img{
-        position:relative;
-        height: 13px;
-        mix-blend-mode:multiply;
-        padding: 3px;
-        left:15px;
-        top:3px;
-    }
-    header{
-        height: 70px;
-    }
-
-    .container{
-        background-color:  #ece8d9;
-       
-    }
-    
-    .col-12{
-     
-        padding: 15px;
-        margin-top: 30px;
-        margin-left: 25px;
-        width: 50%;
-       
-    }
-    h1{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-       
-        
-    }
-    
-    
-    .imagen1{
-        width: 100%;
-    
-    }
-    
-    .imagen1:hover{
-        opacity: 0.8;
-    }
-    
-  
-    h2{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-    }
-    
-    .lista{
-        font-size: 15px;
-        text-decoration: none;
-    }
-    .lista li{
-        list-style: none;
-    }
-    
-    
-    .precio{font-size: 15px;
-        position: relative;
-        right: 30px;
-    }
-    
-    H4{
-        border-bottom: 1px solid black
-    }
-    
-    .subtotal{
-        position: relative;
-        left:0px;
-        bottom: 50px;
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-    #subtot{
-        position: relative;
-        left:35px;
-        bottom: 35px;
-
-    }
-    
-  
-
-     
-    
-    
-    
-    .enter{
-        position: relative;
-         bottom: 10px;
-         left: 10px;
-    font-size: 13px;
-    }
-    
-    #textarea{
-        position: relative;
-        left:90px;
-        bottom: 40px;
-    }
 
 
- 
-  
-
-    .descuento{
-        position: relative;
-        right: 200px;
-        font-size: 20px;
-    
-    }
-    
-    .tot{
-        position: relative;
-        left: -190px;
-       
-        top:-30px;
-        font-size: 30px;
-       
-    }
-    
-    .toti{
-        position: relative;
-        left: 190px;
-        font-size: 30px;
-        margin-top: 15px;
-        top:-105px;
-       
-    }
-    
-    #buy{
-        position: relative;
-        width: 100%;
-        top: -45px;
-        left: 15px;
-        width: 50%;
-    }
-
-    .btn{
-        position: relative;
-        left: 280px;
-        bottom: 80px;
-       
-        
-    
-    }
-    
-
-    .col-5{
-        position: relative;
-        right: 170px;
-    }
-
-    
-
-      .bleft li{
-        position:relative;
-        padding: 3px;
-        font-size:9px;
-        bottom:30px;
-        right:20px;
-    }
-    #coco2 img{
-        position: relative;
-        height: 100px;
-        left:170px;
-        top:50px;
-        visibility: hidden;
-    }
-    .info ul{
-        list-style: none;
-        position: relative;
-        float: left;
-        padding: 15px;
-        right: 40px;
-    }
-    .info li{ 
-        position:relative;
-        padding: 3px;
-        right:80px;
-        font-size:8px;
-        bottom:28px
-    }
-    .extras li{
-        position:relative;
-        padding: 3px;
-        right:340px;
-        font-size:8px;
-        top:1px
-    }
-    .redes ul{
-        float: right;
-        list-style: none;
-        position: relative;
-        bottom: 79px;
-        right: 15px;
-    }
-    .redes ul li img{
-        height: 11px;
-        mix-blend-mode:multiply;
-        padding: 6px;
-    }
-    footer{
-        font-family: "Montserrat";
-        background-color: #494949;
-        overflow: hidden;
-        position: relative;
-        height: 120px;
-        width: 100%;
-        border-top: 2px solid white;
-    }
-    #inferior{
-        font-size: 8px;
-    }
+@media(max-width: 768px) and (min-width:426px){
    
-}
-
-
-
-@media(max-width: 375px){
     section{
         background-color: #faf6e9;
         overflow: hidden;
         box-sizing: border-box;
         position: relative;
         top:80px;
-        height: 1140px;
+        height: 2200px;
         width: 100%;
     }
-    .portada img{
-        width: 100%;
-        display: block;
-        margin: auto;
-        height:150px
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:170px;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        top: 10px;
+        padding: 15px;
+        right: 160px;
+        text-align: right; 
+    }
+    .info li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .info li{
+        padding: 3px;
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 168px;
+        right:200px;
+        left:320px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .extras li{
+        padding: 3px;
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes li{
+        display: inline;
+    }
+    .redes ul li img{
+        height: 27px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+    }
+}
+@media(max-width: 320px) and (min-height:546px){
+  
+    h1{
+        font-size: 25px;
+        border-bottom: 1px solid black;
+       
+        
     }
     #barra{
         width: 100%;
@@ -620,7 +389,7 @@ barra de abajo Copyright
         color: black;
         text-decoration: none;
         right:30px;
-        bottom:35px;
+        bottom:25px;
         font-size: 10px;
         
     }  
@@ -639,150 +408,15 @@ barra de abajo Copyright
     header{
         height: 70px;
     }
-
-    .container{
-        background-color:  #ece8d9;
-       
-    }
     
-    .col-12{
-     
-        padding: 15px;
-        margin-top: 30px;
-        margin-left: 25px;
-        width: 50%;
-       
-    }
-    h1{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-       
-        
-    }
+    section{
     
-    
-    .imagen1{
-        width: 100%;
-    
-    }
-    
-    .imagen1:hover{
-        opacity: 0.8;
-    }
-    
-  
-    h2{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-    }
-    
-    .lista{
-        font-size: 15px;
-        text-decoration: none;
-    }
-    .lista li{
-        list-style: none;
-    }
-    
-    
-    .precio{font-size: 15px;
-        position: relative;
-        right: 30px;
-    }
-    
-    H4{
-        border-bottom: 1px solid black
-    }
-    
-    .subtotal{
-        position: relative;
-        left:0px;
-        bottom: 50px;
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-    #subtot{
-        position: relative;
-        left:35px;
-        bottom: 35px;
-
-    }
-    
-  
-
-     
-    
-    
-    
-    .enter{
-        position: relative;
-         bottom: 10px;
-         left: 10px;
-    font-size: 13px;
-    }
-    
-    #textarea{
-        position: relative;
-        left:90px;
-        bottom: 40px;
+      height: 2000px;
     }
 
 
- 
-  
 
-    .descuento{
-        position: relative;
-        right: 200px;
-        font-size: 20px;
-    
-    }
-    
-    .tot{
-        position: relative;
-        left: -190px;
-       
-        top:-30px;
-        font-size: 30px;
-       
-    }
-    
-    .toti{
-        position: relative;
-        left: 190px;
-        font-size: 30px;
-        margin-top: 15px;
-        top:-105px;
-       
-    }
-    
-    #buy{
-        position: relative;
-        width: 100%;
-        top: -45px;
-        left: 15px;
-        width: 50%;
-    }
-
-    .btn{
-        position: relative;
-        left: 280px;
-        bottom: 80px;
-       
-        
-    
-    }
-    
-
-    .col-5{
-        position: relative;
-        right: 170px;
-    }
-
-    
-
-      .bleft li{
+    .bleft li{
         position:relative;
         padding: 3px;
         font-size:9px;
@@ -841,538 +475,121 @@ barra de abajo Copyright
     #inferior{
         font-size: 8px;
     }
-}
+   }
 
 
+@media(max-width: 768px) and (min-height:426px){
 
-@media(max-width: 768px) {
-section{
+    section{
         background-color: #faf6e9;
         overflow: hidden;
         box-sizing: border-box;
         position: relative;
         top:80px;
-        height: 1060px;
+        height: 2100px;
         width: 100%;
-    }
-    .portada img{
-        width: 100%;
-        display: block;
-        margin: auto;
-        height:150px
-    }
-    #barra{
-        width: 100%;
-        background-color:  #494949;
-        padding: 2px;
-        margin-top:0px;
-        color: white;
-        font-size: 5px;
-        text-align: center;
-    }
-    #coco img{
-        position:relative;
-        height: 50px;
-        right: 11px;
-        display: block;
-        margin: auto;
-        top:4px;
-    }
-    .menu li a{
-        position:relative;
-        color: black;
-        text-decoration: none;
-        right:30px;
-        bottom:35px;
-        font-size: 10px;
-        
-    }  
-    .menu li{
-        display: list-item;
-         
-    }
-    .derecha ul li img{
-        position:relative;
-        height: 13px;
-        mix-blend-mode:multiply;
-        padding: 3px;
-        left:15px;
-        top:3px;
-    }
-    header{
-        height: 70px;
-    }
-
-    .container{
-        background-color:  #ece8d9;
-       
-    }
-    
-    .col-12{
-     
-        padding: 15px;
-        margin-top: 30px;
-        margin-left: 25px;
-        width: 50%;
-       
-    }
-    h1{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-       
-        
-    }
-    
-    
-    .imagen1{
-        width: 100%;
-    
-    }
-    
-    .imagen1:hover{
-        opacity: 0.8;
-    }
-    
-  
-    h2{
-        font-size: 15px;
-        border-bottom: 1px solid black;
-    }
-    
-    .lista{
-        font-size: 15px;
-        text-decoration: none;
-    }
-    .lista li{
-        list-style: none;
-    }
-    
-    
-    .precio{font-size: 15px;
-        position: relative;
-        right: 30px;
-    }
-    
-    H4{
-        border-bottom: 1px solid black
-    }
-    
-    .subtotal{
-        position: relative;
-        left:200px;
-        bottom: 50px;
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-    #subtot{
-        position: relative;
-        left:300px;
-        bottom: 35px;
-
-    }
-    
-  
-
-     
-    
-    
-    
-    .enter{
-        position: relative;
-         bottom: 37px;
-         left: 10px;
-    font-size: 13px;
-    }
-    
-    #textarea{
-        position: relative;
-        left:60px;
-        bottom: 25px;
-    }
-
-
- 
-  
-
-    .descuento{
-        position: relative;
-        right: 300px;
-        font-size: 20px;
-    
-    }
-    
-    .tot{
-        position: relative;
-        left: 20px;
-       
-        top:-30px;
-        font-size: 30px;
-       
-    }
-    
-    .toti{
-        position: relative;
-        left: 70px;
-        font-size: 30px;
-        margin-top: 15px;
-        top:-30px;
-       
-    }
-    
-    #buy{
-        position: relative;
-        width: 100%;
-        top: -45px;
-        left:220px;
-        width: 50%;
-    }
-
-    .btn{
-        position: relative;
-        left: 500px;
-        bottom: 70px;
-       
-        
-    
-    }
-    
-
-    .col-5{
-        position: relative;
-        right: 170px;
-    }
-
-    
-
-      .bleft li{
-        position:relative;
-        padding: 3px;
-        font-size:9px;
-        bottom:30px;
-        right:20px;
     }
     #coco2 img{
         position: relative;
         height: 100px;
         left:170px;
-        top:50px;
-        visibility: hidden;
     }
     .info ul{
         list-style: none;
         position: relative;
         float: left;
+        top: 10px;
         padding: 15px;
-        right: 40px;
+        right: 160px;
+        text-align: right; 
     }
-    .info li{ 
-        position:relative;
+    .info li a{
+        color: white; 
+        text-decoration: none; 
+    }
+    .info li{
         padding: 3px;
-        right:80px;
-        font-size:8px;
-        bottom:28px
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 168px;
+        right:200px;
+        left:320px;
+    }
+    .extras li a{
+        color: white; 
+        text-decoration: none; 
     }
     .extras li{
-        position:relative;
         padding: 3px;
-        right:340px;
-        font-size:8px;
-        top:1px
     }
     .redes ul{
         float: right;
         list-style: none;
         position: relative;
-        bottom: 79px;
-        right: 15px;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes li{
+        display: inline;
     }
     .redes ul li img{
-        height: 11px;
+        height: 27px;
         mix-blend-mode:multiply;
         padding: 6px;
     }
-    footer{
-        font-family: "Montserrat";
-        background-color: #494949;
-        overflow: hidden;
-        position: relative;
-        height: 120px;
-        width: 100%;
-        border-top: 2px solid white;
-    }
-    #inferior{
-        font-size: 8px;
-    }
-
-
-
-
 }
+
+
+
+
 
 
 @media(max-width: 1024px) {
+    
     section{
-            background-color: #faf6e9;
-            overflow: hidden;
-            box-sizing: border-box;
-            position: relative;
-            top:80px;
-            height: 1260px;
-            width: 100%;
-        }
-        .portada img{
-            width: 100%;
-            display: block;
-            margin: auto;
-            height:150px
-        }
-        #barra{
-            width: 100%;
-            background-color:  #494949;
-            padding: 2px;
-            margin-top:0px;
-            color: white;
-            font-size: 5px;
-            text-align: center;
-        }
-        #coco img{
-            position:relative;
-            height: 50px;
-            right: 11px;
-            display: block;
-            margin: auto;
-            top:4px;
-        }
-        .menu li a{
-            position:relative;
-            color: black;
-            text-decoration: none;
-            right:30px;
-            bottom:35px;
-            font-size: 10px;
-            
-        }  
-        .menu li{
-            display: list-item;
-             
-        }
-        .derecha ul li img{
-            position:relative;
-            height: 13px;
-            mix-blend-mode:multiply;
-            padding: 3px;
-            left:15px;
-            top:3px;
-        }
-        header{
-            height: 70px;
-        }
+       height: 1000px;
+    }
     
-        .container{
-            background-color:  #ece8d9;
-           
-        }
-        
-        .col-12{
-         
-            padding: 15px;
-            margin-top: 30px;
-            margin-left: 25px;
-            width: 50%;
-           
-        }
-        h1{
-            font-size: 15px;
-            border-bottom: 1px solid black;
-           
-            
-        }
-        
-        
-        .imagen1{
-            width: 100%;
-        
-        }
-        
-        .imagen1:hover{
-            opacity: 0.8;
-        }
-        
-      
-        h2{
-            font-size: 15px;
-            border-bottom: 1px solid black;
-        }
-        
-        .lista{
-            font-size: 15px;
-            text-decoration: none;
-        }
-        .lista li{
-            list-style: none;
-        }
-        
-        
-        .precio{font-size: 15px;
-            position: relative;
-            right: 30px;
-        }
-        
-        H4{
-            border-bottom: 1px solid black
-        }
-        
-        .subtotal{
-            position: relative;
-            left:330px;
-            bottom: 50px;
-            font-size: 20px;
-            margin-top: 15px;
-        }
-    
-        #subtot{
-            position: relative;
-            left:500px;
-            bottom: 30px;
-    
-        }
-        
-      
-    
-         
-        
-        
-        
-        .enter{
-            position: relative;
-             bottom: 37px;
-             left: 10px;
-        font-size: 13px;
-        }
-        
-        #textarea{
-            position: relative;
-            left:60px;
-            bottom: 25px;
-        }
-    
-    
-     
-      
-    
-        .descuento{
-            position: relative;
-            right: 300px;
-            font-size: 20px;
-        
-        }
-        
-        .tot{
-            position: relative;
-            left: 140px;
-           
-            top:-30px;
-            font-size: 30px;
-           
-        }
-        
-        .toti{
-            position: relative;
-            left: 270px;
-            font-size: 30px;
-            margin-top: 15px;
-            top:-25px;
-           
-        }
-        
-        #buy{
-            position: relative;
-            width: 20%;
-            top: 40px;
-            left:80px;
-            
-        }
-    
-        .btn{
-            position: relative;
-            left: 700px;
-            bottom: 70px;
-           
-            
-        
-        }
-        
-    
-        .col-5{
-            position: relative;
-            right: 170px;
-        }
-    
-        
-    
-          .bleft li{
-            position:relative;
-            padding: 3px;
-            font-size:9px;
-            bottom:30px;
-            right:20px;
-        }
-        #coco2 img{
-            position: relative;
-            height: 100px;
-            left:170px;
-            top:50px;
-            visibility: hidden;
-        }
-        .info ul{
-            list-style: none;
-            position: relative;
-            float: left;
-            padding: 15px;
-            right: 40px;
-        }
-        .info li{ 
-            position:relative;
-            padding: 3px;
-            right:80px;
-            font-size:8px;
-            bottom:28px
-        }
-        .extras li{
-            position:relative;
-            padding: 3px;
-            right:340px;
-            font-size:8px;
-            top:1px
-        }
-        .redes ul{
-            float: right;
-            list-style: none;
-            position: relative;
-            bottom: 79px;
-            right: 15px;
-        }
-        .redes ul li img{
-            height: 11px;
-            mix-blend-mode:multiply;
-            padding: 6px;
-        }
-        footer{
-            font-family: "Montserrat";
-            background-color: #494949;
-            overflow: hidden;
-            position: relative;
-            height: 120px;
-            width: 100%;
-            border-top: 2px solid white;
-        }
-        #inferior{
-            font-size: 8px;
-        }
-    
-    
-    
+    #coco2 img{
+        position: relative;
+        height: 100px;
+        left:110px;
+    }
+    .info ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        top: 10px;
+        padding: 15px;
+        right: 160px;
+        text-align: right; 
+    }
+    .extras ul{
+        list-style: none;
+        position: relative;
+        float: left;
+        padding: 15px;
+        bottom: 150px;
+    }
+    .redes ul{
+        float: right;
+        list-style: none;
+        position: relative;
+        bottom: 70px;
+        right: 40px;
+    }
+    .redes ul li img{
+        position:relative;
+        height: 27px;
+        mix-blend-mode:multiply;
+        padding: 6px;
+        top:15px;
+        right:40px;
+    }
     
     }
     
