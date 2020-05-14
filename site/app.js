@@ -11,6 +11,7 @@ var policyRouter = require('./routes/policy');
 var termsRouter = require('./routes/Terms');
 var detailRouter = require('./routes/detail');
 var registerRouter = require('./routes/register');
+var addRouter = require('./routes/add');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/policy', policyRouter);
 app.use('/terms', termsRouter);
 app.use('/detail', detailRouter);
 app.use('/register', registerRouter);
+app.use('/add', addRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
