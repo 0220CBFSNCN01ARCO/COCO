@@ -1,7 +1,7 @@
 .texto{
     text-align: center;
-    font-weight: 700;
-    font-size: 17px;
+    font-weight: 900;
+    font-size: 20px;
 }
 .texto2{
     text-align: center;
@@ -15,5 +15,8 @@
 }
 .btn:hover{
     background-color: gray;
+}
+body{
+    font-family: "Montserrat";
 }
 
