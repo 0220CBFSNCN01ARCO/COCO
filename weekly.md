@@ -1,5 +1,5 @@
 # Weekly 24/05
-* Revisamos los puntos del Sprint 3 y dividimos actividades.
+Revisamos los puntos del Sprint 3 y dividimos actividades.
 
 ## Crear Retro Sprint 2
 
@@ -11,7 +11,7 @@ Consultar al profe por la modificación del tablero. RESPONSABLE: Natalia.
 
 ## Crear Archivo Weekly.md
 
-* Decidimos tener reuniones los días miércoles 18.30 hs y los días sábado 15.30 hs. RESPONSABLE DE SUBIR PRIMER ARCHIVO Y RESUMEN: Belén.
+Decidimos tener reuniones los días miércoles 18.30 hs y los días sábado 15.30 hs. RESPONSABLE DE SUBIR PRIMER ARCHIVO Y RESUMEN: Belén.
 
 ## Implementar el motor de templates
 
