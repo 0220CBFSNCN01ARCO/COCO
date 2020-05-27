@@ -31,7 +31,6 @@
 }
 .info{
     position: relative;
-    right: 10px;
 }
 .info ul{
     list-style: none;
@@ -88,6 +87,12 @@ barra de abajo Copyright
 #texto-inferior{
     text-align: center;
 }
+@media(max-width:1441px) and (min-width:1025px){
+    .info{
+        position: relative;
+        right: 15px;
+    }
+}
 
 @media(max-width:1440px){
     #coco2 img{
@@ -106,6 +111,7 @@ barra de abajo Copyright
         position: relative;
         left: 190px;
     }
+
 }
 @media(max-width:1024px){
     #coco2 img{
@@ -265,4 +271,13 @@ barra de abajo Copyright
         position: relative;
         left: 15px;
     }
+    #bloque-derecha{
+        position: relative;
+        top: -10px;
+    }
+    .redes{
+        position: relative;
+        bottom: 20px;
+    }
+    
 }
