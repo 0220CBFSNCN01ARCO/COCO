@@ -1,0 +1,264 @@
+#barra-inferior{
+    font-family: "Montserrat";
+    background-color: #494949;
+    height: 200px;
+    border-top: 2px solid #faf6e9;
+    overflow: hidden;
+}
+.bleft ul{
+    list-style: none;
+    padding: 15px;
+}
+
+.bleft li a{
+    color: white; 
+    text-decoration: none; 
+}
+.bleft li{
+    padding: 3px;
+}
+#coco2{
+    position: relative;
+    mix-blend-mode:multiply;
+    display: block;
+    margin: auto;
+    top: 15px;
+}
+#coco2 img{
+    height: 150px;
+
+}
+.info ul{
+    list-style: none;
+    position: relative;
+    padding: 14px;
+
+ 
+}
+.info li a{
+    color: white; 
+    text-decoration: none; 
+}
+.info li{
+    padding: 3px;
+}
+.extras ul{
+    list-style: none;
+    color: white; 
+    float: right;
+}
+.extras li a{
+    color: white; 
+    text-decoration: none; 
+}
+.extras li{
+    padding: 1px;
+}
+.redes ul{
+    float: right;
+}
+.redes li{
+    display: inline;   
+}
+.redes ul li img{
+    height: 30px;
+    mix-blend-mode:multiply;
+    margin-right: 4px;
+    
+}
+#bloque-derecha{
+    position: relative;
+    top: 15px;
+}
+/*
+---------------------------------------
+barra de abajo Copyright
+*/
+#inferior{
+    background-color:  #faf6e9;
+    color: black;
+    font-size: 12px;
+    margin-bottom: 0px;
+    border-top: 2px solid black;
+}
+#texto-inferior{
+    text-align: center;
+}
+
+@media(max-width:1440px){
+    #coco2 img{
+        position: relative;
+        right: 150px;
+    }
+    .redes ul{
+        position: relative;
+        right: 40px;
+    }
+    .redes ul li img{
+        margin-top: 4px; 
+        padding-left: 5px;
+    }
+    .info ul{
+        position: relative;
+        left: 190px;
+    }
+}
+@media(max-width:1024px){
+    #coco2 img{
+        position: relative;
+        right: 50px;
+    }
+    .info ul{
+        position: relative;
+        left: 50px;
+        padding: 2px;
+        top: 13px;
+    }
+    .extras li{
+        padding: 3px;
+    }
+}
+@media(max-width:768px){
+    .bleft ul{
+        position: relative;
+        padding: 8px;
+        top: 5px;
+    }
+    .bleft ul li a{
+        font-size: 12px;
+    }
+    .bleft li{
+        padding: 1px;
+    }
+    #coco2 img{
+        right: 30px;
+        height: 120px;
+    }
+    .info ul{
+        position: relative;
+        left: 20px;
+        padding: 0px;
+        top: 15px;
+    }
+    .info li a{
+        font-size: 12px;
+    }
+    .info li{
+        padding: 0px;
+    }
+    .extras li a{
+        font-size: 11px;
+    }
+    .extras li b{
+        font-size: 11px;
+    }
+    .extras li{
+        padding: 0px;
+    }
+    .redes ul li img{
+        height: 20px;
+    }
+    .redes ul{
+        position: relative;
+        right: 15px;
+    }
+}
+@media(max-width:425px){
+    #coco2 img{
+        right: 30px;
+        height: 120px;
+        display: none;
+    }
+    .bleft ul li a{
+        font-size: 9px;
+    }
+    .bleft ul{
+        left: -15px;
+    }
+    .info li a{
+        font-size: 9px;
+    }
+    .extras li a{
+        font-size: 9px;
+    }
+    .extras li b{
+        font-size: 9px;
+    }
+    .info ul{
+        left:-80px;
+    }
+    .extras ul{
+        position: relative;
+        bottom: 113px;
+        left: 10px;
+    }
+    .redes ul li img{
+        height: 15px;
+    }
+    .redes ul{
+        position: relative;
+        right: 0px;
+        bottom: 115px;
+    }
+}
+@media(max-width:375px){
+    .bleft ul li a{
+        font-size: 8px;
+    }
+    .bleft ul{
+        left: -15px;
+    }
+    .info li a{
+        font-size: 8px;
+    }
+    .extras li a{
+        font-size: 8px;
+    }
+    .extras li b{
+        font-size: 8px;
+    }
+    .redes ul{
+        position: relative;
+        left: 10px;
+    }
+    .info ul{
+        left:-70px;
+        top:14px;
+    }
+    .extras ul{
+        position: relative;
+        left: 15px;
+    }
+}
+@media(max-width:320px){
+    .bleft ul li a{
+        font-size: 7px;
+    }
+    .bleft ul{
+        left: -30px;
+    }
+    .info li a{
+        font-size: 7px;
+    }
+    .extras li a{
+        font-size: 7px;
+    }
+    .extras li b{
+        font-size: 7px;
+    }
+    .redes ul{
+        position: relative;
+        left: 10px;
+    }
+    .info ul{
+        left:-70px;
+        top:14px;
+    }
+    .redes ul li img{
+        height: 12px;
+    }
+    .extras ul{
+        position: relative;
+        left: 15px;
+    }
+}
