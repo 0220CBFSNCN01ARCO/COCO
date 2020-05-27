@@ -16,6 +16,7 @@
 }
 .bleft li{
     padding: 3px;
+    color: white; 
 }
 #coco2{
     position: relative;
@@ -28,12 +29,14 @@
     height: 150px;
 
 }
+.info{
+    position: relative;
+    right: 10px;
+}
 .info ul{
     list-style: none;
     position: relative;
     padding: 14px;
-
- 
 }
 .info li a{
     color: white; 
@@ -41,6 +44,7 @@
 }
 .info li{
     padding: 3px;
+    color: white; 
 }
 .extras ul{
     list-style: none;
