@@ -4,7 +4,7 @@ const productControllers = require('../controllers/productController.js')
 
 /* GET users listing. */
 
-router.get('/', productControllers.detail )
+router.get('/detail', productControllers.detail )
   
 
   

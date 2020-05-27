@@ -7,5 +7,4 @@ router.get('/', usersController.login);
 
 router.get('/register', usersController.register);
 
-
 module.exports = router;
