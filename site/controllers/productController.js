@@ -1,9 +1,9 @@
 let productController = {
     "detail" : function(req,res){
-        res.render("detail");
+        res.render("productDetail");
     },
     "add" : function(req,res){
-        res.render("add");
+        res.render("productAdd");
     }
 
 

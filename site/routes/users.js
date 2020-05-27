@@ -7,7 +7,10 @@ router.get('/', usersController.login);
 
 router.get('/register', usersController.register);
 
+<<<<<<< HEAD
 router.get('/bag', usersController.bag);
 
 
+=======
+>>>>>>> 225312637bdbae0ad6a3520b071199be2024dca2
 module.exports = router;
