@@ -1,0 +1,54 @@
+.cuerpo{
+    height: 1350px;
+    padding-left: 100px ;
+    padding-right: 100px;
+    padding-top: 100px;
+    background: #faf6e9;
+    font-family: "Montserrat";
+    opacity: 1;
+}
+
+@media(max-width: 426px){    
+   .cuerpo{
+        height: 1550px;
+        padding-left: 10px ;
+        padding-right: 10px;
+        padding-top: 100px;
+        font-size: 10px;  
+    }
+}
+@media(max-width: 375px){
+    .cuerpo{
+        height: 1700px;
+        padding-left: 10px ;
+        padding-right: 10px;
+        padding-top: 100px;
+        font-size: 10px;  
+    }
+}
+@media(max-width: 320px){
+    .cuerpo{
+        height: 1950px;
+        padding-left: 10px ;
+        padding-right: 10px;
+        padding-top: 100px;
+        font-size: 10px;  
+    }
+}
+@media(max-width: 768px) and (min-width:426px){
+    .cuerpo{
+        height: 1900px;
+        padding-left: 50px ;
+        padding-right: 50px;
+        padding-top: 100px;
+    }
+}
+@media(max-width: 1024px) and (min-width:769px){
+    .cuerpo{
+        height: 1700px;
+        padding-left: 100px ;
+        padding-right: 100px;
+        padding-top: 100px;
+    }
+}
+
