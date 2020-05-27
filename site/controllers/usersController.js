@@ -4,6 +4,9 @@ let usersController = {
     },
     register : function(req,res){
         res.render('register');
+    } ,
+    bag : function(req,res){
+        res.render('productBag');
     }
 
 };
