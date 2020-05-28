@@ -49,12 +49,14 @@
     height: 30px;
     padding: 2px;
 }
+/*
 @media (max-width:2560px) and (min-width:1441px){
     #iconos ul{
         position: relative;
         left: 260px;
     }
 }
+*/
 @media(max-width: 768px){
     #menu  li a{
         font-size: 15px;

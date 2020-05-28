@@ -224,7 +224,8 @@ aca termina el section
 /*
 arrancamos con cada viwepoint
 mobile s
-*/
+
+
 @media (min-width:1441px){
     #principal{
         height: 6100px;
@@ -277,6 +278,7 @@ mobile s
         height: 200px;
     }
 }
+*/
 @media(max-width: 426px){
     .carousel-item img{
         height: 200px;

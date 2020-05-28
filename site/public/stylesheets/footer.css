@@ -88,6 +88,7 @@ barra de abajo Copyright
 #texto-inferior{
     text-align: center;
 }
+/*
 @media (max-width:2560px) and (min-width:1441px){
     #coco2 img{
         position: relative;
@@ -106,6 +107,7 @@ barra de abajo Copyright
     }
 
 }
+*/
 @media(max-width:1441px) and (min-width:1025px){
     .info{
         position: relative;
