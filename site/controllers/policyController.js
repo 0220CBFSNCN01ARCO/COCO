@@ -5,8 +5,6 @@ let policyController = {
     "Terms" : function(req,res){
         res.render("TermsAndConditions");
     }
-
-
 };
 
 module.exports = policyController;

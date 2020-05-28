@@ -5,8 +5,6 @@ let productController = {
     "add" : function(req,res){
         res.render("productAdd");
     }
-
-
 };
 
 module.exports = productController;
