@@ -88,11 +88,30 @@ barra de abajo Copyright
 #texto-inferior{
     text-align: center;
 }
+@media (max-width:2560px) and (min-width:1441px){
+    #coco2 img{
+        position: relative;
+        right: 370px;
+    }
+    .info ul{
+        position: relative;
+        left: 730px;
+        padding: 2px;
+        top: 13px;
+    }
+    .redes ul{
+        position: relative;
+        left: -40px;
+        top: 10px;
+    }
+
+}
 @media(max-width:1441px) and (min-width:1025px){
     .info{
         position: relative;
         right: 15px;
     }
+
 }
 
 @media(max-width:1440px){
