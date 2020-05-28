@@ -1,14 +1,13 @@
 
+
 #cuerpo{
     background-color: #faf6e9;
     overflow: hidden;
     box-sizing: border-box;
-    padding-top:80px;
+    position: relative;
+    top:80px;
     height: 800px;
-    width: 100%;
-    
-    
-    
+    width: 100%;   
 }
 
 body {
@@ -24,12 +23,10 @@ body {
 
 .carga {
     padding: 5%;
-
 }
 
 .datos {
-    padding: 5%;
-    
+    padding: 5%;   
 }
 
 #descrip {
@@ -37,15 +34,11 @@ body {
 }
 
 #price {
-    margin-top: 30px;
-    
-   
+    margin-top: 30px;  
 }
 
-
 #quantity {
-    margin-top: 30px;
-   
+    margin-top: 30px; 
 }
 
 .cantidad input {
@@ -58,9 +51,7 @@ width: 100%;
     font-family: "Montserrat";
     font-weight: bolder;
     border-color: lightgrey;
-    background: lightgrey;
-
-    
+    background: lightgrey;  
 }
 
 #color {
@@ -68,9 +59,6 @@ width: 100%;
     font-size: 15px;
     font-weight: bolder;
     color: #494949;
-    
-
-
 }
 
 #marca {
@@ -90,8 +78,7 @@ width: 100%;
 
 #uploadButton {
     position: relative;
-    top: 300px;
-    right: 40px;
+    top: 220px;
     align-items: center;
     font-family: "Montserrat";
     text-align: center;
@@ -100,8 +87,6 @@ width: 100%;
     background-color: #494949;
     width: 50%;
 }
-
-
 
 
 

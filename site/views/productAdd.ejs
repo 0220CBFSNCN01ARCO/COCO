@@ -8,99 +8,108 @@
 <body>
     <% include partials\header.ejs %> 
        
-    <section class="container" id= "cuerpo">
-        <div class="row">
+    <section class="container" id="cuerpo">
+      <div class="row">
 
-            <div class="carga col-sm-12 col-md-12 col-lg-6"> 
-              
-              <form action="#" method="POST"></form>
-                <p><label for=""><b>PRODUCT NAME</b></label></p>
-                <textarea name="productname" id="productname" cols="62" rows="2"></textarea>
-
-                <form id="descrip" action="#" method="POST"></form>
-                <p><label for=""><b>DESCRIPTION</b></label></p>
-                <textarea name="description" id="description" cols="62" rows="5"></textarea>
-
-                <form id="price" action="#" method="POST"></form>
-                <p class="cantidad">PRICE <input type="number" name="price" min="1" max="100000" step="1"></p>
-
-                <form id="quantity" action="#" method="POST"></form>
-                <p class="cantidad">QUANTITY <input type="number" name="quantity" min="1" max="1000" step="1"></p>
-
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroupFileAddon01">Upload Image</span>
-                    </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
-                    </div>
-                  </div>
-                
+          <div class="carga col-sm-12 col-md-12 col-lg-6"> 
             
-            </div>
+            <form action="#" method="POST">
+              <p><label for=""><b>PRODUCT NAME</b></label></p>
+              <textarea name="productname" id="productname" cols="62" rows="2"></textarea>
 
+              <p><label for=""><b>DESCRIPTION</b></label></p>
+              <textarea name="description" id="description" cols="62" rows="5"></textarea>
 
+              <p class="cantidad">PRICE <input id="price" type="number" name="price" min="1" max="100000" step="1"></p>
 
-            <div class="datos col-sm-12 col-md-12 col-lg-6">
+              
+              <p class="cantidad">QUANTITY <input id="quantity" type="number" name="quantity" min="1" max="1000" step="1"></p>
 
-                
-
-                <form action="#" method="POST"></form>
-                <div class="dropdown" id="classification">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     CLASSIFICATION
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">CLASS1</a>
-                      <a class="dropdown-item" href="#">CLASS2</a>
-                      <a class="dropdown-item" href="#">CLASS3</a>
-                    </div>
-                  </div> 
-
-
-                <form action="#" method="POST"></form>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      BRAND
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">COCO</a>
-                      <a class="dropdown-item" href="#">OTHERBRAND</a>
-                      <a class="dropdown-item" href="#">ANOTHERBRAND</a>
-                    </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload Image</span>
                   </div>
-
-                  <form action="#" method="POST"></form>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      SIZES
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">S</a>
-                      <a class="dropdown-item" href="#">M</a>
-                      <a class="dropdown-item" href="#">L</a>
-                      <a class="dropdown-item" href="#">XL</a>
-                      <a class="dropdown-item" href="#">XXL</a>
-                    </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
                   </div>
+                </div>
+              
+          
+          </div>
 
-                  <form id= "selection-color" action="#" method="POST"></form>
-                  <label id ="color" for="muestrario">COLOR:</label>
-                  <input type="color" value="0" id="muestrario"> 
 
-                <a href="#"><button type="button" id="uploadButton" class="btn btn-dark">UPLOAD PRODUCT</button></a>
+
+          <div class="datos col-sm-12 col-md-12 col-lg-6">
+
+              
+
+          
+              <div class="dropdown" id="classification">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   CLASSIFICATION
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">CLASS1</a>
+                    <a class="dropdown-item" href="#">CLASS2</a>
+                    <a class="dropdown-item" href="#">CLASS3</a>
+                  </div>
+                </div> 
+
+
+             
+              <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    BRAND
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">COCO</a>
+                    <a class="dropdown-item" href="#">OTHERBRAND</a>
+                    <a class="dropdown-item" href="#">ANOTHERBRAND</a>
+                  </div>
+                </div>
 
                 
+              <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SIZES
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">S</a>
+                    <a class="dropdown-item" href="#">M</a>
+                    <a class="dropdown-item" href="#">L</a>
+                    <a class="dropdown-item" href="#">XL</a>
+                    <a class="dropdown-item" href="#">XXL</a>
+                  </div>
+                </div>
 
-                
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    COLOR
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">BLACK</a>
+                    <a class="dropdown-item" href="#">WHITE</a>
+                    <a class="dropdown-item" href="#">GREY</a>
+                    <a class="dropdown-item" href="#">RED</a>
+                    <a class="dropdown-item" href="#">YELLOW</a>
+                  </div>
+                </div>
+
+              <a href="#"><button type="submit" id="uploadButton" class="btn btn-dark">UPLOAD PRODUCT</button></a>
+
+              </form>
+
+              
+
+              
 
 
-            </div>
+          </div>
 
-        </div>
-        
-    </section>
+      </div>
+      
+  </section>
     <% include partials\script.ejs %> 
 </body>
 <% include partials\footer.ejs %> 
