@@ -52,11 +52,8 @@
 @media (max-width:2560px) and (min-width:1441px){
     #iconos ul{
         position: relative;
-        list-style: none;
-        top: 17px;
         left: 260px;
     }
-
 }
 @media(max-width: 768px){
     #menu  li a{

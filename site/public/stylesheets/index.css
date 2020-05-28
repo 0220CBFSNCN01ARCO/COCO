@@ -225,6 +225,58 @@ aca termina el section
 arrancamos con cada viwepoint
 mobile s
 */
+@media (max-width:2560px) and (min-width:1441px){
+    #principal{
+        height: 6100px;
+    }
+    .carousel-item img{
+        height: 1200px;
+    }
+    .zapatoH img{
+        height: 9000px;
+        max-height: 900px;
+    }
+    .zapatoM{
+        height: 900px;
+    }
+    .zapatoM img{
+        max-height: 900px;
+        top: 100px;
+    }
+    .CamisaH img{
+        height: 900px;
+    }
+    .remeraM img{
+        height: 900px;
+    }
+    .buzoM img{
+        height: 1400px;
+    }
+    .buzoH img{
+        height: 1400px;
+    }
+    .cinturonH img{
+        height: 900px;
+    }
+    .cinturonM img{
+        height: 900px;
+    }
+    .jeanH img{
+        height: 1400px;
+    }
+    .jeanM img{
+        height: 1400px;
+    }
+    .jeanM2 img{
+        height: 1400px;
+    }
+    .marcas{
+        left: 100px;
+    }
+    .marcas img{
+        height: 200px;
+    }
+}
 @media(max-width: 426px){
     .carousel-item img{
         height: 200px;
