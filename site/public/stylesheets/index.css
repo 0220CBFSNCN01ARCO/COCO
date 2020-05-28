@@ -225,7 +225,7 @@ aca termina el section
 arrancamos con cada viwepoint
 mobile s
 */
-@media (max-width:2560px) and (min-width:1441px){
+@media (min-width:1441px){
     #principal{
         height: 6100px;
     }
