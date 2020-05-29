@@ -9,7 +9,7 @@
         "quantity":90,
         "size":"M",
         "price":2076.79,
-        "offer":true,
+        "offer":"yes",
         "discount":35,
         "category":"H"
     },
@@ -24,7 +24,7 @@
         "quantity":12,
         "size":"L",
         "price":1425.34,
-        "offer":false,
+        "offer":"not",
         "discount":12,
         "category":"H"
     },
@@ -39,7 +39,7 @@
         "quantity":64,
         "size":"XS",
         "price":1106.62,
-        "offer":false,
+        "offer":"not",
         "discount":70,
         "category":"H"
     },
@@ -54,7 +54,7 @@
         "quantity":80,
         "size":"XL",
         "price":2789.82,
-        "offer":false,
+        "offer":"not",
         "discount":28,
         "category":"H"
     },
@@ -69,7 +69,7 @@
         "quantity":78,
         "size":"2XL",
         "price":4603.21,
-        "offer":true,
+        "offer":"yes",
         "discount":18,
         "category":"H"
     },
@@ -84,7 +84,7 @@
         "quantity":99,
         "size":"S",
         "price":2196.44,
-        "offer":false,
+        "offer":"not",
         "discount":78,
         "category":"H"
     },
@@ -99,7 +99,7 @@
         "quantity":22,
         "size":"L",
         "price":4431.08,
-        "offer":false,
+        "offer":"not",
         "discount":30,
         "category":"H"
     },
@@ -114,7 +114,7 @@
         "quantity":55,
         "size":"Xl",
         "price":3177.58,
-        "offer":true,
+        "offer":"yes",
         "discount":25,
         "category":"H"
     },
@@ -129,7 +129,7 @@
         "quantity":34,
         "size":"S",
         "price":4594.83,
-        "offer":true,
+        "offer":"yes",
         "discount":27,
         "category":"H"
     },
@@ -144,7 +144,7 @@
         "quantity":57,
         "size":"L",
         "price":3838.62,
-        "offer":true,
+        "offer":"yes",
         "discount":43,
         "category":"H"
     },
@@ -159,7 +159,7 @@
         "quantity":73,
         "size":"2XL",
         "price":4762.74,
-        "offer":true,
+        "offer":"yes",
         "discount":49,
         "category":"H"
     },
@@ -174,7 +174,7 @@
         "quantity":71,
         "size":"M",
         "price":2306.58,
-        "offer":false,
+        "offer":"not",
         "discount":23,
         "category":"H"
     },
@@ -189,7 +189,7 @@
         "quantity":15,
         "size":"2XL",
         "price":2583.76,
-        "offer":false,
+        "offer":"not",
         "discount":23,
         "category":"H"
     },
@@ -204,7 +204,7 @@
         "quantity":58,
         "size":"XL",
         "price":4337.12,
-        "offer":false,
+        "offer":"not",
         "discount":48,
         "category":"H"
     },
@@ -219,7 +219,7 @@
         "quantity":73,
         "size":"L",
         "price":4666.47,
-        "offer":false,
+        "offer":"not",
         "discount":20,
         "category":"H"
     },
@@ -234,7 +234,7 @@
         "quantity":1,
         "size":"XS",
         "price":4235.8,
-        "offer":false,
+        "offer":"not",
         "discount":71,
         "category":"M"
     },
@@ -249,7 +249,7 @@
         "quantity":79,
         "size":"2XL",
         "price":4758.94,
-        "offer":true,
+        "offer":"yes",
         "discount":15,
         "category":"M"
     },
@@ -264,7 +264,7 @@
         "quantity":43,
         "size":"XS",
         "price":4854.77,
-        "offer":true,
+        "offer":"yes",
         "discount":13,
         "category":"M"
     },
@@ -279,7 +279,7 @@
         "quantity":85,
         "size":"XL",
         "price":2952.98,
-        "offer":false,
+        "offer":"not",
         "discount":59,
         "category":"M"
     },
@@ -294,7 +294,7 @@
         "quantity":93,
         "size":"S",
         "price":4196.18,
-        "offer":true,
+        "offer":"yes",
         "discount":23,
         "category":"M"
     },
@@ -309,7 +309,7 @@
         "quantity":46,
         "size":"L",
         "price":2754.46,
-        "offer":false,
+        "offer":"not",
         "discount":68,
         "category":"M"
     },
@@ -324,7 +324,7 @@
         "quantity":53,
         "size":"L",
         "price":4529.57,
-        "offer":false,
+        "offer":"not",
         "discount":78,
         "category":"M"
     },
@@ -339,7 +339,7 @@
         "quantity":23,
         "size":"XL",
         "price":3553.72,
-        "offer":false,
+        "offer":"not",
         "discount":20,
         "category":"M"
     },
@@ -354,7 +354,7 @@
         "quantity":79,
         "size":"XL",
         "price":4891.44,
-        "offer":true,
+        "offer":"yes",
         "discount":53,
         "category":"M"
     },
@@ -369,7 +369,7 @@
         "quantity":28,
         "size":"XL",
         "price":2342.05,
-        "offer":true,
+        "offer":"yes",
         "discount":56,
         "category":"M"
     },
@@ -384,7 +384,7 @@
         "quantity":58,
         "size":"L",
         "price":4987.83,
-        "offer":false,
+        "offer":"not",
         "discount":94,
         "category":"M"
     },
@@ -399,7 +399,7 @@
         "quantity":94,
         "size":"M",
         "price":3521.64,
-        "offer":true,
+        "offer":"yes",
         "discount":29,
         "category":"M"
     },
@@ -414,7 +414,7 @@
         "quantity":58,
         "size":"L",
         "price":3597.53,
-        "offer":true,
+        "offer":"yes",
         "discount":50,
         "category":"M"
     },
@@ -429,7 +429,7 @@
         "quantity":26,
         "size":"XL",
         "price":1758.47,
-        "offer":true,
+        "offer":"yes",
         "discount":40,
         "category":"M"
     },
@@ -444,7 +444,7 @@
         "quantity":67,
         "size":"L",
         "price":1573.45,
-        "offer":false,
+        "offer":"not",
         "discount":55,
         "category":"M"
     },
@@ -459,7 +459,7 @@
         "quantity":90,
         "size":"XS",
         "price":4583.67,
-        "offer":true,
+        "offer":"yes",
         "discount":48,
         "category":"M"
     },
@@ -474,7 +474,7 @@
         "quantity":37,
         "size":"M",
         "price":4455.34,
-        "offer":true,
+        "offer":"yes",
         "discount":57,
         "category":"M"
     },
@@ -489,7 +489,7 @@
         "quantity":21,
         "size":"S",
         "price":3699.74,
-        "offer":false,
+        "offer":"not",
         "discount":67,
         "category":"M"
     },
@@ -504,7 +504,7 @@
         "quantity":66,
         "size":"XS",
         "price":1543.4,
-        "offer":false,
+        "offer":"not",
         "discount":78,
         "category":"M"
     },
@@ -519,7 +519,7 @@
         "quantity":74,
         "size":"XL",
         "price":1518.26,
-        "offer":false,
+        "offer":"not",
         "discount":98,
         "category":"M"
     },
@@ -534,7 +534,7 @@
         "quantity":22,
         "size":"S",
         "price":1069.29,
-        "offer":true,
+        "offer":"yes",
         "discount":25,
         "category":"M"
     },
@@ -549,7 +549,7 @@
         "quantity":2,
         "size":"XL",
         "price":4581.87,
-        "offer":true,
+        "offer":"yes",
         "discount":35,
         "category":"M"
     }

@@ -25,7 +25,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/policy', policyRouter);
 app.use('/product', productRouter);
-app.use('/product/:id', productRouter);
+app.use('/product', productRouter);
 
 
 // catch 404 and forward to error handler

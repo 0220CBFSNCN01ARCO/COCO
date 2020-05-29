@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/productList.css">
+    <title>COCO | Product List</title>
+</head>
+    <% include partials\header.ejs %>
+<body>
+    
+    <section class="container-fluid">
+        <div class="row">
+
+            <table class="table table-striped" id="principal">
+                <thead>
+                <tr>
+                    <th scope="col">Options</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Colour</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Offer</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                    <% productsList.forEach(product => { %>
+                        <tr>
+                            <th scope="row">Options</th>
+
+                            <td><%= product.id %></td>
+                            <td><%= product.name %></td>
+                            <td><%= product.brand %></td>
+                            <td><%= product.colour %></td>
+                            <td><%= product.quantity %></td>
+                            <td><%= product.size %></td>
+                            <td>$<%= product.price %></td>
+                            <td><%= product.offer %></td>
+                        </tr>
+
+                    <% }) %>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <% include partials\script.ejs %>
+
+</body>
+    <% include partials\footer.ejs %>
+</html>
