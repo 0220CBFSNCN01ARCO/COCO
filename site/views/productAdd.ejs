@@ -13,104 +13,13 @@
 
           <div class="carga col-sm-12 col-md-12 col-lg-6"> 
             
-            <form action="#" method="POST">
-              <p><label for=""><b>PRODUCT NAME</b></label></p>
-              <textarea name="productname" id="productname" cols="62" rows="2"></textarea>
+            <form action="/product/create" method="POST">
+              <label for="">Nombre</label>
+              <input type="text" name="nombre">
+              <br>
+              <input type="submit" value="enviar">
 
-              <p><label for=""><b>DESCRIPTION</b></label></p>
-              <textarea name="description" id="description" cols="62" rows="5"></textarea>
-
-              <p class="cantidad">PRICE <input id="price" type="number" name="price" min="1" max="100000" step="1"></p>
-
-              
-              <p class="cantidad">QUANTITY <input id="quantity" type="number" name="quantity" min="1" max="1000" step="1"></p>
-
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload Image</span>
-                  </div>
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
-                  </div>
-                </div>
-              
-          
-          </div>
-
-
-
-          <div class="datos col-sm-12 col-md-12 col-lg-6">
-
-              
-
-          
-              <div class="dropdown" id="category">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   CATEGORY
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">CATEGORY 1</a>
-                    <a class="dropdown-item" href="#">CATEGORY 2</a>
-                    <a class="dropdown-item" href="#">CATEGORY 3</a>
-                  </div>
-                </div> 
-
-
-             
-              <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    BRAND
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">COCO</a>
-                    <a class="dropdown-item" href="#">OTHERBRAND</a>
-                    <a class="dropdown-item" href="#">ANOTHERBRAND</a>
-                  </div>
-                </div>
-
-                
-              <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    SIZES
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">S</a>
-                    <a class="dropdown-item" href="#">M</a>
-                    <a class="dropdown-item" href="#">L</a>
-                    <a class="dropdown-item" href="#">XL</a>
-                    <a class="dropdown-item" href="#">XXL</a>
-                  </div>
-                </div>
-
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    COLOR
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">BLACK</a>
-                    <a class="dropdown-item" href="#">WHITE</a>
-                    <a class="dropdown-item" href="#">GREY</a>
-                    <a class="dropdown-item" href="#">RED</a>
-                    <a class="dropdown-item" href="#">YELLOW</a>
-                  </div>
-                </div>
-
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    IN OFFER
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">YES</a>
-                    <a class="dropdown-item" href="#">NO</a>
-                  </div>
-                </div>
-
-                <p class="cantidad">DISCOUNT <input id="discount" type="number" name="quantity" min="1" max="1000" step="1"></p>
-
-              <a href="#"><button type="submit" id="uploadButton" class="btn btn-dark">UPLOAD PRODUCT</button></a>
-
-              </form>
+            </form>
 
               
 

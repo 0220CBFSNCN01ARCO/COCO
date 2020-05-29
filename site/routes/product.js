@@ -4,8 +4,10 @@ const productControllers = require('../controllers/productController.js')
 
 /* GET users listing. */
 
-router.get('/detail', productControllers.detail )
+router.get('/detail/:id', productControllers.detail )
   
-router.get('/add', productControllers.add )
+router.get('/create', productControllers.add )
+
+router.post('/create', productControllers.create)
 
 module.exports = router;
