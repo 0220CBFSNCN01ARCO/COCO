@@ -1,7 +1,27 @@
 #principal{
-    margin-top: 120px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 95px;
     background: #faf6e9;
+    overflow: hidden;
+}
+#bloque{
+    overflow: hidden;
+
+}
+.btn{
+    background-color:#494949 ;
+    border: #494949;
+    width: 100%;
+}
+.btn:hover{
+    background-color: gray;
+}
+#boton-abajo{
+    margin: 20px;
+}
+@media(max-width:425px){
+    #principal{
+        margin-top: 85px;
+        font-size: 10px;
+        
+    }
 }
