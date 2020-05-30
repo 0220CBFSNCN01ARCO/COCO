@@ -17,6 +17,10 @@ body{
 .btn:hover{
     background-color: gray;
 }
+.btn:end{
+    background-color;:#494949    
+}
+
 #menuEdit{
     width: 100%;
     text-align: center;

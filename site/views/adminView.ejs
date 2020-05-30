@@ -59,10 +59,11 @@
             
                     </div>
                     <div class="col-6">
-                        <a href="/" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                            Delete product
+                        <form name=tuformulario method="POST" action="/product/admin/view/delete/<%= ID %>?_method=DELETE">
+                            <button type="button" onclick="pregunta()" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                                Delete product
                             </button>
-                        </a>
+                        </form>
                     </div>
                     <div class="col-3">
             
@@ -88,6 +89,13 @@
     </div>
 
     <% include partials\script.ejs %>
+    <script language="JavaScript">
+        function pregunta(){
+            if (confirm('¿Estas seguro de enviar este formulario?')){
+               document.tuformulario.submit()
+            }
+        }
+    </script>
 </body>
     <% include partials\footer.ejs %>
 </html>

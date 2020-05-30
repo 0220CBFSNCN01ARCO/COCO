@@ -4,14 +4,16 @@ const productControllers = require('../controllers/productController.js')
 
 /* GET users listing. */
 
-router.get('/detail/:id', productControllers.detail )
+router.get('/detail/:id', productControllers.detail );
   
-router.get('/create', productControllers.add )
+router.get('/create', productControllers.add );
 
-router.post('/create', productControllers.create)
+router.post('/create', productControllers.create);
 
-router.get('/admin/view/:id', productControllers.view)
+router.get('/admin/view/:id', productControllers.view);
     
-router.get('/', productControllers.productList)
+router.get('/', productControllers.productList);
+
+router.delete("/admin/view/delete/:id", productControllers.delete)
 
 module.exports = router;
