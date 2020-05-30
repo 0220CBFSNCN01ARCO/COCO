@@ -7,65 +7,40 @@
 </head> 
 <body >
     <% include partials\header.ejs %> 
-<section class="container-fluid" id="cuerpo">
-  <div class="row">
-     
-       <div class="col-5 col-md-7 col-lg-7" id="images">
-        
-            <a href="#"><img src="/images/Indumentaria/Mujer/remeras/RemeraMiniCadenaLino/gris/RemeraMiniCadenaLinoGris1.png" alt="Remera" id="remera1"></a>
-            <a href="#"><img src="/images/Indumentaria/Mujer/remeras/RemeraMiniCadenaLino/gris/RemeraMiniCadenaLinoGris2.png" alt="Remera" id="remera2"></a>
-            <a href="#"><img src="/images/Indumentaria/Mujer/remeras/RemeraMiniCadenaLino/gris/RemeraMiniCadenaLinoGris3.png" alt="Remera" id="remera3"></a>
-      
-   
+
+    <section class="container-fluid" id="cuerpo">
+      <div class="row">
+        <div class="col-6">
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="/images/Indumentaria/<%= productID.image %>" alt="First slide">
+              </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+        <div class="col-6">
+
+
+        </div>
+      </div>
+
+    </section>
        
-       </div>
-        <div class="col-7 col-md-5 col-lg-5" id="selection">
-            
-            
-                    <p class="nombreProducto"><b>T-SHIRT LINEN</b></p>
-            
-                
-                
-                    <p class="selection-color"><label for=""><b>COLOR:</b></label></p>
-                    <p> <input type = "radio" name="color" value="gris"> <b>Grey</b> 
-                        <input type = "radio" name="color" value="negro"> <b>Black</b>
-                        <input type = "radio" name="color" value="negro"> <b>White</b> </p>
-                    
-    
-                  
-                    <p class="talle"><label for=""><b>SIZE:</b></label></p>
-                    <p> <input type = "radio" name="talle" value="S"> <b>S</b> 
-                        <input type = "radio" name="talle" value="M"> <b>M</b>
-                        <input type = "radio" name="talle" value="L"> <b>L</b>
-                        <input type = "radio" name="talle" value="XL"> <b>XL</b> 
-                        <input type = "radio" name="talle" value="XXL"> <b>XXL</b></p>
-            
-                            
-                     
-                    <a href="#" class="tabla-talles"><b>SIZE GUIDE</b></a>
-               
-                
-               
-                    <p class="description"><b>DESCRIPTION</b></p>
-                            <ul type="bullet">
-                                <li>FABRIC: Linen</li>
-                                <li>DITAILS: Beautiful silk thread details</li>
-                                <li>FIT: Loose and comfy!</li>
-                            </ul>
-                     
-    
                    
-                        
-                    <p class="precio"><b>ON SALE! ONLY $14,99 usd</b></p>
-    
-        
-                    <a href="#"><button type="button" class="btn btn-dark">ADD TO BAG</button></a>
-                 
-                       
-               
-            </div>
-                   
-  </div>
+  
 </section>
 <% include partials\script.ejs %> 
 </body>
