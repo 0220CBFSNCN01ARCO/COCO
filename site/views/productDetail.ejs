@@ -10,38 +10,66 @@
 
     <section class="container-fluid" id="cuerpo">
       <div class="row">
-        <div class="col-6">
 
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="/images/Indumentaria/<%= productID.image %>" alt="First slide">
+          <div class="col-6">
+
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="/images/Indumentaria/<%= productID.image %>" alt="First slide">
+                    </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
               </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+
+            </div>
           </div>
 
-        </div>
-        <div class="col-6">
+          <div class="col-6" id="detalle">
+            
+            <ul >
+              <% let valor = Math.trunc(((productID.price * productID.discount) / 100)) %>
+
+                <li><h3><b><%= productID.name %></b></h3></li>
+                <li><b>Description:</b> <%= productID.description %></li>
+                <li><b>Brand:</b> <%= productID.brand %></li>
+                <li><b>Colour:</b> <%= productID.colour %></li>
+                <li><b>Quantity Available:</b> <%= productID.quantity %></li>
+                <li><b>Size:</b> <%= productID.size %></li>
+
+                <% if(productID.offer === "yes"){ %>
+                <li><b>Price:</b> $<%= productID.price - valor %></li>
+                <% } else{ %>
+                  <li><b>Price:</b> $<%= productID.price %></li>
+                <% } %>
 
 
-        </div>
+                <% if(productID.offer === "yes"){ %>
+                  <li><b>Discount applied:</b> $<%= valor %></li>
+                <% } %>
+                <a href="/users/bag" >
+                  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                  Buy
+                  </button>
+                </a>
+            </ul>
+          </div>
+      </div>
       </div>
 
     </section>
        
                    
   
-</section>
 <% include partials\script.ejs %> 
 </body>
 <% include partials\footer.ejs %> 

@@ -3,13 +3,47 @@
 aca termina el header
 ----------------------------------------------------------------------------------------------
 */
+body{
+    background-color: #faf6e9;
+    font-family: "Montserrat";
+}
 #cuerpo{
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-bottom: 30px;
+    
+}
+.carousel{
+    overflow: hidden;
+    height: 700px;
+}
+#detalle{
+    margin-top: 30px;
+}
+#detalle ul{
+    list-style: none;
+}
+
+#detalle li{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#detalle li h3{
+    text-align: center;
     margin-bottom: 30px;
 }
-.carousel-item{
-    overflow: hidden;
+.btn{
+    margin-top: 40px;
+    width: 100%;
+    background-color:#494949 ;
+    border: #494949;
+    height: 50px;
 }
+.btn:hover{
+    background-color: gray;
+}
+
 
 
 
