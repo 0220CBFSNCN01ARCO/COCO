@@ -1,3 +1,7 @@
+body{
+    background: #faf6e9;
+}
+
 #principal{
     margin-top: 95px;
     background: #faf6e9;
@@ -5,6 +9,7 @@
 }
 #bloque{
     overflow: hidden;
+    background: #faf6e9;
 
 }
 .btn{
@@ -16,7 +21,15 @@
     background-color: gray;
 }
 #boton-abajo{
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
+}
+tbody tr th a img{
+    mix-blend-mode:multiply;
+    height: 30px;
+    margin: auto;
+    display: block;
 }
 @media(max-width:425px){
     #principal{

@@ -19,6 +19,14 @@ let productController = {
         //console.log(products) para ver el listado
 
         res.render("productList", { productsList: products });
+    },
+    "view": function(req,res,next){
+        const id = req.params.id;
+        const productID = products.find( products => {
+            return products.id == id;
+        });
+        res.render("adminView", { productID: productID});
+        
     }
 };
 

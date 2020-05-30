@@ -14,7 +14,7 @@
                 <table class="table table-striped" id="principal">
                     <thead>
                     <tr>
-                        <th scope="col">Options</th>
+                        <th scope="col"></th>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Brand</th>
@@ -29,7 +29,7 @@
 
                         <% productsList.forEach(product => { %>
                             <tr>
-                                <th scope="row">Options</th>
+                                <th scope="row"><a href="/product/admin/view/<%= product.id %>"><img src= "/images/iconos/archivo.jpg"></a></th>
 
                                 <td><%= product.id %></td>
                                 <td><%= product.name %></td>
