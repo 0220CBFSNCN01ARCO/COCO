@@ -131,7 +131,7 @@ aca termina el section
         font-size: 10px;
     }
 
-
+}
 
    
 @media(max-width: 768px) and (min-width:426px){
@@ -164,5 +164,6 @@ aca termina el section
     #selection {
         left: 500px;
     }
+}
 
 

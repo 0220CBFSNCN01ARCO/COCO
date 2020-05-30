@@ -26,7 +26,7 @@ let productController = {
             return products.id == id;
         });
         res.render("adminView", { productID: productID});
-        
+        console.log(id)
     }
 };
 

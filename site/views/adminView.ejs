@@ -2,13 +2,90 @@
 <html lang="en">
 <head>
     <% include partials\head.ejs %>
-    <link rel="stylesheet" href="/stylesheets/Policy.css">
+    <link rel="stylesheet" href="/stylesheets/adminView.css">
     <title>COCO | Options</title>
 </head>
 <body>
     <% include partials\header.ejs %>
-
-    <% console.log(productID) %>
+    <div id="cuerpo">
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6" id="menuEdit">
+                        <b>Menu</b>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            View Product
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Edit product
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Delete product
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/product" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Cancel
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+    </div>
 
     <% include partials\script.ejs %>
 </body>
