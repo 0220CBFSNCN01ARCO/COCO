@@ -18,8 +18,29 @@ let productController = {
         res.render("productAdd");
     },
 
-    "create": function(req,res){
-        res.send("funciona")
+    "create": function(req,res,next){
+        let cont = products.length;
+        let ID = cont + 1;
+
+        let prod = {
+            id: ID,
+            name: req.body.name,
+            description: req.body.description,
+            image: req.files[0].filename,
+            brand: req.body.brand,
+            colour: req.body.colour,
+            quantity: req.body.quantity,
+            size: req.body.size,
+            price: req.body.price,
+            offer: req.body.offer,
+            discount: req.body.discount,
+            category: req.body.category,
+        }
+        products.push(prod);
+        fs.writeFileSync('data/products.json', JSON.stringify(products));
+
+        res.redirect("/product")
+        
     },
 
     "productList": function(req,res){

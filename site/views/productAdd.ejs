@@ -13,56 +13,56 @@
 
           <div class="col-12"> 
             
-            <form action="/product/create" method="POST">
+            <form action="/product/create" method="POST" enctype="multipart/form-data">
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputEmail4">Name</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="enter name">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="enter name">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputPassword4">Brand</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="enter brand">
+                    <label for="">Brand</label>
+                    <input type="text" class="form-control" name="brand" placeholder="enter brand">
                   </div>
                   
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Description</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="enter description">
+                  <label for="">Description</label>
+                  <input type="text" class="form-control" name="description" placeholder="enter description">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputCity">Colour</label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="enter colour">
+                    <label for="">Colour</label>
+                    <input type="text" class="form-control" name="colour" placeholder="enter colour">
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="inputState">Offer</label>
-                    <select id="inputState" class="form-control">
+                    <label for="">Offer</label>
+                    <select id="inputState" class="form-control" name="offer">
                       <option selected>not</option>
                       <option>yes</option>
                     </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="inputZip">Discount</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="enter percentage number">
+                    <label for="">Discount</label>
+                    <input type="number" class="form-control" name="discount" placeholder="enter percentage number">
                   </div>
                   
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-3">
-                    <label for="inputEmail4">Quantity</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="enter number">
+                    <label for="">Quantity</label>
+                    <input type="number" class="form-control" name="quantity" placeholder="enter number">
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="inputState">Category</label>
-                    <select id="inputState" class="form-control">
+                    <label for="">Category</label>
+                    <select id="inputState" class="form-control" name="category">
                       <option selected>H</option>
                       <option>M</option>
                     </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="inputState">Size</label>
-                    <select id="inputState" class="form-control">
+                    <label for="">Size</label>
+                    <select id="inputState" class="form-control" name="Size">
                       <option selected>XS</option>
                       <option>S</option>
                       <option>M</option>
@@ -73,13 +73,13 @@
                     </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="inputZip">Price</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="enter price">
+                    <label for="">Price</label>
+                    <input type="number" class="form-control" name="price" placeholder="enter price">
                   </div>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
+                  <label form="">Image</label>
+                  <input type="file" name="image">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">

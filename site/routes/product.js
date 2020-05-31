@@ -1,14 +1,26 @@
 var express = require('express');
 var router = express.Router();
 const productControllers = require('../controllers/productController.js')
+const multer = require('multer');
+const path = require("path")
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/images/indumentaria');
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now()  + path.extname(file.originalname));
+    }
+  });
+
+const upload = multer({ storage: storage });
 /* GET users listing. */
 
 router.get('/detail/:id', productControllers.detail );
   
 router.get('/create', productControllers.add );
 
-router.post('/create', productControllers.create);
+router.post('/create', upload.any(), productControllers.create);
 
 router.get('/admin/view/:id', productControllers.view);
     
