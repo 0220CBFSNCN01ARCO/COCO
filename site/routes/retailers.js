@@ -6,6 +6,7 @@ const moreinformationController = require('../controllers/moreinformationControl
 
 /* GET home page. */
   router.get('/', moreinformationController.retailers);
+  router.get('/story', moreinformationController.story);
 
   
 

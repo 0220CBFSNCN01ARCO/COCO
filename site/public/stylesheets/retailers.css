@@ -1,0 +1,13 @@
+.cuerpo{
+    height: 1350px;
+    padding-left: 100px ;
+    padding-right: 100px;
+    padding-top: 100px;
+    background: #faf6e9;
+    font-family: "Montserrat";
+    opacity: 1;
+}
+
+.titulo{
+    text-align: center;
+}

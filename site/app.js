@@ -11,6 +11,7 @@ var policyRouter = require('./routes/policy');
 var productRouter = require('./routes/product');
 var retailersRouter = require('./routes/retailers');
 
+
 var app = express();
 
 // view engine setup
@@ -29,6 +30,7 @@ app.use('/users', usersRouter);
 app.use('/policy', policyRouter);
 app.use('/product', productRouter);
 app.use('/retailers', retailersRouter);
+
 
 
 // catch 404 and forward to error handler
