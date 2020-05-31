@@ -8,18 +8,94 @@
 <body>
     <% include partials\header.ejs %> 
        
-    <section class="container" id="cuerpo">
+    <section class="container-fluid" id="cuerpo">
       <div class="row">
 
-          <div class="carga col-sm-12 col-md-12 col-lg-6"> 
+          <div class="col-12"> 
             
             <form action="/product/create" method="POST">
-              <label for="">Nombre</label>
-              <input type="text" name="nombre">
-              <br>
-              <input type="submit" value="enviar">
 
-            </form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Name</label>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="enter name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Brand</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="enter brand">
+                  </div>
+                  
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Description</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="enter description">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">Colour</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="enter colour">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputState">Offer</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>not</option>
+                      <option>yes</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputZip">Discount</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="enter percentage number">
+                  </div>
+                  
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="inputEmail4">Quantity</label>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="enter number">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputState">Category</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>H</option>
+                      <option>M</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputState">Size</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>2XL</option>
+                      <option>3XL</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputZip">Price</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="enter price">
+                  </div>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                  <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+                <div class="form-group col-md-6">
+                  <a href="/product" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                    Cancel
+                    </button>
+                </a>
+                </div>
+
+                </div>
+                
+                
+              </form>
 
               
 
