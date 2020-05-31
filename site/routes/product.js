@@ -28,7 +28,7 @@ router.get('/', productControllers.productList);
 
 router.get('/:id', productControllers.productEdit);
 
-router.put("/:id", productControllers.Edit)
+router.put("/:id", upload.any(), productControllers.Edit)
 
 router.delete("/admin/view/delete/:id", productControllers.delete)
 

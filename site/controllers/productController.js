@@ -34,14 +34,18 @@ let productController = {
             price: req.body.price,
             offer: req.body.offer,
             discount: req.body.discount,
-            category: req.body.category,
+            category: req.body.category
         }
+
+        
+        
         products.push(prod);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
 
         res.redirect("/product")
         
     },
+    
     "productEdit": function(req,res){
         const id = req.params.id;
         const productToEdit = products.find( products => {
@@ -50,8 +54,29 @@ let productController = {
         res.render("productEdit", { productToEdit: productToEdit, ID:id})
     },
 
-    "Edit": function(req,res){
-        res.send("Funcioona")
+    "Edit": function(req,res,next){
+        const productId = req.params.id;
+
+        products.map(product => {
+            if(product.id ==  productId){
+                product.name = req.body.name;
+                product.description = req.body.description;
+                product.brand = req.body.brand,
+                product.colour = req.body.colour,
+                product.quantity = req.body.quantity,
+                product.size = req.body.size,
+                product.price = req.body.price,
+                product.offer = req.body.offer,
+                product.discount = req.body.discount,
+                product.category = req.body.category
+        
+        }
+    })
+        fs.writeFileSync('data/products.json', JSON.stringify(products));
+        res.redirect("/product")
+
+
+    
     },
 
 
