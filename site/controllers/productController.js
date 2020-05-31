@@ -42,9 +42,20 @@ let productController = {
         res.redirect("/product")
         
     },
+    "productEdit": function(req,res){
+        const id = req.params.id;
+        const productToEdit = products.find( products => {
+            return products.id == id;
+        });
+        res.render("productEdit", { productToEdit: productToEdit, ID:id})
+    },
+
+    "Edit": function(req,res){
+        res.send("Funcioona")
+    },
+
 
     "productList": function(req,res){
-        //console.log(products) para ver el listado
 
         res.render("productList", { productsList: products });
     },

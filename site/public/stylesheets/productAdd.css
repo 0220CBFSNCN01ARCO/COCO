@@ -18,3 +18,7 @@ body{
 .btn:hover{
     background-color: gray;
 }
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}

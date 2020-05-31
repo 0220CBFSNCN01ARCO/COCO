@@ -26,6 +26,10 @@ router.get('/admin/view/:id', productControllers.view);
     
 router.get('/', productControllers.productList);
 
+router.get('/:id', productControllers.productEdit);
+
+router.put("/:id", productControllers.Edit)
+
 router.delete("/admin/view/delete/:id", productControllers.delete)
 
 module.exports = router;
