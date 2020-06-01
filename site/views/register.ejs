@@ -8,33 +8,83 @@
 </head> 
 <body >
     <% include partials\header.ejs %> 
-    <section id="cuerpo">
-        <div class="row">
-        <div class="col-12">
-
-            <p class="registro"><b>Register</b></p>
-            <p class="parrafo"><b>Please fill in the information below:</b></p><br>
-            <input class="name" type="text" placeholder="First name" name="uname" required><br>
-        
-            
-            <input class="last" type="password" placeholder="Last name" name="psw" required><br>
-            <input class="mail" type="text" placeholder="Email" name="uname" required><br>
-        
-            
-            <input class="passw" type="password" placeholder="Password" name="psw" required><br>
-            <br>
-            
-            <button class="boton2" type="submit"><b>Create my account</b></button><br>
-            <label>
-             
-
-
-        </div>
-
+    <section class="container" id="cuerpo">
+    <h2 id="titulo">Register</h2>
+    <form class="needs-validation" novalidate method="POST" enctype="multipart/form-data">
+        <div class="form-row" id="primeraColumna">
+          <div class="col-6">
+            <label for="validationCustom01">First name</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Enter your first name" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
           </div>
-            
-      
+          <div class="col-6">
+            <label for="validationCustom02">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Enter your last name" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <label for="validationCustom03">Email</label>
+            <input type="email" class="form-control" id="validationCustom03" placeholder="Enter your email addres" required>
+            <div class="invalid-feedback">
+              Please provide a valid email.
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="validationCustom04">Password</label>
+            <input type="password" class="form-control" id="validationCustom04" placeholder="Enter Password" required>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+        </div>
+        <div class="custom-file">
+            <label form="">Avatar</label>
+            <input type="file" name="image">
+          </div>
+        <div class="form-group" id="confirmacion">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+                <a id="terminos" href="/policy/Terms">
+                    Agree to terms and conditions
+                </a>
+            </label>
+                
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Confirm</button>
+      </form>
     </section>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
 
 
     <% include partials\script.ejs %> 
