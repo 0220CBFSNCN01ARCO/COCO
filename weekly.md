@@ -50,3 +50,22 @@ ATRIBUTOS PARA USUARIO
 * Imagen: image → MULTER
 * Categoría: category → si es admin o no
 **Carpeta data con archivo users.json**
+
+# Weekly 27/05
+Revisamos controllers y métodos http y modificamos en equipo. Repartimos tareas restantes.
+
+## Crear vistas faltantes
+
+Acordamos crear vistas faltantes. RESPONSABLES: Natalia, Belén y Franco
+
+## Creamos métodos solicitados en sprint actual
+
+Revisamos la bibliografía del curso y creamos algunos métodos en equipo.
+
+## Revisamos tareas futuras
+
+Enumeramos tareas futuras. Se definirán detalles en los próximos días.
+
+## Crear JSONS
+
+Responsable: Franco
