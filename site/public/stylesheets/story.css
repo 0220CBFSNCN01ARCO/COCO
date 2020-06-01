@@ -1,14 +1,39 @@
 
-
-
-.seccion{
-    background-color: #faf6e9;
+#cuerpo{
+  
     overflow: hidden;
     box-sizing: border-box;
-    
-    top:80px;
-    height: 1000px;
-   
+    padding-top:150px;
+    height: 1280px;
+    width: 100%; 
+    font-family: "Montserrat";  
 }
+
+body {
+    background: #faf6e9;
+}
+
+
+.story{
+font-family: "Montserrat";
+text-align: center;
+background-color:#ece8d9;
+
+}
+
+#carusel img{
+ width: 100%;
+
+}
+
+
+#texto{
+    background-color:#ece8d9;
+    padding: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
 
 
