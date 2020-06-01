@@ -1,0 +1,34 @@
+#cuerpo{
+    background-color: #faf6e9;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top:150px;
+    height: 800px;
+    width: 100%;   
+}
+
+body {
+    background: #faf6e9;
+}
+
+
+
+.container p {
+    font-family: "Montserrat";
+    font-size: 18px;
+    color:#494949;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+
+#delivery p b {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#return p b {
+    font-size: 20px;
+    text-decoration: underline;
+}
+

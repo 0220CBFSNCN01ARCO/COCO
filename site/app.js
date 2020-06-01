@@ -10,6 +10,8 @@ var usersRouter = require('./routes/users');
 var policyRouter = require('./routes/policy');
 var productRouter = require('./routes/product');
 var retailersRouter = require('./routes/retailers');
+var contactRouter = require('./routes/contact');
+
 
 
 var app = express();
@@ -30,6 +32,7 @@ app.use('/users', usersRouter);
 app.use('/policy', policyRouter);
 app.use('/product', productRouter);
 app.use('/retailers', retailersRouter);
+app.use('/contact', contactRouter);
 
 
 

@@ -4,7 +4,11 @@ let moreinformationController = {
     } ,
     "story" : function(req,res){
         res.render("story");
-    } 
+    }, 
+    "delivery" : function(req,res){
+        res.render("delivery");
+    },
+
 };
 
 
