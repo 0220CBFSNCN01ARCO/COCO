@@ -3,6 +3,7 @@ var router = express.Router();
 const usersController = require('../controllers/usersController.js')
 const multer = require('multer');
 const path = require("path")
+const { check , validationResult , body } = require("express-validator")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -13,12 +14,20 @@ const storage = multer.diskStorage({
     }
   });
 
+const upload = multer({ storage: storage });
+
 /* GET users listing. */
 router.get('/', usersController.login);
 
 router.get('/register', usersController.register);
 
-//router.post('/register',upload.any() , usersController.Sendregister);
+router.post('/register', upload.any(), [
+    check("Firs_name").isString(),
+    check("Last_name").isString(),
+    check("Email").isEmail(),
+    check("Password").isLength({min: 6}),
+    check("password repeat").isLength()
+], usersController.create);
 
 router.get('/bag', usersController.bag);
 
