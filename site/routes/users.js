@@ -22,10 +22,10 @@ router.get('/', usersController.login);
 router.get('/register', usersController.register);
 
 router.post('/register', upload.any(), [
-    check("Firs_name").isString(),
-    check("Last_name").isString(),
+    check("Firs_name").isLength(),
+    check("Last_name").isLength(),
     check("Email").isEmail(),
-    check("Password").isLength({min: 6}),
+    check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
     check("password repeat").isLength()
 ], usersController.create);
 
