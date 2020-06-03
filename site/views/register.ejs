@@ -11,19 +11,20 @@
     <% include partials\header.ejs %> 
 
     <section class="container" id="cuerpo">
-        <div id="error">
-            <% if (typeof errors != "undefined") { %>  
-                <ul>
-                    
-                    <% for (let i = 0 ; i < errors.length ; i++) { %>
-                        <li>
-                            <%= errors[i].msg %>
-                        </li>
-                    <% } %>
-                </ul>
-            <% } %>
-        </div>
+
     <h2 id="titulo">Register</h2>
+    <div id="error">
+        <% if (typeof errors != "undefined") { %>  
+            <ul>
+                
+                <% for (let i = 0 ; i < errors.length ; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
     <form class="needs-validation" novalidate action="/users/register" method="POST" enctype="multipart/form-data">
         <div class="form-row" id="primeraColumna">
           <div class="col-6">
@@ -58,7 +59,7 @@
           </div> 
           <div class="col-3">
             <label for="validationCustom05">Confirm password</label>
-            <input type="password" class="form-control" id="validationCustom05" name="password repeat" placeholder="Enter Password" required>
+            <input type="password" class="form-control" id="validationCustom05" name="passwordRepeat" placeholder="Enter Password" required>
             <div class="invalid-feedback">
             Please enter your password.
             </div>

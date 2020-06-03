@@ -47,7 +47,14 @@ router.post('/register', upload.any(), [
 
     }).withMessage("The email is already in use"),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
-    check("password repeat").isLength()
+    check("Password").custom(function(value,{req, loc ,path}){
+        if (value != req.body.passwordRepeat){
+            return false
+        }else{
+            return true
+        }
+    }).withMessage("Passwords entered are not the same"),
+    check("passwordRepeat").isLength({min: 6})
 ], usersController.create);
 
 router.get('/bag', usersController.bag);

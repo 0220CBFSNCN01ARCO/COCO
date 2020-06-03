@@ -19,7 +19,7 @@ let usersController = {
     },
     "create" : function(req,res,next){
         let errors = validationResult(req);
-        console.log(errors)
+        
         if (errors.isEmpty()){
             let newUser = {
                 firs_name : req.body.Firs_name,
