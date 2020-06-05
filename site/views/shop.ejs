@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/shop.css">
+    <title>COCO | edit product</title>
+</head>
+<% include partials\header.ejs %> 
+<body>
+    
+       
+    <section class="container-fluid" id="cuerpo">
+      <div class="row">
+          
+        <% productsList.forEach(product => { %>
+
+          <article class="col-3" id="fotulis"> 
+            <div class="photo-container">
+              <a href="/product/detail/<%= product.id %>"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
+            
+            </div>
+            <div id="datos">
+              <h5><%= product.name %></h5>
+              <p>$<%= product.price %></p>
+            </div>
+          </article>
+
+        <% }) %>
+      </div>
+      
+  </section>
+    <% include partials\script.ejs %> 
+</body>
+<% include partials\footer.ejs %> 
+</html>

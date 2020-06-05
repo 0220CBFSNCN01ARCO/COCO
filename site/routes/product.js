@@ -32,4 +32,6 @@ router.put("/:id", upload.any(), productControllers.Edit)
 
 router.delete("/admin/view/delete/:id", productControllers.delete)
 
+router.get('/view/shop', productControllers.shop)
+
 module.exports = router;

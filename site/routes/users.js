@@ -20,6 +20,11 @@ const upload = multer({ storage: storage });
 /* GET users listing. */
 router.get('/', usersController.login);
 
+router.post('/',[
+    check("email").isEmail().withMessage("te olvidaste el @ capo"),
+    check("password").isLength({min : 6}).withMessage("contraseña corta perro")
+] ,usersController.processLogin);
+
 router.get('/register', usersController.register);
 
 router.post('/register', upload.any(), [

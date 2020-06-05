@@ -5,23 +5,36 @@
     <link rel="stylesheet" href="/stylesheets/login.css">
     <title>COCO | Login </title>
 </head> 
-<body >
-    <% include partials\header.ejs %> 
-    <section id="cuerpo">
-        <div class="row">
-            <div class="col-12" id="Carrito">
-
-                    <p class="login"><b>Login</b></p>
-                    <p class="parrafo"><b>Please enter you e-mail and password:</b></p><br>
-                    <input class="usuario" type="text" placeholder="Email" name="uname" required><br>
-                    <input class="pass" type="password" placeholder="Password" name="psw" required><br>
-                    <a href="#" class="olvido">Forgot password?</a>
-                    <br>
-                    <button class="boton" type="submit"><b>Login</b></button><br>
-                    <br>
-                    <a href="/users/register" class="cuenta">Don't have an account? Create one</a>       
+<% include partials\header.ejs %> 
+<body id="cuerpo">
+    
+    <section class="container">
+        <div id="error">
+            <% if (typeof errors != "undefined") { %>  
+                <ul>
+                    
+                    <% for (let i = 0 ; i < errors.length ; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+        <div >
+        <form action="/users" method="POST">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-        </div>  
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit"></input>
+          </form>
+        </div>
     </section>
     <% include partials\script.ejs %> 
       

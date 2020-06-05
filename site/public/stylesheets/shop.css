@@ -1,0 +1,21 @@
+#cuerpo{
+    text-align: center;
+    padding-top: 100px;
+    background-color: #faf6e9;
+}
+#fotulis{
+    overflow: hidden;
+    
+}
+.photo-container img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+}
+#datos{
+    background-color: red;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}

@@ -105,9 +105,11 @@ let productController = {
         fs.writeFileSync(productsPath, newProductList);
 
         res.redirect("/product")
-    }       
+    },
+    "shop": function(req,res){
         
-    
+        res.render("shop" , { productsList: products });
+    }    
 };
 
 module.exports = productController;

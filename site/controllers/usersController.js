@@ -11,6 +11,39 @@ let usersController = {
     "login" : function(req,res){
         res.render('login');
     },
+    "processLogin" : function(req,res,next){
+        let errors = validationResult(req);
+        
+        if (errors.isEmpty()) {
+            //Validamos que dentro del JSON se encuentren usuarios de no ser asi crea un array nuevo
+            let users;
+            if (usersList == ""){
+                users = [];  
+            }else{
+                users = usersList
+            }
+
+            //buscamos el usuario que esta intentando loguearse
+            for (let i = 0 ; i < users.length; i++){
+                if (users[i].email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, users[i].password)){
+                        let usuarioAloguearse = users[i];
+                        res.send(usuarioAloguearse)
+                        break;
+                    }
+                }
+            }
+
+            if (typeof(usuarioAloguearse) == "undefined"){
+                return res.render("login", {errors : [
+                    {msg: "no pasas capo"}
+                ]})
+            }
+            
+        }else{
+            return res.render("login", { errors : errors.errors}) ;
+        }
+    },
     "register" : function(req,res){
         res.render('register');
     } ,
