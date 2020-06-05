@@ -1,21 +1,39 @@
+body{
+    background-color: #faf6e9;
+    font-family: "Montserrat";
+}
+
 #cuerpo{
     text-align: center;
     padding-top: 100px;
-    background-color: #faf6e9;
 }
 #fotulis{
     overflow: hidden;
+    margin-top: 20px;
+    
     
 }
-.photo-container img{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
+#picture{
+    overflow: hidden;
+    
+    
 }
-#datos{
-    background-color: red;
+#fotulis:hover{
+    opacity: 0.7;
+}
+.photo-container img{
+    border-radius: 5px;
     width: 100%;
-    border-bottom-left-radius: 15px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+
+}
+
+#datos{
+    width: 100%;
+    margin: auto;
     border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
     
 }

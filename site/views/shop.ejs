@@ -9,19 +9,20 @@
 <body>
     
        
-    <section class="container-fluid" id="cuerpo">
+    <section class="container" id="cuerpo">
       <div class="row">
           
         <% productsList.forEach(product => { %>
 
           <article class="col-3" id="fotulis"> 
             <div class="photo-container">
-              <a href="/product/detail/<%= product.id %>"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
+              <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
             
             </div>
             <div id="datos">
+              <br>
               <h5><%= product.name %></h5>
-              <p>$<%= product.price %></p>
+              <p><b>$<%= product.price %></b></p>
             </div>
           </article>
 
