@@ -1,9 +1,7 @@
 #cuerpo{
     background-color: #faf6e9;
     overflow: hidden;
-    box-sizing: border-box;
-    padding-top:150px;
-    height: 1000px;
+    padding-top:120px;
     width: 100%;   
 }
 
@@ -15,12 +13,16 @@ body {
     width: 100%;
     
 }
-
+.container{
+    margin-bottom: 20px;
+    width: 100%;
+}
 .container p {
     font-family: "Montserrat";
     font-size: 18px;
     color:#494949;
     font-weight: bolder;
+    
 }
 
 #store {
