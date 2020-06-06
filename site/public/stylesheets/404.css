@@ -19,4 +19,13 @@
 body{
     font-family: "Montserrat";
 }
+#access{
+    margin-top: 250px;
+    text-align: center;
+}
+#styleAccount{
+    color: black;
+    font-style: italic;
+   
+}
 

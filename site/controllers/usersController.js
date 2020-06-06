@@ -32,7 +32,7 @@ let usersController = {
                         let usuarioAloguearse = users[i];
 
                         req.session.usurioLogueado = usuarioAloguearse
-                        res.send("exito")
+                        res.redirect("/")
 
                         break;
                     }
