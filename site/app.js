@@ -27,7 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
-app.use(session({secret: "Es secreto perri"}));
+app.use(session({secret: "Es secreto perri", resave: true,
+saveUninitialized: true}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

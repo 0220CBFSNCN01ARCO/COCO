@@ -77,7 +77,12 @@ let usersController = {
         }else{
             return res.render("register", { errors : errors.errors})
         }
-    }
+    },
+
+    profile: function(req,res){
+        res.render('profile');
+
+    },
 
 };
 

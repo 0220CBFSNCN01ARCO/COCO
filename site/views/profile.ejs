@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <title>COCO | Delivery and returns </title>
+</head> 
+<body >
+    <% include partials\header.ejs %> 
+
+    <section class="container" id="cuerpo">
+
+        <div class="row">
+        
+        <div class="card col-3" style="width: 18rem;">
+            <img src="/images/profile.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 id="title" class="card-title">First_and_last_Name</h5>
+            </div>
+            <ul id= "mail" class="list-group list-group-flush">
+              <li class="list-group-item">Email</li>
+            </ul>
+            <div id="edit" class="card-body">
+              <a href="#" class="card-link">Edit profile</a>
+            </div>
+          </div>
+
+          <div id= "right" class="col-9">
+
+            <p id="say"> Hello, First_and_last_Name!</p>
+
+            <div class="row">
+                <div class="col-sm-6" id="tar1">
+                  <div class="card">
+                    <div class="card-body" class="bd">
+                      <h5 class="card-title">Last orders</h5>
+                      <p id="t1" class="card-text">Here's all your order's information.</p>
+                      <a href="#" class="btn btn-primary">Check it out!</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6"  id="tar2">
+                  <div class="card">
+                    <div class="card-body" class="bd">
+                      <h5 class="card-title">Your coupons</h5>
+                      <p id="t2" class="card-text">We've got special offers for you!</p>
+                      <a href="#" class="btn btn-primary">Wanna see it!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6" id="tar3">
+                  <div class="card">
+                    <div class="card-body" class="bd">
+                      <h5 class="card-title">Customized shopping</h5>
+                      <p id="t3" class="card-text">Need help to decide? </p>
+                      <a href="#" class="btn btn-primary">Yes, please! </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" id="tar4">
+                  <div class="card">
+                    <div class="card-body" class="bd">
+                      <h5 class="card-title">Your closer store</h5>
+                      <p id="t4" class="card-text">Check here how close we are.</p>
+                      <a href="#" class="btn btn-primary">Ok!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+           
+        
+    </section>
+   
+    <% include partials\script.ejs %> 
+      
+</body>
+    <% include partials\footer.ejs %> 
+</html>

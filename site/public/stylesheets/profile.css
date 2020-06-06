@@ -1,0 +1,106 @@
+
+#cuerpo{
+    background-color: #faf6e9;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 150px;
+    height: 700px;
+    width: 100%;  
+}
+
+body {
+    background: #faf6e9;
+}
+
+
+
+.container p {
+    font-family: "Montserrat";
+    font-size: 15px;
+    color:#494949;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+#title {
+    font-family: "Montserrat";
+}
+
+#mail {
+    font-family: "Montserrat";
+}
+#edit {
+    font-family: "Montserrat";
+    color:#494949;
+}
+
+.btn {
+    font-family: "Montserrat";
+    width: 45%;
+    background-color:  #494949;
+    border-color:  #494949;
+
+}
+
+h5 {
+    font-family: "Montserrat";
+}
+
+#right {
+    background-color: #ece8d9;
+    height: 500px;
+    padding: 20px;
+}
+
+.card-body {
+    background-color:  #faf6e9;
+    
+
+}
+
+#say {
+    font-family: "Montserrat";
+    font-size: 45px;
+}
+
+
+#t1 {
+    text-align: center;
+}
+#t2 {
+    text-align: center;
+}
+#t3 {
+    text-align: center;
+}
+#t4 {
+    text-align: center;
+}
+
+#tar1 {
+    text-align: center;
+    
+}
+
+#tar2 {
+
+    text-align: center;
+    
+    
+}
+
+#tar3 {
+    text-align: center;
+    margin-top: 25px;
+    
+    
+}
+
+#tar4 {
+    text-align: center;
+    margin-top: 25px;
+  
+    
+}
+
+
