@@ -31,7 +31,12 @@ body {
 }
 #edit {
     font-family: "Montserrat";
-    color:#494949;
+    color: black;
+}
+
+.nav-item {
+    font-family: "Montserrat";
+    color: #494949;
 }
 
 .btn {
@@ -58,49 +63,24 @@ h5 {
 
 }
 
+#tar1 {
+    height: 350px;
+}
+
+#tar2 {
+    padding-top: 90px;
+}
+
+#text {
+    text-align: center;
+}
+
 #say {
     font-family: "Montserrat";
     font-size: 45px;
 }
 
 
-#t1 {
-    text-align: center;
-}
-#t2 {
-    text-align: center;
-}
-#t3 {
-    text-align: center;
-}
-#t4 {
-    text-align: center;
-}
 
-#tar1 {
-    text-align: center;
-    
-}
-
-#tar2 {
-
-    text-align: center;
-    
-    
-}
-
-#tar3 {
-    text-align: center;
-    margin-top: 25px;
-    
-    
-}
-
-#tar4 {
-    text-align: center;
-    margin-top: 25px;
-  
-    
-}
 
 
