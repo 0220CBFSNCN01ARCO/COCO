@@ -109,7 +109,10 @@ let productController = {
     "shop": function(req,res){
         
         res.render("shop" , { productsList: products });
-    }    
+    },
+    "sale": function(req,res){
+        res.render("sale" , { productsList: products });
+    }
 };
 
 module.exports = productController;

@@ -34,4 +34,6 @@ router.delete("/admin/view/delete/:id", productControllers.delete)
 
 router.get('/view/shop', productControllers.shop)
 
+router.get('/view/sale', productControllers.sale)
+
 module.exports = router;

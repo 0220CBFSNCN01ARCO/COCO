@@ -1,0 +1,53 @@
+body{
+    background-color: #faf6e9;
+    font-family: "Montserrat";
+}
+
+#cuerpo{
+    text-align: center;
+    padding-top: 120px;
+}
+#fotulis{
+    overflow: hidden;
+    
+    
+    
+}
+#picture{
+    overflow: hidden;
+    
+    
+}
+#fotulis:hover{
+    opacity: 0.7;
+}
+.photo-container img{
+    border-radius: 5px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+
+}
+
+#datos{
+    width: 100%;
+    margin: auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 20px;
+}
+#precioAnterior{
+    position: relative;
+    font-size: 15px;
+    text-decoration: line-through;
+    bottom: 42px;
+    left: 65px;
+}
+#imageSale img{
+    height: 50px;
+}
+#imageSale{
+    position: relative;
+    bottom: 80px;
+    right: 65px;
+}

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <% include partials\head.ejs %>
-    <link rel="stylesheet" href="/stylesheets/shop.css">
-    <title>COCO | Shop</title>
+    <link rel="stylesheet" href="/stylesheets/sale.css">
+    <title>COCO | Sale</title>
 </head>
 <% include partials\header.ejs %> 
 <body>
@@ -14,6 +14,7 @@
           
         <% productsList.forEach(product => { %>
 
+          <% if (product.offer == "yes"){ %>
           <article class="col-3" id="fotulis"> 
             <div class="photo-container">
               <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
@@ -22,11 +23,15 @@
             <div id="datos">
               <br>
               <h5><%= product.name %></h5>
-              <p><b>$<%= product.price %></b></p>
+              <p><b>$<%= Math.trunc(product.price - Math.trunc(product.price * product.discount / 100)) %></b></p>
+              <p id="precioAnterior"><b><%= product.price %></b></p>
+              <div id="imageSale">
+                <img src="/images/iconos/sale.png" alt="Sale">
+              </div>
             </div>
           </article>
 
-        <% }) %>
+        <% }}) %>
       </div>
       
   </section>

@@ -48,7 +48,7 @@
                 <li><b>Size:</b> <%= productID.size %></li>
 
                 <% if(productID.offer === "yes"){ %>
-                <li><b>Price:</b> $<%= productID.price - valor %></li>
+                <li><b>Price:</b> $<%= Math.trunc(productID.price - valor) %></li>
                 <% } else{ %>
                   <li><b>Price:</b> $<%= productID.price %></li>
                 <% } %>
