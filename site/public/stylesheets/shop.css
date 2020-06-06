@@ -37,3 +37,18 @@ body{
 
     
 }
+#precioAnterior{
+    position: relative;
+    font-size: 15px;
+    text-decoration: line-through;
+    bottom: 42px;
+    left: 65px;
+}
+#imageSale img{
+    height: 50px;
+}
+#imageSale{
+    position: relative;
+    bottom: 80px;
+    right: 65px;
+}

@@ -14,6 +14,25 @@
           
         <% productsList.forEach(product => { %>
 
+          <% if (product.offer == "yes"){ %>
+            
+            <article class="col-3" id="fotulis"> 
+              <div class="photo-container">
+                <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
+              
+              </div>
+              <div id="datos">
+                <br>
+                <h5><%= product.name %></h5>
+                <p><b>$<%= Math.trunc(product.price - Math.trunc(product.price * product.discount / 100)) %></b></p>
+                <p id="precioAnterior"><b><%= product.price %></b></p>
+                <div id="imageSale">
+                  <img src="/images/iconos/sale.png" alt="Sale">
+                </div>
+              </div>
+            </article>
+
+        <% }else{ %>
           <article class="col-3" id="fotulis"> 
             <div class="photo-container">
               <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
@@ -25,8 +44,7 @@
               <p><b>$<%= product.price %></b></p>
             </div>
           </article>
-
-        <% }) %>
+        <% }}) %>
       </div>
       
   </section>
