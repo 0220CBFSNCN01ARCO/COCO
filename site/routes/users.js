@@ -21,8 +21,8 @@ const upload = multer({ storage: storage });
 router.get('/', usersController.login);
 
 router.post('/',[
-    check("email").isEmail().withMessage("te olvidaste el @ capo"),
-    check("password").isLength({min : 6}).withMessage("contraseña corta perro")
+    check("email").isEmail().withMessage("Enter a valid email address"),
+    check("password").isLength({min : 6}).withMessage("The password must contain 6 characters")
 ] ,usersController.processLogin);
 
 router.get('/register', usersController.register);

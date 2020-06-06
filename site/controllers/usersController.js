@@ -36,7 +36,7 @@ let usersController = {
 
             if (typeof(usuarioAloguearse) == "undefined"){
                 return res.render("login", {errors : [
-                    {msg: "no pasas capo"}
+                    {msg: "Invalid credentials"}
                 ]})
             }
             
