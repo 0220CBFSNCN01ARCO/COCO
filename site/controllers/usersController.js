@@ -23,12 +23,17 @@ let usersController = {
                 users = usersList
             }
 
+
+
             //buscamos el usuario que esta intentando loguearse
             for (let i = 0 ; i < users.length; i++){
                 if (users[i].email == req.body.email){
                     if(bcrypt.compareSync(req.body.password, users[i].password)){
                         let usuarioAloguearse = users[i];
-                        res.send(usuarioAloguearse)
+
+                        req.session.usurioLogueado = usuarioAloguearse
+                        res.send("exito")
+
                         break;
                     }
                 }
@@ -39,7 +44,6 @@ let usersController = {
                     {msg: "Invalid credentials"}
                 ]})
             }
-            
         }else{
             return res.render("login", { errors : errors.errors}) ;
         }

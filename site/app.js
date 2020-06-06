@@ -11,6 +11,7 @@ var policyRouter = require('./routes/policy');
 var productRouter = require('./routes/product');
 var retailersRouter = require('./routes/retailers');
 var contactRouter = require('./routes/contact');
+var session = require("express-session")
 
 
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
+app.use(session({secret: "Es secreto perri"}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

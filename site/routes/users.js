@@ -3,8 +3,9 @@ var fs = require('fs');
 var router = express.Router();
 const usersController = require('../controllers/usersController.js')
 const multer = require('multer');
-const path = require("path")
-const { check , validationResult , body } = require("express-validator")
+const path = require("path");
+const { check , validationResult , body } = require("express-validator");
+var guestMiddleware = require("../middleware/guestMiddleware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -25,7 +26,7 @@ router.post('/',[
     check("password").isLength({min : 6}).withMessage("The password must contain 6 characters")
 ] ,usersController.processLogin);
 
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
 
 router.post('/register', upload.any(), [
     check("Firs_name").isLength(),
@@ -63,6 +64,14 @@ router.post('/register', upload.any(), [
 ], usersController.create);
 
 router.get('/bag', usersController.bag);
+
+router.get("/check", function(req,res){
+    if(typeof(req.session.usurioLogueado) == "undefined"){
+        res.send("no estas logueado");
+    }else{
+        res.send("el usuario logueado es " + req.session.usurioLogueado.email)
+    }
+})
 
 
 module.exports = router;
