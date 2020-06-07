@@ -58,6 +58,14 @@ let usersController = {
         res.render("profile",{userID:userID});
   
     },
+    "userEdit" : function(req,res){
+        const ID = req.session.usurioLogueado.id;
+        const userID = usersList.find( usersList => {
+            return usersList.id == ID;
+        })
+        res.render("profileEdit", {userID:userID, ID:ID})
+  
+    },
     "register" : function(req,res){
         res.render('register');
     } ,

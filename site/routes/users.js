@@ -67,6 +67,8 @@ router.get('/bag', usersController.bag);
 
 router.get('/profile/:id', usersController.profile);
 
+router.get('/profile/edit/:id', usersController.userEdit);
+
 router.get("/check", function(req,res){
     if(typeof(req.session.usurioLogueado) == "undefined"){
         res.send("no estas logueado");

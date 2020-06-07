@@ -1,0 +1,47 @@
+body{
+    background-color: #faf6e9;
+    font-family: "Montserrat";
+}
+#titulo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#error{
+    color: red;
+   
+    font-size: 20px;
+}
+#error ul li{
+    list-style: none;
+}
+
+#cuerpo{
+    
+    overflow: hidden;
+    margin-top:110px;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+#primeraColumna{
+    margin-bottom: 15px;
+}
+#terminos{
+    color: initial;
+}
+.btn{
+    background-color:#494949 ;
+    border: #494949;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.btn:hover{
+    background-color: gray;
+}
+.custom-file{
+    margin-top: 20px;
+}
+#confirmacion{
+    margin-top: 10px;
+}
