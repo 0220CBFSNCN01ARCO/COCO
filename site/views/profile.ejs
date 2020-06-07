@@ -15,10 +15,10 @@
         <div class="card col-3" style="width: 18rem;">
             <img src="/images/profile.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 id="title" class="card-title">First_and_last_Name</h5>
+              <h5 id="title" class="card-title"><%= userID.last_name %></h5>
             </div>
             <ul id= "mail" class="list-group list-group-flush">
-              <li class="list-group-item">Email</li>
+              <li class="list-group-item"><%= userID.email %></li>
             </ul>
             <div id="edit" class="card-body">
               <a href="#" class="card-link">Edit profile</a>
@@ -27,7 +27,7 @@
 
           <div id= "right" class="col-9">
 
-            <p id="say"> Hello, First_and_last_Name!</p>
+            <p id="say"> Hello, <%= userID.last_name %>!</p>
 
             <div class="card text-center" id="tar1">
               <div class="card-header">
@@ -47,7 +47,7 @@
               <div class="card-body" id="tar2">
                 <h5 class="card-title">You don't have any orders right now.</h5>
                 <p id= "text" class="card-text">Wanna check out our shop?</p>
-                <a href="#" class="btn btn-primary">Yes, please! </a>
+                <a href="/product/view/shop"class="btn btn-primary">Yes, please! </a>
               </div>
             </div>
            

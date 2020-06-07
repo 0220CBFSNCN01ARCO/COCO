@@ -65,7 +65,7 @@ router.post('/register', upload.any(), [
 
 router.get('/bag', usersController.bag);
 
-router.get('/profile', usersController.profile);
+router.get('/profile/:id', usersController.profile);
 
 router.get("/check", function(req,res){
     if(typeof(req.session.usurioLogueado) == "undefined"){

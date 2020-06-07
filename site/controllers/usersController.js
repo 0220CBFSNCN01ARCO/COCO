@@ -11,6 +11,8 @@ let usersController = {
     "login" : function(req,res){
         res.render('login');
     },
+    
+   
     "processLogin" : function(req,res,next){
         let errors = validationResult(req);
         
@@ -32,7 +34,7 @@ let usersController = {
                         let usuarioAloguearse = users[i];
 
                         req.session.usurioLogueado = usuarioAloguearse
-                        res.redirect("/")
+                        res.redirect('users/profile/:id')
 
                         break;
                     }
@@ -47,6 +49,14 @@ let usersController = {
         }else{
             return res.render("login", { errors : errors.errors}) ;
         }
+    },
+    "profile" : function(req,res){
+        const ID = req.session.usurioLogueado.id;
+        const userID = usersList.find( usersList => {
+            return usersList.id == ID;
+        })
+        res.render("profile",{userID:userID});
+  
     },
     "register" : function(req,res){
         res.render('register');
@@ -77,12 +87,9 @@ let usersController = {
         }else{
             return res.render("register", { errors : errors.errors})
         }
-    },
+    }
 
-    profile: function(req,res){
-        res.render('profile');
-
-    },
+    
 
 };
 
