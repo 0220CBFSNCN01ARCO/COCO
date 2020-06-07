@@ -7,6 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 let productController = {
 
     "detail" : function(req,res){
+      
         const ID = req.params.id;
         const productID = products.find( products => {
             return products.id == ID;
