@@ -15,7 +15,7 @@
         <div class="card col-3" style="width: 18rem;">
             <img src="/images/profile.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 id="title" class="card-title"><%= userID.last_name %></h5>
+              <h5 id="title" class="card-title"><%= userID.first_name + ' ' + userID.last_name %></h5>
             </div>
             <ul id= "mail" class="list-group list-group-flush">
               <li class="list-group-item"><%= userID.email %></li>
@@ -26,51 +26,68 @@
         </div>
 
           <div id= "right" class="col-9">
-
-            <p id="say"> Hello, <%= userID.last_name %>!</p>
+            <% if(userID.category == true){ %>
+            <p id="say"> Hello, <%= userID.first_name %>!</p>
 
             <div class="card text-center" id="tar1">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#">Last orders</a>
+                    <a class="nav-link active" href="#">Admin board</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Your coupons</a>
+                    <a class="nav-link" href="#">Your sales</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Customized shopping</a>
+                    <a class="nav-link" href="#">Statistics</a>
                   </li>
                   
                 </ul>
               </div>
               <div class="card-body" id="tar2">
-                <h5 class="card-title">You don't have any orders right now.</h5>
-                <p id= "text" class="card-text">Wanna check out our shop?</p>
-                <a href="/product/view/shop"class="btn btn-primary">Yes, please! </a>
+                <h5 class="card-title">Where do you ganna go?</h5>
+                <p id= "text" class="card-text">Select an action</p>
+                <a href="/product"class="btn btn-primary">Products </a>
+                <a href="#"class="btn btn-primary">Users </a>
               </div>
             </div>
           </div>
         </div>
 
-        <% if(userID.category == true){ %>
-        <div class="row">
+        <% } else { %>
 
-            <div class="col-6">
-                <a href="/product" ><button id="admin" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                    Product list
-                    </button>
-                </a>
-            </div>
-            <div class="col-6">
-                <a href="/" ><button id="admin" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                    Users list
-                    </button>
-                </a>
-            </div>
+          <p id="say"> Hello, <%= userID.first_name %>!</p>
 
+          <div class="card text-center" id="tar1">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Last orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Your coupons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Customized shopping</a>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="card-body" id="tar2">
+              <h5 class="card-title">You don't have any orders right now.</h5>
+              <p id= "text" class="card-text">Wanna check out our shop?</p>
+              <a href="/product/view/shop"class="btn btn-primary">Yes, please! </a>
+            </div>
+          </div>
         </div>
-        <% } %>
+      </div>
+
+
+          <% } %>
+
+
+
+        
         
     </section>
    

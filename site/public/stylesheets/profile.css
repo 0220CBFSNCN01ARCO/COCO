@@ -46,6 +46,11 @@ body {
 
 }
 
+.btn:hover{
+    background-color: gray;
+    border-color:  gray;
+}
+
 h5 {
     font-family: "Montserrat";
 }
@@ -79,18 +84,7 @@ h5 {
     font-size: 45px;
 }
 
-#admin{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: "Montserrat";
-    width: 100%;
-    background-color:  #494949;
-    border-color:  #494949;
-}
-#admin:hover{
-    background-color: gray;
-    border-color:  gray;
-}
+
 
 
 
