@@ -3,8 +3,7 @@
     background-color: #faf6e9;
     overflow: hidden;
     box-sizing: border-box;
-    padding-top: 150px;
-    height: 700px;
+    padding-top: 100px;
     width: 100%;  
 }
 
@@ -78,6 +77,19 @@ h5 {
 #say {
     font-family: "Montserrat";
     font-size: 45px;
+}
+
+#admin{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Montserrat";
+    width: 100%;
+    background-color:  #494949;
+    border-color:  #494949;
+}
+#admin:hover{
+    background-color: gray;
+    border-color:  gray;
 }
 
 

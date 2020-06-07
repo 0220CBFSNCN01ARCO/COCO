@@ -3,7 +3,7 @@
 <head>
     <% include partials\head.ejs %>
     <link rel="stylesheet" href="/stylesheets/profile.css">
-    <title>COCO | Delivery and returns </title>
+    <title>COCO | Profile </title>
 </head> 
 <body >
     <% include partials\header.ejs %> 
@@ -23,7 +23,7 @@
             <div id="edit" class="card-body">
               <a href="/users/profile/edit/:id" class="card-link">Edit profile</a>
             </div>
-          </div>
+        </div>
 
           <div id= "right" class="col-9">
 
@@ -50,7 +50,27 @@
                 <a href="/product/view/shop"class="btn btn-primary">Yes, please! </a>
               </div>
             </div>
-           
+          </div>
+        </div>
+
+        <% if(userID.category == true){ %>
+        <div class="row">
+
+            <div class="col-6">
+                <a href="/product" ><button id="admin" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                    Product list
+                    </button>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="/" ><button id="admin" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                    Users list
+                    </button>
+                </a>
+            </div>
+
+        </div>
+        <% } %>
         
     </section>
    

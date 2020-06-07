@@ -1,3 +1,4 @@
+var express = require('express');
 const fs = require ('fs');
 const path = require('path');
 const bcrypt = require('bcrypt')
@@ -9,10 +10,14 @@ const usersList = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 let usersController = {
 
     "login" : function(req,res){
-        res.render('login');
+        let userLogin = req.session.usurioLogueado
+        if(userLogin == undefined){
+            res.render("login");
+        }else{
+            res.render("profile",{userID : userLogin });
+        }
     },
     
-   
     "processLogin" : function(req,res,next){
         let errors = validationResult(req);
         
