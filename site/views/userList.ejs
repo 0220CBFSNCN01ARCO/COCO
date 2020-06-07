@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/productList.css">
+    <title>COCO | Product List</title>
+</head>
+    <% include partials\header.ejs %>
+<body>
+    
+    <section class="container-fluid" id="bloque">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-striped" id="principal">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Id</th>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Category</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <% userList.forEach(user => { %>
+                            <tr>
+                                <th scope="row"><a href="/users/list<%= user.id %>"><img src= "/images/iconos/archivo.jpg"></a></th>
+
+                                <td><%= user.id %></td>
+                                <td><%= user.firt_name %></td>
+                                <td><%= user.last_name %></td>
+                                <td><%= user.email %></td>
+                                <td><%= user.category %></td>
+                            </tr>
+
+                        <% }) %>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="boton-abajo">
+        <div class="row">
+                <div class="col-12">
+                    <a href="#" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                        Return
+                        </button>
+                    </a>
+                </div>
+        </div>
+    </section>
+
+    <% include partials\script.ejs %>
+
+</body>
+    <% include partials\footer.ejs %>
+</html>

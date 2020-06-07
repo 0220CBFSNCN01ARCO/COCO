@@ -100,7 +100,12 @@ let usersController = {
         }else{
             return res.render("register", { errors : errors.errors})
         }
-    }
+    },
+
+    "userList": function(req,res){
+
+        res.render("userList", { userList: usersList });
+    },
 
     
 
