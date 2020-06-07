@@ -81,7 +81,7 @@ let usersController = {
         if (errors.isEmpty()){
             let newUser = {
                 id : ID,
-                firs_name : req.body.Firs_name,
+                first_name : req.body.Firs_name,
                 last_name : req.body.Last_name,
                 email : req.body.Email,
                 password : bcrypt.hashSync(req.body.Password,10),
