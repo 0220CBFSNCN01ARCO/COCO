@@ -39,6 +39,11 @@ let usersController = {
                         let usuarioAloguearse = users[i];
 
                         req.session.usurioLogueado = usuarioAloguearse
+
+                        if(typeof(req.body.remember != undefined)){
+                            res.cookie("remember", usuarioAloguearse.email , { maxAge : 60000} )
+                        }
+
                         res.redirect('users/profile/:id')
 
                         break;
