@@ -1,6 +1,7 @@
 body{
     background-color: #faf6e9;
     font-family: "Montserrat";
+    
 }
 
 #cuerpo{
@@ -8,19 +9,36 @@ body{
     overflow: hidden;
     width: 100%;
     margin-top: 130px;
-    margin-bottom: 50px;
-        
-    
-
+    margin-bottom: 300px;
 }
+
+#cat {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#changes {
+    text-align: center;
+}
+
+#validationCustom01 {
+width: 30%;
+justify-content: center;
+}
+
 .btn{
     background-color:#494949 ;
     border: #494949;
     width: 100%;
+    margin-top: 30px;
     
     
 }
 .btn:hover{
     background-color: gray;
+}
+
+#titulo {
+    text-align: center;
 }
 
