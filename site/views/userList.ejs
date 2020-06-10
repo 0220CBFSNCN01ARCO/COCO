@@ -3,7 +3,7 @@
 <head>
     <% include partials\head.ejs %>
     <link rel="stylesheet" href="/stylesheets/productList.css">
-    <title>COCO | Product List</title>
+    <title>COCO | Users list</title>
 </head>
     <% include partials\header.ejs %>
 <body>
@@ -27,7 +27,7 @@
 
                         <% userList.forEach(user => { %>
                             <tr>
-                                <th scope="row"><a href="/users/list<%= user.id %>"><img src= "/images/iconos/archivo.jpg"></a></th>
+                                <th scope="row"><a href="/users/list/view/<%= user.id %>"><img src= "/images/iconos/archivo.jpg"></a></th>
 
                                 <td><%= user.id %></td>
                                 <td><%= user.firt_name %></td>

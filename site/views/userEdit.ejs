@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/userEdit.css">
+    
+    <title>COCO | User edit </title>
+</head> 
+<body >
+    
+    <% include partials\header.ejs %> 
+
+    <section class="container" id="cuerpo">
+
+    <h2 id="titulo">You can only change user's category</h2>
+    
+    </div class="row">
+    <form class="needs-validation" novalidate action="/users/view/edit/<% ID%>" method="POST" enctype="multipart/form-data">
+        <div class="form-row" id="primeraColumna">
+          <div class="col-6">
+            <label for="validationCustom01">Category</label>
+            <input type="text" class="form-control" id="validationCustom01" name="category" value="<%= userID.category %>" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          
+        <div class="row">
+        <div class="col-6">
+        <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>  
+        <div class="col-6">
+            <a href="/users" ><button type="button" class="btn btn-primary">
+              Cancel
+              </button>
+          </a>
+          </div>
+        </div>
+      </form>
+    </section>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+
+    <% include partials\script.ejs %> 
+</body>
+<% include partials\footer.ejs %> 
+</html>

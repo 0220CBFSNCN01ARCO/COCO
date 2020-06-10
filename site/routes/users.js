@@ -29,7 +29,7 @@ router.post('/',[
 router.get('/register', guestMiddleware, usersController.register);
 
 router.post('/register', upload.any(), [
-    check("Firs_name").isLength(),
+    check("First_name").isLength(),
     check("Last_name").isLength(),
     check("Email").isEmail(),
     body("Email").custom(function(value){
@@ -69,7 +69,48 @@ router.get('/profile/:id', usersController.profile);
 
 router.get('/profile/edit/:id', usersController.userEdit);
 
+router.put('/profile/edit/:id', upload.any(), [
+    check("First_name").isLength(),
+    check("Last_name").isLength(),
+    check("Email").isEmail(),
+    body("Email").custom(function(value){
+        
+        let UsersJSON = path.join(__dirname, '../data/users.json');
+        let usersList = JSON.parse(fs.readFileSync(UsersJSON, 'utf-8'));
+
+            let users;
+            if (UsersJSON = "") {
+                users = []
+            }else{
+                users = usersList;
+            }
+        
+        for(let i = 0; i < users.length; i++){
+            if (users[i].email == value){
+                return false
+            }
+        }
+        return true
+
+    }).withMessage("The email is already in use"),
+    check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
+    check("Password").custom(function(value,{req, loc ,path}){
+        if (value != req.body.passwordRepeat){
+            return false
+        }else{
+            return true
+        }
+    }).withMessage("Passwords entered are not the same"),
+    check("passwordRepeat").isLength({min: 6})
+], usersController.editProfile);
+
 router.get('/list', usersController.userList);
+
+router.get('/list/view/:id', usersController.view);
+
+router.delete('/view/delete/:id', usersController.delete);
+
+router.get('/view/edit/:id', usersController.editUser);
 
 router.get("/check", function(req,res){
     if(typeof(req.session.usurioLogueado) == "undefined"){

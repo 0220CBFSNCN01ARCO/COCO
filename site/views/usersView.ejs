@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/usersView.css">
+    <title>COCO | Options</title>
+</head>
+<body>
+    <% include partials\header.ejs %>
+    <div id="cuerpo">
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6" id="menuEdit">
+                        <b>Menu</b>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/users/view/edit/<%= ID %>" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Edit user
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <form name=tuformulario method="POST" action="/users/view/delete/<%= ID %>?_method=DELETE">
+                            <button type="button" onclick="pregunta()" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                                Delete product
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+        <section class="container-fluid">
+            <div class="row">
+                    <div class="col-3">
+            
+                    </div>
+                    <div class="col-6">
+                        <a href="/users/list" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Cancel
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-3">
+            
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <% include partials\script.ejs %>
+    <script language="JavaScript">
+        function pregunta(){
+            if (confirm('Are you sure about removing this user?')){
+               document.tuformulario.submit()
+            }
+        }
+    </script>
+</body>
+    <% include partials\footer.ejs %>
+</html>

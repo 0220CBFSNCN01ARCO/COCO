@@ -71,6 +71,26 @@ let usersController = {
         res.render("profileEdit", {userID:userID, ID:ID})
   
     },
+    "editProfile" :  function(req,res,next){
+        const userId = req.params.id;
+
+            usersList.map(user => {
+            if(user.id ==  userId)
+                user.id = user.id,
+                user.first_name = req.body.First_name,
+                user.last_name = req.body.Last_name,
+                user.email = req.body.Email,
+                user.password = bcrypt.hashSync(req.body.Password,10),
+                user.avatar = req.files[0] ? req.files[0].filename : '',
+                user.category = user.category
+                
+                })
+
+        fs.writeFileSync('data/users.json', JSON.stringify(usersList));
+        res.redirect("/users")
+        
+    },
+  
     "register" : function(req,res){
         res.render('register');
     } ,
@@ -86,7 +106,7 @@ let usersController = {
         if (errors.isEmpty()){
             let newUser = {
                 id : ID,
-                first_name : req.body.Firs_name,
+                first_name : req.body.First_name,
                 last_name : req.body.Last_name,
                 email : req.body.Email,
                 password : bcrypt.hashSync(req.body.Password,10),
@@ -107,6 +127,39 @@ let usersController = {
         res.render("userList", { userList: usersList });
     },
 
+    "view": function(req,res,next){
+        const id = req.params.id;
+        const userID = usersList.find( usersList => {
+            return usersList.id == id;
+        });
+        res.render("usersView", { userID: userID, ID:id});
+        console.log(id)
+    },
+
+    "delete": function(req,res,next){
+        let userID = req.params.id;
+
+        let userIdDelete = usersList.filter(usersList =>{
+            return usersList.id != userID;
+        })
+        let newusersList = JSON.stringify(userIdDelete,'utf-8');
+        
+        fs.writeFileSync(usersPath, newusersList);
+
+        res.redirect("/users/list")
+    },
+    
+    "editUser": function(req,res,next){
+
+        const id = req.params.id;
+        const userID = usersList.find( usersList => {
+            return usersList.id == id;
+        });
+        res.render("userEdit", { userID: userID, ID:id});
+        
+    },
+
+    
     
 
 };
