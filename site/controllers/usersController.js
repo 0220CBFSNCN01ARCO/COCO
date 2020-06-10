@@ -168,21 +168,17 @@ let usersController = {
     "edit": function(req,res,next){
 
         const userId = req.params.id;
-
-        usersList.map(user => {
-            if(user.id ==  userId)
-                user.id = user.id,
-                user.first_name = user.first_name,
-                user.last_name = user.last_name,
-                user.email = user.email,
-                user.password = user.password,
-                user.avatar = user.avatar,
+    
+       usersList.map(user => {
+            if(user.id == userId)
                 user.category = req.body.category
+            })
                 
-                })
-
+        
         fs.writeFileSync('data/users.json', JSON.stringify(usersList));
         res.redirect('/users/list');
+    
+
         
     },
 
