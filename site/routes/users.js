@@ -6,6 +6,7 @@ const multer = require('multer');
 const path = require("path");
 const { check , validationResult , body } = require("express-validator");
 var guestMiddleware = require("../middleware/guestMiddleware")
+var authMiddleware = require("../middleware/authMiddleware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -63,7 +64,7 @@ router.post('/register', upload.any(), [
     check("passwordRepeat").isLength({min: 6})
 ], usersController.create);
 
-router.get('/bag', usersController.bag);
+router.get('/bag',authMiddleware,usersController.bag);
 
 router.get('/profile/:id', usersController.profile);
 

@@ -12,6 +12,7 @@ var productRouter = require('./routes/product');
 var retailersRouter = require('./routes/retailers');
 var contactRouter = require('./routes/contact');
 var session = require("express-session")
+var cookieAuthMiddleware = require("./middleware/cookieAuthMiddleware")
 
 
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 app.use(session({secret: "Es secreto perri", resave: true,
 saveUninitialized: true}));
+app.use(cookieAuthMiddleware);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
