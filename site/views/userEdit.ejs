@@ -12,25 +12,25 @@
 
     <section class="container" id="cuerpo">
 
-    <h2 id="titulo">You can only change user's category</h2>
+    <h2 id="titulo">Do you want to make this user an Admin?</h2>
     
     </div class="row">
-    <form class="needs-validation" novalidate action="/users/view/edit/<% ID%>" method="POST" enctype="multipart/form-data">
+    <form class="needs-validation" novalidate action="/users/view/edit/<%= ID %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-row" id="primeraColumna">
-          <div class="col-6">
-            <label for="validationCustom01">Category</label>
+          <div class="col-12" id="cat">
+            <label for="validationCustom01">If you do, type 'true' and save changes</label>
             <input type="text" class="form-control" id="validationCustom01" name="category" value="<%= userID.category %>" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
           
-        <div class="row">
-        <div class="col-6">
-        <button class="btn btn-primary" type="submit">Save changes</button>
+        <div class="row" id="changes">
+        <div class="col-12">
+        <button id= 'save' class="btn btn-primary" type="submit">Save changes</button>
         </div>  
-        <div class="col-6">
-            <a href="/users" ><button type="button" class="btn btn-primary">
+        <div class="col-12">
+            <a href="/users/list" ><button type="button" class="btn btn-primary">
               Cancel
               </button>
           </a>

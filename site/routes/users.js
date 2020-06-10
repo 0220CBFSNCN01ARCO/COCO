@@ -113,6 +113,8 @@ router.delete('/view/delete/:id', usersController.delete);
 
 router.get('/view/edit/:id', usersController.editUser);
 
+router.put('/view/edit/:id', usersController.edit);
+
 router.get("/check", function(req,res){
     if(typeof(req.session.usurioLogueado) == "undefined"){
         res.send("no estas logueado");
@@ -120,6 +122,10 @@ router.get("/check", function(req,res){
         res.send("el usuario logueado es " + req.session.usurioLogueado.email)
     }
 })
+
+router.get('/logout', usersController.logout);
+
+
 
 
 module.exports = router;
