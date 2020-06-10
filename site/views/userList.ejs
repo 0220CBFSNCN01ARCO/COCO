@@ -12,28 +12,33 @@
         <div class="row">
             <div class="table-responsive">
                 <table class="table table-striped" id="principal">
-                    <thead>
+                    <thead id="tablaAling">
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Id</th>
                         <th scope="col">First name</th>
                         <th scope="col">Last name</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Category</th>
+                        <th scope="col">Manager</th>
                         
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tablaAling">
 
                         <% userList.forEach(user => { %>
                             <tr>
                                 <th scope="row"><a href="/users/list/view/<%= user.id %>"><img src= "/images/iconos/archivo.jpg"></a></th>
 
                                 <td><%= user.id %></td>
-                                <td><%= user.firt_name %></td>
+                                <td><%= user.first_name %></td>
                                 <td><%= user.last_name %></td>
                                 <td><%= user.email %></td>
-                                <td><%= user.category %></td>
+                                <td><%if(user.category == false){ %>
+                                        not
+                                    <% }else{ %>
+                                        yes
+                                    <% } %>
+                                </td>
                             </tr>
 
                         <% }) %>

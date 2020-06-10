@@ -31,6 +31,9 @@ tbody tr th a img{
     margin: auto;
     display: block;
 }
+#tablaAling{
+    text-align: center;
+}
 @media(max-width:425px){
     #principal{
         margin-top: 85px;
