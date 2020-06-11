@@ -115,7 +115,7 @@ let usersController = {
                 last_name : req.body.Last_name,
                 email : req.body.Email,
                 password : bcrypt.hashSync(req.body.Password,10),
-                avatar : req.files[0] ? req.files[0].filename : '',
+                avatar : req.files[0] ? req.files[0].filename : "default.jpg",
                 category : false
             }
             usersList.push(newUser);
@@ -168,6 +168,7 @@ let usersController = {
     "edit": function(req,res,next){
 
         const userId = req.params.id;
+        
     
        usersList.map(user => {
             if(user.id == userId)

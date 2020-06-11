@@ -19,6 +19,7 @@ body{
 
 #changes {
     text-align: center;
+   
 }
 
 .btn{
@@ -35,5 +36,16 @@ body{
 
 #titulo {
     text-align: center;
+}
+
+#selectAdmin{
+    background-color:#758184 ;
+    border: #758184;
+    width: 100%;
+    
+}
+
+#selectAdmin:hover{
+    background-color: gray;
 }
 

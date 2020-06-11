@@ -3,15 +3,14 @@
     background-color: #faf6e9;
     overflow: hidden;
     box-sizing: border-box;
-    padding-top: 100px;
-    width: 100%;  
+    margin-top: 110px;
+    width: 100%; 
+    margin-bottom: 50px; 
 }
 
 body {
     background: #faf6e9;
 }
-
-
 
 .container p {
     font-family: "Montserrat";
@@ -83,7 +82,6 @@ h5 {
     font-family: "Montserrat";
     font-size: 45px;
 }
-
 
 
 
