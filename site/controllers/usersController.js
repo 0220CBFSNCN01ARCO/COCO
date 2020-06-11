@@ -40,7 +40,7 @@ let usersController = {
 
                         req.session.usurioLogueado = usuarioAloguearse
 
-                        if(typeof(req.body.remember != undefined)){
+                        if(req.body.remember != undefined){
                             res.cookie("remember", usuarioAloguearse.email , { maxAge : 60000} )
                         }
 
@@ -185,8 +185,9 @@ let usersController = {
 
 
     "logout" : function(req,res,next){
+
         req.session.destroy();
-        req.session = null ;
+        res.clearCookie("remember");
 
         res.redirect('/');
         
