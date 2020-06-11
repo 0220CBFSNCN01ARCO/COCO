@@ -116,7 +116,7 @@ let usersController = {
                 email : req.body.Email,
                 password : bcrypt.hashSync(req.body.Password,10),
                 avatar : req.files[0] ? req.files[0].filename : "default.jpg",
-                category : false
+                category : "false"
             }
             usersList.push(newUser);
             fs.writeFileSync('data/users.json', JSON.stringify(usersList));
