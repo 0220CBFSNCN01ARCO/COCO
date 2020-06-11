@@ -12,53 +12,48 @@
 
     <section class="container" id="cuerpo">
 
-    <h2 id="titulo">Do you want to make this user an Admin?</h2>
-    
-      <form action="/users/view/edit/<%= ID %>?_method=PUT" method="POST">
-        
-        <div class="form-row" id="cat">
-
-            
-              <div class="form-group col-4">
-              </div>
-              <div class="form-group col-4">
-                  <label for="">If you do, type 'true' and save changes</label>
-
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select option
+      <h2 id="titulo">Do you want to make this user an Admin?</h2>
+      
+        <form action="/users/view/edit/<%= ID %>?_method=PUT" method="POST">
+          
+          <div class="form-row" id="cat">
+  
+              
+                <div class="form-group col-4">
+                </div>
+                <div class="form-group col-4">
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="category" value= "<%= userID.category = 'true'%>" id="option2"> Yes
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="category" value= "<%= userID.category = 'false'%>" id="option3"> No
+                  </label>
+                    
+                </div>
+                <div class="form-group col-4">
+                </div>
+              
+              
+          </div>  
+          <div class="form-row" id="changes">
+  
+                <div class="form-group col-4">
+                </div>
+                <div class="form-group col-4">
+                  <button id= 'save' class="btn btn-primary" type="submit">Save changes</button> 
+                  <a href="/users/list" ><button type="button" class="btn btn-primary">
+                    Cancel
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item active" href="#">false</a>
-                      <a class="dropdown-item active" href="#">true</a>
-                    </div>
-                  </div>
-                  
-              </div>
-              <div class="form-group col-4">
-              </div>
-            
-            
-        </div>  
-        <div class="form-row" id="changes">
-
-              <div class="form-group col-4">
-              </div>
-              <div class="form-group col-4">
-                <button id= 'save' class="btn btn-primary" type="submit">Save changes</button> 
-                <a href="/users/list" ><button type="button" class="btn btn-primary">
-                  Cancel
-                  </button>
-              </a>
-              </div>
-              <div class="form-group col-4">
-              </div>
-            
-            
-        </div>
-      </form>
-
-    </section>
+                </a>
+                </div>
+                <div class="form-group col-4">
+                </div>
+              
+              
+          </div>
+        </form>
+  
+      </section>
       
       <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields

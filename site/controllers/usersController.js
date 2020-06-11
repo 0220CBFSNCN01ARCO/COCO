@@ -168,6 +168,7 @@ let usersController = {
     "edit": function(req,res,next){
 
         const userId = req.params.id;
+        
     
        usersList.map(user => {
             if(user.id == userId)
