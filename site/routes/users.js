@@ -126,6 +126,4 @@ router.get("/check", function(req,res){
 router.get('/logout', usersController.logout);
 
 
-
-
 module.exports = router;

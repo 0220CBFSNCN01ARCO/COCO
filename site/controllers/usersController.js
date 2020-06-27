@@ -4,6 +4,9 @@ const path = require('path');
 const bcrypt = require('bcrypt')
 const { check , validationResult , body } = require("express-validator")
 
+let db = require("../database/models")
+let sequelize = db.sequelize;
+
 const usersPath = path.join(__dirname, '../data/users.json');
 const usersList = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 
