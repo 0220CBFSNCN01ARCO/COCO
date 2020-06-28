@@ -1,7 +1,7 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('products', {
+	return sequelize.define('Product', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
-				model: 'brands',
+				model: 'Brand',
 				key: 'id'
 			},
 			field: 'idBrands'
@@ -42,7 +42,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
-				model: 'colours',
+				model: 'Colour',
 				key: 'id'
 			},
 			field: 'idColours'
@@ -51,7 +51,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
-				model: 'categories',
+				model: 'Category',
 				key: 'id'
 			},
 			field: 'idCategories'
@@ -60,7 +60,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
-				model: 'offers',
+				model: 'Offer',
 				key: 'id'
 			},
 			field: 'idOffers'
