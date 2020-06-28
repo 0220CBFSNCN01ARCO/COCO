@@ -132,7 +132,12 @@ let usersController = {
 
     "userList": function(req,res){
 
-        res.render("userList", { userList: usersList });
+        db.User.findAll()
+            .then(function(usuarios){
+                res.render("userList", { userList: usuarios });
+            })
+
+        // JSON res.render("userList", { userList: usersList });
     },
 
     "view": function(req,res,next){

@@ -15,6 +15,7 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'percentage'
 		}
 	}, {
-		tableName: 'discounts'
+		tableName: 'discounts',
+		timestamps: false
 	});
 };

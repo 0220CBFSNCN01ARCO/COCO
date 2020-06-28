@@ -10,12 +10,12 @@ module.exports = function(sequelize, DataTypes) {
 			autoIncrement: true,
 			field: 'id'
 		},
-		firstName: {
+		first_Name: {
 			type: DataTypes.STRING(45),
 			allowNull: false,
 			field: 'first_name'
 		},
-		lastName: {
+		last_Name: {
 			type: DataTypes.STRING(45),
 			allowNull: false,
 			field: 'last_name'
@@ -46,13 +46,15 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'idCategories'
 		}
 	}, {
-		tableName: 'users'
+		tableName: 'users',
+		timestamps: false
 	});
 
 	User.associate = function(models){
 		User.belongsTo(models.Category, {
 			as: "category",
 			foreignKey: "idCategories"
+			
 		})
 	}
 

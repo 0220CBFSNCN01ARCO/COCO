@@ -21,12 +21,14 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'description'
 		}
 	}, {
-		tableName: 'categories'
+		tableName: 'categories',
+		timestamps: false	
 	});
 
 	Category.associate = function(models){
 		Category.hasMany(models.User, {
-			as: "users",	
+			as: "users",
+			
 		})
 	}
 

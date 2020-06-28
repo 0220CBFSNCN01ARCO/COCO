@@ -30,6 +30,7 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'idDiscounts'
 		}
 	}, {
-		tableName: 'offers'
+		tableName: 'offers',
+		timestamps: false
 	});
 };

@@ -33,6 +33,7 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'idSizes'
 		}
 	}, {
-		tableName: 'products_sizes'
+		tableName: 'products_sizes',
+		timestamps: false
 	});
 };

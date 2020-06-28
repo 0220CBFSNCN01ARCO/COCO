@@ -66,6 +66,7 @@ module.exports = function(sequelize, DataTypes) {
 			field: 'idOffers'
 		}
 	}, {
-		tableName: 'products'
+		tableName: 'products',
+		timestamps: false
 	});
 };
