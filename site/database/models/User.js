@@ -1,7 +1,8 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('User', {
+
+	const User = sequelize.define('User', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -47,4 +48,13 @@ module.exports = function(sequelize, DataTypes) {
 	}, {
 		tableName: 'users'
 	});
+
+	User.associate = function(models){
+		User.belongsTo(models.Category, {
+			as: "category",
+			foreignKey: "idCategories"
+		})
+	}
+
+	return User
 };

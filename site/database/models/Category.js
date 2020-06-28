@@ -1,7 +1,8 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Category', {
+
+	const Category = sequelize.define('Category', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -22,4 +23,12 @@ module.exports = function(sequelize, DataTypes) {
 	}, {
 		tableName: 'categories'
 	});
+
+	Category.associate = function(models){
+		Category.hasMany(models.User, {
+			as: "users",	
+		})
+	}
+
+	return Category
 };
