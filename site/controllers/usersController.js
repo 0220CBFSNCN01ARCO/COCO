@@ -132,7 +132,9 @@ let usersController = {
 
     "userList": function(req,res){
 
-        db.User.findAll()
+        db.User.findAll({
+            include: [{association: "category"}]
+        })
             .then(function(usuarios){
                 res.render("userList", { userList: usuarios });
             })
