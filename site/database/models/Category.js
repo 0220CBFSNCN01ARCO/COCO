@@ -28,6 +28,8 @@ module.exports = function(sequelize, DataTypes) {
 	Category.associate = function(models){
 		Category.hasMany(models.User, {
 			as: "users",
+			foreignKey: "idCategories"
+		
 			
 		})
 	}
