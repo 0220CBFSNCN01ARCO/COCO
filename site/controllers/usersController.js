@@ -125,11 +125,24 @@ let usersController = {
         
     "userEdit" : function(req,res){
         const ID = req.session.usurioLogueado.id;
+        db.User.findOne({
+            include: [{association: "category"}],
+            where:{
+                id: ID
+            }
+            }).then((usuario) => {
+                res.render("profileEdit",{userID : usuario, ID:ID});
+
+            })
+        
+
+        /*
+        const ID = req.session.usurioLogueado.id;
         const userID = usersList.find( usersList => {
             return usersList.id == ID;
         })
         res.render("profileEdit", {userID:userID, ID:ID})
-  
+        */
     },
     "editProfile" :  function(req,res,next){
         const userId = req.params.id;
