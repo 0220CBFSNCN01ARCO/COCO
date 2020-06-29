@@ -19,6 +19,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+let db = require("../database/models")
+let sequelize = db.sequelize;
+
 /* GET users listing. */
 router.get('/', usersController.login);
 
@@ -34,7 +37,8 @@ router.post('/register', upload.any(), [
     check("Last_name").isLength(),
     check("Email").isEmail(),
     body("Email").custom(function(value){
-        
+
+        /*
         let UsersJSON = path.join(__dirname, '../data/users.json');
         let usersList = JSON.parse(fs.readFileSync(UsersJSON, 'utf-8'));
 
@@ -51,6 +55,24 @@ router.post('/register', upload.any(), [
             }
         }
         return true
+        */
+        db.User.findAll({
+            include: [{association: "category"}]
+        })
+            .then(function(usuarios){
+                if (usuarios  = "") {
+                    users = []
+                }else{
+                    users = usuarios;
+                }
+            
+            for(let i = 0; i < users.length; i++){
+                if (users[i].email == value){
+                    return false
+                }
+            }
+            return true
+        })
 
     }).withMessage("The email is already in use"),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
@@ -76,9 +98,30 @@ router.put('/profile/edit/:id', upload.any(), [
     check("Email").isEmail(),
     body("Email").custom(function(value){
         
+        /*
         let UsersJSON = path.join(__dirname, '../data/users.json');
         let usersList = JSON.parse(fs.readFileSync(UsersJSON, 'utf-8'));
+        */
+            db.User.findAll({
+                include: [{association: "category"}]
+            })
+                .then(function(usuarios){
+                    if (usuarios  = "") {
+                        users = []
+                    }else{
+                        users = usuarios;
+                    }
+                
+                for(let i = 0; i < users.length; i++){
+                    if (users[i].email == value){
+                        return false
+                    }
+                }
+                return true
+            })
 
+        
+        /*
             let users;
             if (UsersJSON = "") {
                 users = []
@@ -92,7 +135,7 @@ router.put('/profile/edit/:id', upload.any(), [
             }
         }
         return true
-
+        */
     }).withMessage("The email is already in use"),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
     check("Password").custom(function(value,{req, loc ,path}){
