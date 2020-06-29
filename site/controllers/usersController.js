@@ -23,7 +23,42 @@ let usersController = {
     
     "processLogin" : function(req,res,next){
         let errors = validationResult(req);
+
+    
+        db.User.findOne({
+            include: [{association: "category"}],
+            where:{
+                email: req.body.email
+            }
+        }).then(usuario => {
+            
+            const validacion = bcrypt.compareSync(req.body.password, usuario.password)
+            if(validacion){
+                req.session.usurioLogueado = usuario
+            }else{ 
+                return res.render('login', { errors: [
+                    {msg: "Invalid credentials"}
+                ]});
+                
+            }
+                if(req.body.remember != undefined){
+                    res.cookie("remember", usuario.email , { maxAge : 60000} )
+                }
+
+               
+                return res.redirect('/users/profile/' + usuario.id)
+
+               
+
+            
+
+        }).catch(error =>{ 
+            return res.render("login", { errors : errors.errors}) ;
+           
+        })
         
+    
+        /*
         if (errors.isEmpty()) {
             //Validamos que dentro del JSON se encuentren usuarios de no ser asi crea un array nuevo
             let users;
@@ -62,15 +97,32 @@ let usersController = {
         }else{
             return res.render("login", { errors : errors.errors}) ;
         }
+        */
     },
     "profile" : function(req,res){
         const ID = req.session.usurioLogueado.id;
+
+        db.User.findOne({
+            include: [{association: "category"}],
+            where:{
+                id: ID
+            }
+            }).then((resultado) => {
+                res.render("profile",{userID:resultado});
+
+            })
+            
+
+        /*
         const userID = usersList.find( usersList => {
             return usersList.id == ID;
         })
         res.render("profile",{userID:userID});
+        */
   
+        
     },
+        
     "userEdit" : function(req,res){
         const ID = req.session.usurioLogueado.id;
         const userID = usersList.find( usersList => {
