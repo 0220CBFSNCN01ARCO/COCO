@@ -191,6 +191,21 @@ let usersController = {
         res.render('productBag');
     },
     "create" : function(req,res,next){
+
+        
+            db.User.create({
+                first_Name : req.body.First_name,
+                last_Name : req.body.Last_name,
+                email : req.body.Email,
+                password : bcrypt.hashSync(req.body.Password,10),
+                avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                idCategories :  2
+
+            })
+           
+            res.redirect("/")
+        /*
+
         let errors = validationResult(req);
 
         let cont = usersList.length;
@@ -210,9 +225,12 @@ let usersController = {
             fs.writeFileSync('data/users.json', JSON.stringify(usersList));
     
             res.redirect("/users")
+
         }else{
             return res.render("register", { errors : errors.errors})
         }
+
+        */
     },
 
     "userList": function(req,res){
