@@ -106,19 +106,14 @@ router.put('/profile/edit/:id', upload.any(), [
                 include: [{association: "category"}]
             })
                 .then(function(usuarios){
-                    if (usuarios  = "") {
-                        users = []
-                    }else{
-                        users = usuarios;
+                    for(let i = 0; i < usuarios.length; i++){
+                        if (usuarios[i].email == value){
+                            return false
+                        }
                     }
+                    return true
+                })
                 
-                for(let i = 0; i < users.length; i++){
-                    if (users[i].email == value){
-                        return false
-                    }
-                }
-                return true
-            })
 
         
         /*

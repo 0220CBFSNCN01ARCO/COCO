@@ -145,6 +145,26 @@ let usersController = {
         */
     },
     "editProfile" :  function(req,res,next){
+
+        db.User.update({
+                
+                first_Name: req.body.First_name,
+                last_Name: req.body.Last_name,
+                email: req.body.Email,
+                //se podria agregar la opcion de cambiar al cantreña
+                //con un boton y quiere cambiar se modifique sino no
+
+                //tampoco se puede cambiar la imagen
+                
+                
+        },{
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/")
+
+        /*
         const userId = req.params.id;
 
             usersList.map(user => {
@@ -161,7 +181,7 @@ let usersController = {
 
         fs.writeFileSync('data/users.json', JSON.stringify(usersList));
         res.redirect("/users")
-        
+        */
     },
   
     "register" : function(req,res){
