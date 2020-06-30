@@ -37,7 +37,7 @@ router.post('/register', upload.any(), [
     check("Last_name").isLength(),
     check("Email").isEmail(),
     body("Email").custom(function(value){
-
+        
         /*
         let UsersJSON = path.join(__dirname, '../data/users.json');
         let usersList = JSON.parse(fs.readFileSync(UsersJSON, 'utf-8'));
@@ -56,23 +56,32 @@ router.post('/register', upload.any(), [
         }
         return true
         */
-        db.User.findAll({
-            include: [{association: "category"}]
-        })
-            .then(function(usuarios){
-                if (usuarios  = "") {
-                    users = []
-                }else{
-                    users = usuarios;
-                }
-            
-            for(let i = 0; i < users.length; i++){
-                if (users[i].email == value){
-                    return false
-                }
+       
+            db.User.findOne({
+            where: {
+            email: value
             }
-            return true
         })
+            .then(function(usuario){
+                console.log(usuario)
+                
+
+                if (usuario != null){ 
+                console.log("NO PASAS CAPO")
+                    return false;
+                }
+                else{
+                    console.log("PASA MI REY")
+                    return true;
+                }
+            }).catch(error =>{ 
+                return false
+            })
+       
+                
+   
+    
+            
 
     }).withMessage("The email is already in use"),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),

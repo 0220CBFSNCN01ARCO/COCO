@@ -191,8 +191,12 @@ let usersController = {
         res.render('productBag');
     },
     "create" : function(req,res,next){
-
+        let errors = validationResult(req)
         
+        console.log("ERRORESSS!!!!!!!!!!")
+        console.log(errors)
+
+        if (errors.isEmpty()){
             db.User.create({
                 first_Name : req.body.First_name,
                 last_Name : req.body.Last_name,
@@ -203,7 +207,11 @@ let usersController = {
 
             })
            
-            res.redirect("/")
+            res.redirect("/users")
+
+        }else{
+            return res.render("register", { errors : errors.errors})
+        }
         /*
 
         let errors = validationResult(req);
@@ -247,11 +255,24 @@ let usersController = {
 
     "view": function(req,res,next){
         const id = req.params.id;
+        db.User.findOne({
+        include: [{association: "category"}],
+        where:{
+            id: id
+        }
+        }).then((usuario) => {
+            res.render("usersView",{userID : usuario, ID: id});
+
+        })
+        console.log(id)
+        /*
+        const id = req.params.id;
         const userID = usersList.find( usersList => {
             return usersList.id == id;
         });
         res.render("usersView", { userID: userID, ID:id});
         console.log(id)
+        */
     },
 
     "delete": function(req,res,next){
@@ -270,19 +291,38 @@ let usersController = {
     "editUser": function(req,res,next){
 
         const id = req.params.id;
+        db.User.findOne({
+        include: [{association: "category"}],
+        where:{
+            id: id
+        }
+        }).then((usuario) => {
+            res.render("userEdit",{userID : usuario, ID: id});
+
+        })
+
+        /*const id = req.params.id;
         const userID = usersList.find( usersList => {
             return usersList.id == id;
         });
         res.render("userEdit", { userID: userID, ID:id});
-        
+        */
     },
 
       
     "edit": function(req,res,next){
 
         const userId = req.params.id;
-        
-    
+        db.User.update({
+            idCategories : req.body.category
+        },{
+            where: {
+                id: userId
+            }
+        })
+
+        res.redirect('/users/list');
+        /*
        usersList.map(user => {
             if(user.id == userId)
                 user.category = req.body.category
@@ -292,7 +332,7 @@ let usersController = {
         fs.writeFileSync('data/users.json', JSON.stringify(usersList));
         res.redirect('/users/list');
     
-
+        */
         
     },
 
