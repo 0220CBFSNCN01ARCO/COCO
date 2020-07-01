@@ -19,5 +19,15 @@ module.exports = function(sequelize, DataTypes) {
 		timestamps: false
 	});
 
+	
+	Genre.associate = function(models){
+		Genre.hasMany(models.CategoryProduct, {
+			as: 'categoryProducts',
+			foreignKey: 'idGenres'
+			
+		});
+
+		  }
+
 	return Genre
 };
