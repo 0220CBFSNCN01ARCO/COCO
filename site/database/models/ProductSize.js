@@ -1,7 +1,7 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('ProductSize', {
+	const ProductSize= sequelize.define('ProductSize', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -36,4 +36,6 @@ module.exports = function(sequelize, DataTypes) {
 		tableName: 'products_sizes',
 		timestamps: false
 	});
+
+	return ProductSize
 };

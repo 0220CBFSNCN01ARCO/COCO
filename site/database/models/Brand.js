@@ -1,7 +1,7 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Brand', {
+	const Brand = sequelize.define('Brand', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -23,4 +23,12 @@ module.exports = function(sequelize, DataTypes) {
 		tableName: 'brands',
 		timestamps: false
 	});
+	Brand.associate = function(models){
+		Brand.hasMany(models.Product, {
+			as: "products",
+			foreignKey: 'idBrands'
+			
+		});
+	}
+	return Brand
 };

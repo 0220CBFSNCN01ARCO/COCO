@@ -1,7 +1,7 @@
 /* jshint indent: 1 */
 
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Product', {
+	const Product = sequelize.define('Product', {
 		id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
@@ -47,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
 			},
 			field: 'idColours'
 		},
-		idCategories: {
+		idCategoriesProduct: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
@@ -69,4 +69,29 @@ module.exports = function(sequelize, DataTypes) {
 		tableName: 'products',
 		timestamps: false
 	});
+
+	Product.associate = function(models){
+		Product.belongsTo(models.Brand, {
+			as: 'brand',
+			foreignKey: 'idBrands'
+		});
+
+		Product.belongsTo(models.Colour, {
+			as: 'colour',
+			foreignKey: 'idColours'
+		});
+
+		Product.belongsTo(models.CategoryProduct, {
+			as: 'categoryProduct',
+			foreignKey: 'idCategoriesProduct'
+			
+		});
+
+		Product.belongsTo(models.Offer, {
+			as: 'offer',
+			foreignKey: 'idOffers'
+		})
+	}
+
+	return Product;
 };
