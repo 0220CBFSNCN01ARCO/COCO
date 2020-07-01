@@ -57,33 +57,22 @@ router.post('/register', upload.any(), [
         return true
         */
        
-            db.User.findOne({
+            return db.User.findOne({
             where: {
             email: value
             }
         })
             .then(function(usuario){
-                console.log(usuario)
-                
 
-                if (usuario != null){ 
-                console.log("NO PASAS CAPO")
-                    return false;
-                }
-                else{
-                    console.log("PASA MI REY")
-                    return true;
-                }
-            }).catch(error =>{ 
+                if (usuario != null){
+                    Promise.reject("The email is already in use")}
+                    
+                
+            }).catch(function(error){ 
                 return false
             })
-       
-                
-   
-    
-            
 
-    }).withMessage("The email is already in use"),
+    }),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
     check("Password").custom(function(value,{req, loc ,path}){
         if (value != req.body.passwordRepeat){

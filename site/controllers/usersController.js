@@ -4,7 +4,8 @@ const path = require('path');
 const bcrypt = require('bcrypt')
 const { check , validationResult , body } = require("express-validator")
 
-let db = require("../database/models")
+let db = require("../database/models");
+const { doesNotMatch } = require('assert');
 let sequelize = db.sequelize;
 
 const usersPath = path.join(__dirname, '../data/users.json');
@@ -197,6 +198,7 @@ let usersController = {
         console.log(errors)
 
         if (errors.isEmpty()){
+
             db.User.create({
                 first_Name : req.body.First_name,
                 last_Name : req.body.Last_name,
@@ -205,9 +207,17 @@ let usersController = {
                 avatar : req.files[0] ? req.files[0].filename : "default.jpg",
                 idCategories :  2
 
+            }).then(function(user){
+
+                return res.redirect("/users")
+
+            }).catch(function(error){
+                // NO MUESTRA EL ERROR DEL EMAIL DUPLICADO !!!!!
+                res.render("register", { errors : error})
+                
             })
            
-            res.redirect("/users")
+            
 
         }else{
             return res.render("register", { errors : errors.errors})
