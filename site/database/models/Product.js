@@ -51,10 +51,10 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
-				model: 'Category',
+				model: 'CategoryProduct',
 				key: 'id'
 			},
-			field: 'idCategories'
+			field: 'idCategoriesProduct'
 		},
 		idOffers: {
 			type: DataTypes.INTEGER(11),
