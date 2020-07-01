@@ -276,6 +276,18 @@ let usersController = {
     },
 
     "delete": function(req,res,next){
+
+        let userID = req.params.id;
+
+        db.User.destroy({
+        where:{
+            id: userID
+            }
+        })
+
+        res.redirect("/users/list")
+
+        /*
         let userID = req.params.id;
 
         let userIdDelete = usersList.filter(usersList =>{
@@ -286,6 +298,7 @@ let usersController = {
         fs.writeFileSync(usersPath, newusersList);
 
         res.redirect("/users/list")
+        */
     },
     
     "editUser": function(req,res,next){
