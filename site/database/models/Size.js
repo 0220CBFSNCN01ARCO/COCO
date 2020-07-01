@@ -18,5 +18,16 @@ module.exports = function(sequelize, DataTypes) {
 		tableName: 'sizes',
 		timestamps: false
 	});
+
+	Size.associate = function(models){
+		
+
+		Size.belongsToMany(models.Product, {
+			as: 'products',
+			through: models.ProductSize,
+			foreignKey: 'idSizes',
+			otherKey: 'idProducts'
+		})
+	}
 	return Size
 };

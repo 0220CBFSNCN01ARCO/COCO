@@ -90,6 +90,13 @@ module.exports = function(sequelize, DataTypes) {
 		Product.belongsTo(models.Offer, {
 			as: 'offer',
 			foreignKey: 'idOffers'
+		});
+
+		Product.belongsToMany(models.Size, {
+			as: 'sizes',
+			through: models.ProductSize,
+			foreignKey: 'idProducts',
+			otherKey: 'idSizes'
 		})
 	}
 
