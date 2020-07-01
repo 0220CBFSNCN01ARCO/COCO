@@ -107,6 +107,7 @@ let usersController = {
             include: [{association: "category"}],
             where:{
                 id: ID
+                
             }
             }).then((resultado) => {
                 res.render("profile",{userID:resultado});
@@ -212,7 +213,7 @@ let usersController = {
                 return res.redirect("/users")
 
             }).catch(function(error){
-                // NO MUESTRA EL ERROR DEL EMAIL DUPLICADO !!!!!
+                
                 res.render("register", { errors : error})
                 
             })
