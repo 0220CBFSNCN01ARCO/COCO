@@ -1,5 +1,6 @@
 const fs = require ('fs');
 const path = require('path');
+let db = require("../database/models");
 
 const productsPath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
@@ -19,7 +20,9 @@ let productController = {
         res.render("productAdd");
     },
 
-    "create": function(req,res,next){
+    "create": function(req,res){
+
+        
         let cont = products.length;
         let ID = cont + 1;
 
