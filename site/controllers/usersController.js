@@ -370,9 +370,31 @@ let usersController = {
         let ID = req.params.id
 
         res.render("password",{ID : ID });
+    },
+    "ChangePassword" : function(req,res,next){
+        let ID = req.params.id
+        let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
+            /*db.User.findOne({
+                where:{
+                    id: ID
+                }
+            }).then((usuario) => {
+                
+                let validacion = bcrypt.compareSync(req.body.Password, usuario.password)
+                console.log("LA VALIDACION ESSSSSS  " + validacion)
+                if(validacion){
+                    res.send("BIENNNN")
+                    }
+            })
+            */
+        }else{
+            console.log("LLEGEEE HASTA ACAAAAAAAAAAA")
+            return res.render("password", { errors : errors.errors, ID : ID }) ;
+        }
+    
     }
-    
-    
 
 };
 

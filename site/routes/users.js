@@ -159,7 +159,18 @@ router.get("/check", function(req,res){
 
 router.get('/logout', usersController.logout);
 
-router.get('/password/edit/:id', usersController.editPassword);
+router.get('/profile/password/edit/:id', usersController.editPassword);
+
+router.put('/profile/password/edit/:id', [ 
+    check("PasswordNew", "passwordRepeat").isLength({min: 6}).withMessage("The password must contain 6 characters"),
+    check("PasswordNew").custom(function(value,{req, loc ,path}){
+    if (value != req.body.passwordRepeat){
+        return false
+    }else{
+        return true
+    }
+    }).withMessage("Passwords entered are not the same"),
+    ] ,usersController.ChangePassword);
 
 
 module.exports = router;

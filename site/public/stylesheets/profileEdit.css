@@ -12,7 +12,7 @@ body{
     margin-bottom: 10px;
 }
 #error{
-    color: black;
+    color: red;
     font-weight: 700;
     font-size: 20px;
 }

@@ -10,7 +10,7 @@ body{
     margin-bottom: 10px;
 }
 #error{
-    color: black;
+    color: red;
    
     font-size: 20px;
 }
