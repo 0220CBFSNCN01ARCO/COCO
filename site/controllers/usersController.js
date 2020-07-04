@@ -208,21 +208,17 @@ let usersController = {
                 avatar : req.files[0] ? req.files[0].filename : "default.jpg",
                 idCategories :  2
 
-            }).then(function(user){
-
-                return res.redirect("/users")
-
-            }).catch(function(error){
-                
-                res.render("register", { errors : error})
-                
             })
-           
+            res.redirect("/users")
             
-
         }else{
+
             return res.render("register", { errors : errors.errors})
+              
+
         }
+                
+                
         /*
 
         let errors = validationResult(req);

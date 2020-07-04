@@ -64,15 +64,13 @@ router.post('/register', upload.any(), [
         })
             .then(function(usuario){
 
-                if (usuario != null){
-                    Promise.reject("The email is already in use")}
+                if (usuario){
+                    return Promise.reject()
                     
-                
-            }).catch(function(error){ 
-                return false
+                }
             })
-
-    }),
+            
+    }).withMessage("The email is already in use"),
     check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
     check("Password").custom(function(value,{req, loc ,path}){
         if (value != req.body.passwordRepeat){
