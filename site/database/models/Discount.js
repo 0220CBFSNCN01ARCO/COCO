@@ -20,8 +20,8 @@ module.exports = function(sequelize, DataTypes) {
 	});
 	Discount.associate = function(models){
 		Discount.hasMany(models.Offer, {
-			as: "offers"
-			
+			as: "offers",
+			foreignKey: 'idDiscounts'
 		});
 	};
 	return Discount

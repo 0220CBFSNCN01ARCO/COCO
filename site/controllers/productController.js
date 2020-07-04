@@ -87,7 +87,7 @@ let productController = {
     "productList": function(req,res){
 
         db.Product.findAll({
-            include: [{association: "brand"}, {association: "colour"}]
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}],
         })
             .then(function(products){
                 res.render("productList", { productsList: products });

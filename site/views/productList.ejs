@@ -38,7 +38,12 @@
                                 <td><%= product.quantity %></td>
                                 <td><%= product.size %></td>
                                 <td>$<%= product.price %></td>
-                                <td><%= product.offer %></td>
+                                <td><% if(product.offer.has == 0){ %>
+                                        not
+                                    <%}else{ %>
+                                        yes
+                                    <% } %>
+                                </td>
                             </tr>
 
                         <% }) %>
