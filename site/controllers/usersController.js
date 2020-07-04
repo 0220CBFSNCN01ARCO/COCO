@@ -366,6 +366,11 @@ let usersController = {
         
     },
 
+    "editPassword" : function(req,res,next){
+        let ID = req.params.id
+
+        res.render("password",{ID : ID });
+    }
     
     
 

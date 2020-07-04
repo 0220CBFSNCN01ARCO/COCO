@@ -97,8 +97,9 @@ module.exports = function(sequelize, DataTypes) {
 			through: models.ProductSize,
 			foreignKey: 'idProducts',
 			otherKey: 'idSizes',
-			timestamps: false
+			
 		})
+		
 	}
 
 	return Product;

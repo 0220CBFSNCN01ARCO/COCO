@@ -20,15 +20,19 @@ module.exports = function(sequelize, DataTypes) {
 	});
 
 	Size.associate = function(models){
-		
-
+		Size.hasMany(models.ProductSize, {
+			as: 'ProductSize',
+			foreignKey: 'idSizes'
+		/*
 		Size.belongsToMany(models.Product, {
 			as: 'products',
 			through: models.ProductSize,
 			foreignKey: 'idSizes',
 			otherKey: 'idProducts',
 			timestamps: false
+		*/
 		})
+		
 	}
 	return Size
 };

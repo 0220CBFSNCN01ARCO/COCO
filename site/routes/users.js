@@ -159,5 +159,7 @@ router.get("/check", function(req,res){
 
 router.get('/logout', usersController.logout);
 
+router.get('/password/edit/:id', usersController.editPassword);
+
 
 module.exports = router;
