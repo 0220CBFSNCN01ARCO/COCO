@@ -1,9 +1,10 @@
 body{
     background-color: #faf6e9;
     font-family: "Montserrat";
-    background-image: url("/images/cover.jpg");
+    background-image: url("/images/base.jpg");
     overflow: hidden;
-    background-size: 380px;
+    background-size: 250px;
+
     
 }
 #titulo{
@@ -11,8 +12,8 @@ body{
     margin-bottom: 10px;
 }
 #error{
-    color: red;
-   
+    color: black;
+    font-weight: 700;
     font-size: 20px;
 }
 #error ul li{

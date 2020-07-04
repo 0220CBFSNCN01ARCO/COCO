@@ -1,5 +1,8 @@
 body{
     background-color: #faf6e9;
+    background-image: url("/images/cover.jpg");
+    overflow: hidden;
+    background-size: 380px;
 }
 
 #princ{ 
@@ -19,9 +22,11 @@ body{
     background-color: gray;
 }
 #error{
-    color: red;
+    color: black;
     font-size: 20px;
     text-align: left;
+    font-weight: 700;
+    
 }
 #error ul li{
     list-style: none;

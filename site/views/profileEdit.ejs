@@ -11,8 +11,16 @@
     <% include partials\header.ejs %> 
 
     <section class="container" id="cuerpo">
+    <div class="col-12">
+      <div class="row">
 
-    <h2 id="titulo">Edit profile</h2>
+    <div class="col-6">
+
+    </div>
+
+    <div class="col-6">
+
+    <h2 id="titulo"><strong>Edit profile</strong></h2>
     <div id="error">
         <% if (typeof errors != "undefined") { %>  
             <ul>
@@ -28,14 +36,14 @@
     <form class="needs-validation" novalidate action="/users/profile/edit/<%= ID %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="form-row" id="primeraColumna">
           <div class="col-6">
-            <label for="validationCustom01">First name</label>
+            <label for="validationCustom01"><strong>First name</strong></label>
             <input type="text" class="form-control" id="validationCustom01" name="First_name" value="<%= userID.first_Name %>" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
           <div class="col-6">
-            <label for="validationCustom02">Last name</label>
+            <label for="validationCustom02"><strong>Last name</strong></label>
             <input type="text" class="form-control" id="validationCustom02" name="Last_name" value="<%= userID.last_Name %>" required>
             <div class="valid-feedback">
               Looks good!
@@ -44,26 +52,27 @@
         </div>
         <div class="form-row">
           <div class="col-12">
-            <label for="validationCustom03">Email</label>
+            <label for="validationCustom03"><strong>Email</strong></label>
             <input type="email" class="form-control" id="validationCustom03" name="Email" value="<%= userID.email %>" required>
             <div class="invalid-feedback">
               Please provide a valid email.
             </div>
           </div>
 
-           
+           </div>
         
-        </div>
+        <!--
         <div class="custom-file">
             <label form="">Avatar</label>
             <input type="file" name="image">
           </div>
+        -->
         <div class="form-group" id="confirmacion">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="invalidCheck" required>
             <label class="form-check-label" for="invalidCheck">
                 <a id="terminos" href="/policy/Terms">
-                    Agree to terms and conditions
+                <strong>Agree to terms and conditions</strong>
                 </a>
             </label>
                 
@@ -74,7 +83,7 @@
         </div>
         <div class="form-row">
         <div class="col-6">
-        <button class="btn btn-primary" type="submit">Save changes</button>
+        <button class="btn btn-primary" type="submit">Save</button>
         </div>  
         <div class="col-6">
             <a href="/users" ><button type="button" class="btn btn-primary">
@@ -84,6 +93,13 @@
           </div>
         </div>
       </form>
+
+
+    </div>
+  </div>
+</div>
+
+
     </section>
       
       <script>

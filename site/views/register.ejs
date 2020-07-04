@@ -12,7 +12,7 @@
 
     <section class="container" id="cuerpo">
 
-    <h2 id="titulo">Register</h2>
+    <h2 id="titulo"><strong>Register</strong></h2>
     <div id="error">
         <% if (typeof errors != "undefined") { %>  
             <ul>
@@ -28,14 +28,14 @@
     <form class="needs-validation" novalidate action="/users/register" method="POST" enctype="multipart/form-data">
         <div class="form-row" id="primeraColumna">
           <div class="col-6">
-            <label for="validationCustom01">First name</label>
+            <label for="validationCustom01"><strong>First name</strong></label>
             <input type="text" class="form-control" id="validationCustom01" name="First_name" placeholder="Enter your first name" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
           <div class="col-6">
-            <label for="validationCustom02">Last name</label>
+            <label for="validationCustom02"><strong>Last name</strong></label>
             <input type="text" class="form-control" id="validationCustom02" name="Last_name" placeholder="Enter your last name" required>
             <div class="valid-feedback">
               Looks good!
@@ -44,21 +44,21 @@
         </div>
         <div class="form-row">
           <div class="col-6">
-            <label for="validationCustom03">Email</label>
+            <label for="validationCustom03"><strong>Email</strong></label>
             <input type="email" class="form-control" id="validationCustom03" name="Email" placeholder="Enter your email addres" required>
             <div class="invalid-feedback">
               Please provide a valid email.
             </div>
           </div>
           <div class="col-3">
-            <label for="validationCustom04">Password</label>
+            <label for="validationCustom04"><strong>Password</strong></label>
             <input type="password" class="form-control" id="validationCustom04" name="Password" placeholder="Enter Password" required>
             <div class="invalid-feedback">
             Please enter your password.
             </div>
           </div> 
           <div class="col-3">
-            <label for="validationCustom05">Confirm password</label>
+            <label for="validationCustom05"><strong>Confirm password</strong></label>
             <input type="password" class="form-control" id="validationCustom05" name="passwordRepeat" placeholder="Enter Password" required>
             <div class="invalid-feedback">
             Please enter your password.
@@ -67,7 +67,7 @@
         
         </div>
         <div class="custom-file">
-            <label form="">Avatar</label>
+            <label form=""><strong>Avatar</strong></label>
             <input type="file" name="image">
           </div>
         <div class="form-group" id="confirmacion">
@@ -75,7 +75,7 @@
             <input class="form-check-input" type="checkbox" id="invalidCheck" required>
             <label class="form-check-label" for="invalidCheck">
                 <a id="terminos" href="/policy/Terms">
-                    Agree to terms and conditions
+                <strong>Agree to terms and conditions</strong>
                 </a>
             </label>
                 
