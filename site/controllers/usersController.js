@@ -376,22 +376,43 @@ let usersController = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
-            /*db.User.findOne({
+            db.User.findOne({
                 where:{
                     id: ID
                 }
             }).then((usuario) => {
                 
                 let validacion = bcrypt.compareSync(req.body.Password, usuario.password)
-                console.log("LA VALIDACION ESSSSSS  " + validacion)
+
                 if(validacion){
-                    res.send("BIENNNN")
-                    }
+                  
+                   db.User.update({
+                
+                    password: bcrypt.hashSync(req.body.PasswordNew,10),
+
+                    },{
+                        where: {
+                            id: ID
+                        }
+                    })
+                    res.redirect("/")
+
+                    
+                }else{
+                    return res.render("password", { errors : [{msg: "Enter your current password"}], ID : ID }) ;
+                }
+            }).catch(error =>{ 
+                console.log("LLEGEEE HASTA ACAAAAAAAAAAA")
+                return res.render("password", { errors : [{msg: "Enter your current password"}], ID : ID }) ;
+               
             })
-            */
+            
         }else{
-            console.log("LLEGEEE HASTA ACAAAAAAAAAAA")
+            
+            console.log(errors)
+            
             return res.render("password", { errors : errors.errors, ID : ID }) ;
+            
         }
     
     }

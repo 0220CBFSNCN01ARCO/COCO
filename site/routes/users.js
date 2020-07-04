@@ -162,7 +162,7 @@ router.get('/logout', usersController.logout);
 router.get('/profile/password/edit/:id', usersController.editPassword);
 
 router.put('/profile/password/edit/:id', [ 
-    check("PasswordNew", "passwordRepeat").isLength({min: 6}).withMessage("The password must contain 6 characters"),
+    check("Password","PasswordNew", "passwordRepeat").isLength({min: 6}).withMessage("The passwords must contain 6 characters"),
     check("PasswordNew").custom(function(value,{req, loc ,path}){
     if (value != req.body.passwordRepeat){
         return false
@@ -170,6 +170,13 @@ router.put('/profile/password/edit/:id', [
         return true
     }
     }).withMessage("Passwords entered are not the same"),
+    check("Password").custom(function(value,{req, loc ,path}){
+        if (value != req.body.PasswordNew){
+            return true
+        }else{
+            return false
+        }
+        }).withMessage("Enter a different password"),
     ] ,usersController.ChangePassword);
 
 
