@@ -419,7 +419,21 @@ let usersController = {
     "editAvatar" : function(req,res,next){
         let ID = req.params.id
         res.render("avatar",{ID : ID })
-    }
+    },
+    "ChangeAvatar" : function(req,res,next){
+        let ID = req.params.id
+        db.User.update({
+            avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+            
+        },{
+            where: {
+                id: ID
+            }
+        })
+        res.redirect("/users")
+
+        
+        }
 
 };
 

@@ -181,4 +181,6 @@ router.put('/profile/password/edit/:id', [
 
 router.get('/profile/avatar/edit/:id', usersController.editAvatar);
 
+router.put('/profile/avatar/edit/:id', upload.any(), usersController.ChangeAvatar);
+
 module.exports = router;
