@@ -19,7 +19,18 @@ body{
 #error ul li{
     list-style: none;
 }
-
+#centroArriba{
+    text-align: center;
+    margin-top: 50px;
+}
+#centroAbajo{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#BotonesAbajo{
+    margin-bottom: 10px;
+}
 #cuerpo{
     
     overflow: hidden;

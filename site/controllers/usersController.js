@@ -415,6 +415,10 @@ let usersController = {
             
         }
     
+    },
+    "editAvatar" : function(req,res,next){
+        let ID = req.params.id
+        res.render("avatar",{ID : ID })
     }
 
 };

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials\head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/profileEdit.css">
+    
+    <title>COCO | Avatar </title>
+</head> 
+<body>
+    
+    <% include partials\header.ejs %> 
+
+    <section class="container" id="cuerpo">
+    
+    <div class="col-12" id="passwords">
+        
+    <div class="row">
+    <div class="col-3">
+
+    </div>
+    
+    <div class="col-6">
+
+    
+    
+    <div id="error">
+        <% if (typeof errors != "undefined") { %>  
+            <ul>
+                
+                <% for (let i = 0 ; i < errors.length ; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+
+    
+
+    
+    <h2 id="titulo"><strong>Change Avatar</strong></h2>
+    
+    <form class="needs-validation" novalidate action="/users/profile/password/edit/<%= ID %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+        <div class="col-12" id="centroArriba">
+        
+        <h5><strong>Select a new image and save changes</strong></h5>
+        </div>
+           
+
+          <div class="custom-file" id="centroAbajo">
+            <label form=""><strong>Avatar</strong></label>
+            <input type="file" name="image">
+          </div> 
+        
+        <div class="form-row">
+        <div class="col-6" id="BotonesAbajo">
+        <button class="btn btn-primary" type="submit">Save</button>
+        </div>  
+        <div class="col-6" id="BotonesAbajo">
+            <a href="/users" ><button type="button" class="btn btn-primary">
+              Cancel
+              </button>
+          </a>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="col-3">
+
+    </div>
+    </div>
+    </div>
+
+    </section>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+
+    <% include partials\script.ejs %> 
+</body>
+<% include partials\footer.ejs %> 
+</html>

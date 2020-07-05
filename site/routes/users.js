@@ -179,5 +179,6 @@ router.put('/profile/password/edit/:id', [
         }).withMessage("Enter a different password"),
     ] ,usersController.ChangePassword);
 
+router.get('/profile/avatar/edit/:id', usersController.editAvatar);
 
 module.exports = router;
