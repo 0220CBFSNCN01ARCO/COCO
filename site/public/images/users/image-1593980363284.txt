@@ -1,0 +1,8 @@
+npm install multer --save
+npm install method-override --save
+npm install bcrypt --save
+npm install express-validator --save
+npm install express-session --save
+npm install sequelize-cli -g --save
+npm install sequelize --save
+npm install mysql32 --save

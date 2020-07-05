@@ -33,53 +33,17 @@ router.post('/',[
 router.get('/register', guestMiddleware, usersController.register);
 
 router.post('/register', upload.any(), [
-    check("First_name").isLength(),
-    check("Last_name").isLength(),
+    check("First_name").isLength({min: 2}).withMessage("The first name must contain 2 characters"),
+    check("Last_name").isLength({min: 2}).withMessage("The last name must contain 2 characters"),
     check("Email").isEmail(),
-    body("Email").custom(function(value){
-        
-        /*
-        let UsersJSON = path.join(__dirname, '../data/users.json');
-        let usersList = JSON.parse(fs.readFileSync(UsersJSON, 'utf-8'));
-
-            let users;
-            if (UsersJSON = "") {
-                users = []
-            }else{
-                users = usersList;
-            }
-        
-        for(let i = 0; i < users.length; i++){
-            if (users[i].email == value){
-                return false
-            }
-        }
-        return true
-        */
-       
-            return db.User.findOne({
-            where: {
-            email: value
-            }
-        })
-            .then(function(usuario){
-
-                if (usuario){
-                    return Promise.reject()
-                    
-                }
-            })
-            
-    }).withMessage("The email is already in use"),
-    check("Password").isLength({min: 6}).withMessage("The password must contain 6 characters"),
+    check("Password","passwordRepeat").isLength({min: 6}).withMessage("The password must contain 6 characters"),
     check("Password").custom(function(value,{req, loc ,path}){
         if (value != req.body.passwordRepeat){
             return false
         }else{
             return true
         }
-    }).withMessage("Passwords entered are not the same"),
-    check("passwordRepeat").isLength({min: 6})
+    }).withMessage("Passwords entered are not the same")
 ], usersController.create);
 
 router.get('/bag',authMiddleware,usersController.bag);
@@ -162,7 +126,7 @@ router.get('/logout', usersController.logout);
 router.get('/profile/password/edit/:id', usersController.editPassword);
 
 router.put('/profile/password/edit/:id', [ 
-    check("Password","PasswordNew", "passwordRepeat").isLength({min: 6}).withMessage("The passwords must contain 6 characters"),
+    check("PasswordNew", "passwordRepeat").isLength({min: 6}).withMessage("The passwords must contain 6 characters"),
     check("PasswordNew").custom(function(value,{req, loc ,path}){
     if (value != req.body.passwordRepeat){
         return false

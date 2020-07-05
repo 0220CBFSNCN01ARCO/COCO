@@ -200,16 +200,36 @@ let usersController = {
 
         if (errors.isEmpty()){
 
-            db.User.create({
-                first_Name : req.body.First_name,
-                last_Name : req.body.Last_name,
-                email : req.body.Email,
-                password : bcrypt.hashSync(req.body.Password,10),
-                avatar : req.files[0] ? req.files[0].filename : "default.jpg",
-                idCategories :  2
-
+            db.User.findOne({
+                where: {
+                email: req.body.Email
+                }
             })
-            res.redirect("/users")
+                .then(function(usuario){
+    
+                    if (usuario){
+                        return res.render("register", { errors : [{msg :"The email is already in use"}]})
+                        
+                    }else{
+                        db.User.create({
+                            first_Name : req.body.First_name,
+                            last_Name : req.body.Last_name,
+                            email : req.body.Email,
+                            password : bcrypt.hashSync(req.body.Password,10),
+                            avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                            idCategories :  2
+            
+                        })
+                        res.redirect("/users")
+                    }
+
+                }).catch(error =>{ 
+                    return res.render("register", { errors : [{msg :"The email is already in use"}]})
+                })
+
+    
+
+            
             
         }else{
 
