@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin-top: 100px;
     width: 100%; 
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
 }
 
 body {
@@ -22,14 +22,18 @@ body {
 
 #title {
     font-family: "Montserrat";
+    text-align: center;
 }
 
 #mail {
     font-family: "Montserrat";
+    text-align: center;
 }
+
 #edit {
     font-family: "Montserrat";
     color: black;
+    text-align: center;
 }
 
 .nav-item {
@@ -56,12 +60,16 @@ h5 {
 
 #right {
     background-color: #ece8d9;
-    height: 500px;
-    padding: 20px;
+    
+    
+}
+#total{
+    background-color: #ece8d9;
 }
 
 .card-body {
     background-color:  #faf6e9;
+    
     
 
 }
@@ -90,7 +98,8 @@ h5 {
 }
 
 .card-img-top{
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .card-img-top:hover{

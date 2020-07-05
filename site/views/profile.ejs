@@ -9,23 +9,30 @@
     <% include partials\header.ejs %> 
 
     <section class="container" id="cuerpo">
-
+        <div id="total">
         <div class="row">
+        
         
         <div class="card col-3" style="width: 18rem">
             <a href="/users/profile/avatar/edit/<%= userID.id %>"><img src="/images/users/<%= userID.avatar %>" class="card-img-top" alt="..."></a>
             <div class="card-body">
-              <h5 id="title" class="card-title"><%= userID.first_Name + ' ' + userID.last_Name %></h5>
+              <h5 id="title" class="card-title"><strong><%= userID.first_Name + ' ' + userID.last_Name %></strong></h5>
             </div>
             <ul id= "mail" class="list-group list-group-flush">
               <li class="list-group-item"><%= userID.email %></li>
             </ul>
             <div id="edit" class="card-body">
-              <a href="/users/profile/edit/<%= userID.id %>" class="card-link">Edit profile</a>
-            </div>
-            <div id="edit" class="card-body">
+              <label><strong>Menu</strong></label><br>
+              <a href="/users/profile/edit/<%= userID.id %>" class="card-link">Edit profile</a><br>
               <a href="/users/profile/password/edit/<%= userID.id %>" class="card-link">Change password</a>
             </div>
+            <div class="card-body" id="singout">
+              <a href="/users/logout" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                Exit
+                </button>
+              </a>
+            </div>
+            
         </div>
 
           <div id= "right" class="col-9">
@@ -55,7 +62,9 @@
               </div>
             </div>
           </div>
+
         </div>
+      </div>
 
         
 
@@ -91,12 +100,7 @@
 
       </div>
 
-      <div class="col-4" id="singout">
-        <a href="/users/logout" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-          Exit
-          </button>
-        </a>
-      </div>
+      
       
       <div class="col-4">
 
