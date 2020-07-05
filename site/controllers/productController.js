@@ -106,6 +106,17 @@ let productController = {
     },
 
     "delete": function(req,res,next){
+        let ID = req.params.id;
+
+        db.Product.destroy({
+        where:{
+            id: ID
+            }
+        })
+
+        res.redirect("/product")
+
+        /*
         let productID = req.params.id;
 
         let productsIdDelete = products.filter(product =>{
@@ -116,6 +127,7 @@ let productController = {
         fs.writeFileSync(productsPath, newProductList);
 
         res.redirect("/product")
+        */
     },
     "shop": function(req,res){
         
