@@ -13,7 +13,7 @@
         <div class="row">
         
         <div class="card col-3" style="width: 18rem">
-            <img src="/images/users/<%= userID.avatar %>" class="card-img-top" alt="...">
+            <a href="/users/profile/avatar/edit/<%= userID.id %>"><img src="/images/users/<%= userID.avatar %>" class="card-img-top" alt="..."></a>
             <div class="card-body">
               <h5 id="title" class="card-title"><%= userID.first_Name + ' ' + userID.last_Name %></h5>
             </div>
