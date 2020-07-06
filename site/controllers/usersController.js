@@ -194,51 +194,46 @@ let usersController = {
     },
     "create" : function(req,res,next){
         let errors = validationResult(req)
-        
-        console.log("ERRORESSS!!!!!!!!!!")
-        console.log(errors)
+    
+        if(errors.isEmpty()){
 
-        if (errors.isEmpty()){
-
-            db.User.findOne({
+            let validacion = db.User.findOne({
                 where: {
                 email: req.body.Email
                 }
             })
-                .then(function(usuario){
-    
-                    if (usuario){
-                        return res.render("register", { errors : [{msg :"The email is already in use"}]})
-                        
-                    }else{
-                        db.User.create({
-                            first_Name : req.body.First_name,
-                            last_Name : req.body.Last_name,
-                            email : req.body.Email,
-                            password : bcrypt.hashSync(req.body.Password,10),
-                            avatar : req.files[0] ? req.files[0].filename : "default.jpg",
-                            idCategories :  2
             
-                        })
-                        res.redirect("/users")
-                    }
+            validacion.then((usuario) => {
+                console.log(usuario)
+                if(usuario){
+                    
+                        return res.render("register", {errors : [{msg :"The email is already in use"}]})
 
-                }).catch(error =>{ 
-                    return res.render("register", { errors : [{msg :"The email is already in use"}]})
-                })
-
-    
-
+                }else{
+                    console.log("ESTOY ACAAAAAAAAAAAAAAA")
+                    db.User.create({
+                        first_Name : req.body.First_name,
+                        last_Name : req.body.Last_name,
+                        email : req.body.Email,
+                        password : bcrypt.hashSync(req.body.Password,10),
+                        avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                        idCategories :  2
             
-            
+                    })
+                    
+                    return res.render("login")
+
+                }
+            });
+            validacion.catch(error =>{
+                return res.render("register", { errors : errors.errors })
+            })
+
         }else{
 
-            return res.render("register", { errors : errors.errors})
-              
-
+            return res.render("register", { errors : errors.errors })
         }
-                
-                
+                   
         /*
 
         let errors = validationResult(req);
