@@ -10,10 +10,24 @@ let productController = {
     "detail" : function(req,res){
       
         const ID = req.params.id;
-        const productID = products.find( products => {
+
+        db.Product.findOne({
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+            where:{
+                id: ID
+                
+            }
+            }).then((resultado) => {
+                res.render("productDetail",{productID:resultado});
+
+            })
+
+
+
+        /*const productID = products.find( products => {
             return products.id == ID;
         })
-        res.render("productDetail",{productID:productID});
+        res.render("productDetail",{productID:productID});*/
     },
 
     "add" : function(req,res){
@@ -51,11 +65,28 @@ let productController = {
     },
     
     "productEdit": function(req,res){
-        const id = req.params.id;
+        const ID = req.params.id;
+
+        db.Product.findOne({
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+            where:{
+                id: ID
+                
+            }
+            }).then((resultado) => {
+                res.render("productEdit",{productToEdit:resultado, ID:ID});
+
+            })
+
+
+
+
+
+        /*const id = req.params.id;
         const productToEdit = products.find( products => {
             return products.id == id;
         });
-        res.render("productEdit", { productToEdit: productToEdit, ID:id})
+        res.render("productEdit", { productToEdit: productToEdit, ID:id})*/
     },
 
     "Edit": function(req,res,next){

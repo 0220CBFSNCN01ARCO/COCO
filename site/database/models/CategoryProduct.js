@@ -37,7 +37,7 @@ module.exports = function(sequelize, DataTypes) {
 
 		CategoryProduct.belongsTo(models.Genre, {
 			as: 'genre',
-			foreignKey: 'idGenre'
+			foreignKey: 'idGenres'
 		});
 	}
 
