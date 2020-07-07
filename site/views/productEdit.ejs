@@ -37,11 +37,12 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Offer</label>
-                    <input type="text" class="form-control" name="offer" value="<%= productToEdit.offer %>">
+                    <input type="text" class="form-control" name="offer" value="<%= productToEdit.offer.has %>">
                   </div>
+      
                   <div class="form-group col-md-3">
                     <label for="">Discount</label>
-                    <input type="number" class="form-control" name="discount" value="<%= productToEdit.discount %>">
+                    <input type="number" class="form-control" name="discount" value="<%= productToEdit.offer.percentage %>">
                   </div>
                   
                 </div>
@@ -52,11 +53,11 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Category</label>
-                    <input type="text" class="form-control" name="category" value="<%= productToEdit.category %>">
+                    <input type="text" class="form-control" name="category" value="<%= productToEdit.categoryProduct.name %>">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Size</label>
-                    <input type="text" class="form-control" name="size" value="<%= productToEdit.size %>">
+                    <input type="text" class="form-control" name="size" value="<%= productToEdit.sizes.name %>">
                   </div>
                   <div class="form-group col-md-3">
                     <label for="">Price</label>
