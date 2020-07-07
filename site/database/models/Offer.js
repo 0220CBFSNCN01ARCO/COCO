@@ -20,14 +20,10 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true,
 			field: 'description'
 		},
-		idDiscounts: {
-			type: DataTypes.INTEGER(11),
+		percentage: {
+			type: DataTypes.INTEGER(40),
 			allowNull: false,
-			references: {
-				model: 'Discount',
-				key: 'id'
-			},
-			field: 'idDiscounts'
+			field: 'percentage'
 		}
 	}, {
 		tableName: 'offers',
@@ -40,11 +36,6 @@ module.exports = function(sequelize, DataTypes) {
 			
 		});
 
-		Offer.belongsTo(models.Discount, {
-			as: 'discount',
-			foreignKey: 'idDiscounts'
-			
-		});
 	}
 	return Offer
 };

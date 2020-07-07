@@ -18,10 +18,10 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: true,
 			field: 'description'
 		},
-		idGenres: {
-			type: DataTypes.INTEGER(11),
+		genre: {
+			type: DataTypes.STRING(40),
 			allowNull: false,
-			field: 'idGenres'
+			field: 'genre'
 		}
 	}, {
 		tableName: 'categoryproduct',
@@ -35,10 +35,7 @@ module.exports = function(sequelize, DataTypes) {
 			
 		});
 
-		CategoryProduct.belongsTo(models.Genre, {
-			as: 'genre',
-			foreignKey: 'idGenres'
-		});
+	
 	}
 
 	return CategoryProduct

@@ -64,7 +64,22 @@ module.exports = function(sequelize, DataTypes) {
 				key: 'id'
 			},
 			field: 'idOffers'
+		},
+		idSizes: {
+			type: DataTypes.INTEGER(11),
+			allowNull: false,
+			references: {
+				model: 'Size',
+				key: 'id'
+			},
+			field: 'idSizes'
+		},
+		quantity : {
+			type: DataTypes.INTEGER(11),
+			allowNull: false,
+			field: 'quantity'
 		}
+
 	}, {
 		tableName: 'products',
 		timestamps: false
@@ -92,11 +107,10 @@ module.exports = function(sequelize, DataTypes) {
 			foreignKey: 'idOffers'
 		});
 
-		Product.belongsToMany(models.Size, {
+		Product.belongsTo(models.Size, {
 			as: 'sizes',
-			through: models.ProductSize,
-			foreignKey: 'idProducts',
-			otherKey: 'idSizes',
+			foreignKey: 'idSizes',
+			
 			
 		})
 		
