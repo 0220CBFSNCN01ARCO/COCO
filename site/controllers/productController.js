@@ -173,14 +173,14 @@ let productController = {
     },
     "sale": function(req,res){
 
-        /*db.Product.findAll({
+        db.Product.findAll({
             include: [{association: "brand"}, {association: "colour"},{association: "offer"},{association: "sizes"}],
         })
             .then(function(products){
                 res.render("sale", { productsList: products });
-            })*/
+            })
 
-        res.render("sale" , { productsList: products });
+        /*res.render("sale" , { productsList: products });*/
     }
 };
 
