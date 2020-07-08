@@ -24,8 +24,8 @@ let usersController = {
     
     "processLogin" : function(req,res,next){
         let errors = validationResult(req);
-        //no tiene el empy
-    
+        
+        if(errors.isEmpty()){
         db.User.findOne({
             include: [{association: "category"}],
             where:{
@@ -58,7 +58,9 @@ let usersController = {
            
         })
         
-    
+    }else{
+        return res.render("login", { errors : errors.errors}) ;
+    }
         /*
         if (errors.isEmpty()) {
             //Validamos que dentro del JSON se encuentren usuarios de no ser asi crea un array nuevo
