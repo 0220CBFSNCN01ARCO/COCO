@@ -32,21 +32,49 @@ let productController = {
 
     "add" : function(req,res){
         res.render("productAdd");
+        
     },
 
     "create": function(req,res){
+        let OfertResultado = 0
+
+        if (req.body.offer = "not") {
+            OfertResultado = 0
+        }else{
+            OfertResultado = 1
+        }
+
+
+        let size = db.Size.findOne({
+            where: {
+            name: req.body.Size
+            }
+        })
+        let Brand = db.Brand.findOne({
+            where: {
+            name: req.body.brand
+            }
+        })
+        let color = db.Colour.findOne({
+            where: {
+            name: req.body.colour
+            }
+        })
+        
+
+
         db.Product.create({
                 
             name: req.body.name,
-            brand: req.body.brand,
+            idBrands: Brand.id,
             description: req.body.description,
             image: req.files[0].filename, 
             price: req.body.price ,
             quantity: req.body.quantity ,
-            idColours: req.body.colour ,
-            idOffers: req.body.offer, 
+            idColours: color.id ,
+            idOffers: OfertResultado,
             idCategoriesProduct: req.body.category,
-            idSizes: req.body.size ,
+            idSizes: size.id ,
 
             
     },)
