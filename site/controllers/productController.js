@@ -49,11 +49,11 @@ let productController = {
                 OfertResultado = 1
             }
 
-            let offers = await db.offer.findOne({
+            let offerts = await db.Offer.findOne({
                 where: {
                 [Op.and]  : [
                     { percentage: parseInt(req.body.discount)},
-                    { has : parseInt(OfertResultado) }
+                    { has : OfertResultado }
                 ]
                 }
             })
@@ -95,13 +95,11 @@ let productController = {
                 name: req.body.name,
                 idBrands: parseInt(Brand.id),
                 description: req.body.description,
-                image: req.files[0] ? req.files[0].filename : "default.jpg",
+                image: req.files[0] ? req.files[0].filename : "none",
                 price: parseInt(req.body.price) ,
                 quantity: parseInt(req.body.quantity) ,
                 idColours: parseInt(color.id) ,
-
-                idOffers: parseInt(offers.id),
-
+                idOffers: parseInt(offerts.id),
                 idCategoriesProduct: parseInt(categoryProduct.id),
                 idSizes: parseInt(size.id) ,
             })
