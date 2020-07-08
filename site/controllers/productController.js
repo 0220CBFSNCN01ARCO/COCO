@@ -35,34 +35,38 @@ let productController = {
         
     },
 
-    "create": function(req,res){
+    "create": async function(req,res){
+
         let OfertResultado = 0
 
-        if (req.body.offer = "not") {
+        if (req.body.offer == "not") {
             OfertResultado = 0
         }else{
             OfertResultado = 1
         }
 
 
-        let size = db.Size.findOne({
+        let size = await db.Size.findOne({
             where: {
             name: req.body.Size
             }
         })
-        let Brand = db.Brand.findOne({
+        let Brand = await db.Brand.findOne({
             where: {
             name: req.body.brand
             }
         })
-        let color = db.Colour.findOne({
+        let color = await db.Colour.findOne({
             where: {
             name: req.body.colour
             }
         })
+
+        console.log("COLOR " + color.id)
+        console.log("TALLE " + size.id)
+        console.log("MARCA " + Brand.id)
+        console.log("ORFETA " + OfertResultado)
         
-
-
         db.Product.create({
                 
             name: req.body.name,
@@ -75,9 +79,7 @@ let productController = {
             idOffers: OfertResultado,
             idCategoriesProduct: req.body.category,
             idSizes: size.id ,
-
-            
-    },)
+        })
 
     res.redirect("/product")
         
