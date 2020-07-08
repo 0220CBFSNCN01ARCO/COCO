@@ -35,9 +35,25 @@ let productController = {
     },
 
     "create": function(req,res){
+        db.Product.create({
+                
+            name: req.body.name,
+            brand: req.body.brand,
+            description: req.body.description,
+            image: req.files[0].filename, 
+            price: req.body.price ,
+            quantity: req.body.quantity ,
+            idColours: req.body.colour ,
+            idOffers: req.body.offer, 
+            idCategoriesProduct: req.body.category,
+            idSizes: req.body.size ,
 
+            
+    },)
+
+    res.redirect("/product")
         
-        let cont = products.length;
+        /*let cont = products.length;
         let ID = cont + 1;
 
         let prod = {
@@ -60,12 +76,15 @@ let productController = {
         products.push(prod);
         fs.writeFileSync('data/products.json', JSON.stringify(products));
 
-        res.redirect("/product")
+        res.redirect("/product")*/
         
     },
     
     "productEdit": function(req,res){
         const ID = req.params.id;
+        
+
+        
 
         db.Product.findOne({
             include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
@@ -74,7 +93,14 @@ let productController = {
                 
             }
             }).then((resultado) => {
-                res.render("productEdit",{productToEdit:resultado, ID:ID});
+                let oferta = 'not'
+                
+                if(resultado.offer.has == 0){
+                   oferta = 'not'
+                } else { 
+                    oferta = 'yes'
+                 } 
+                res.render("productEdit",{productToEdit:resultado, ID:ID, oferta: oferta});
 
             })
 
@@ -90,7 +116,31 @@ let productController = {
     },
 
     "Edit": function(req,res,next){
-        const productId = req.params.id;
+
+        db.Product.update({
+                
+            name: req.body.name,
+            brand: req.body.brand,
+            description: req.body.description,
+            image: req.files[0].filename, 
+            price: req.body.price ,
+            quantity: req.body.quantity ,
+            idColours: req.body.colour ,
+            idOffers: req.body.offer, 
+            idCategoriesProduct: req.body.category,
+            idSizes: req.body.size ,
+
+            
+    },{
+        where: {
+            id: req.params.id
+        }
+    })
+
+    res.redirect("/product")
+
+
+        /*const productId = req.params.id;
 
         products.map(product => {
             if(product.id ==  productId){
@@ -108,7 +158,7 @@ let productController = {
         }
     })
         fs.writeFileSync('data/products.json', JSON.stringify(products));
-        res.redirect("/product")
+        res.redirect("/product")*/
 
 
     
@@ -128,12 +178,25 @@ let productController = {
     },
 
     "view": function(req,res,next){
-        const id = req.params.id;
-        const productID = products.find( products => {
+        const ID = req.params.id;
+        db.Product.findOne({
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+            where:{
+                id: ID
+                
+            }
+            }).then((resultado) => {
+                res.render("adminView",{productID:resultado, ID: ID});
+                console.log(id)
+            })
+
+
+
+        /*const productID = products.find( products => {
             return products.id == id;
         });
         res.render("adminView", { productID: productID, ID:id});
-        console.log(id)
+        console.log(id)*/
     },
 
     "delete": function(req,res,next){
