@@ -1,6 +1,7 @@
 const fs = require ('fs');
 const path = require('path');
 let db = require("../database/models");
+const {Op}  = require("sequelize");
 
 const productsPath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
@@ -62,10 +63,20 @@ let productController = {
             }
         })
 
+        let categoryProduct = await db.CategoryProduct.findOne({
+            where: {
+            [Op.and]  : [
+                { genre: req.body.genre},
+                { name : req.body.category }
+            ]
+            }
+        })
+
         console.log("COLOR " + color.id)
         console.log("TALLE " + size.id)
         console.log("MARCA " + Brand.id)
-        console.log("ORFETA " + OfertResultado)
+        console.log("OFERTA " + OfertResultado)
+        console.log("CATEGORIA " + categoryProduct.id)
         
         db.Product.create({
                 
@@ -77,7 +88,7 @@ let productController = {
             quantity: req.body.quantity ,
             idColours: color.id ,
             idOffers: OfertResultado,
-            idCategoriesProduct: req.body.category,
+            idCategoriesProduct: categoryProduct.id,
             idSizes: size.id ,
         })
 
