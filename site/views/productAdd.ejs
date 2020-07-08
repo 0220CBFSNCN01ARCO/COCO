@@ -8,7 +8,7 @@
 <body>
     <% include partials\header.ejs %> 
        
-    <section class="container-fluid" id="cuerpo">
+    <section class="container" id="cuerpo">
       <div class="row">
 
           <div class="col-12"> 
@@ -17,11 +17,11 @@
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="">Name</label>
+                    <label for=""><strong>Name</strong></label>
                     <input type="text" class="form-control" name="name" placeholder="enter name">
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="">Brand</label>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Brand</strong></label>
                     <select id="inputState" class="form-control" name="brand">
                       <option selected>Coco</option>
                       <option>Vans</option>
@@ -29,15 +29,19 @@
                       <option>Olend</option>
                     </select>
                   </div>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Quantity</strong></label>
+                    <input type="number" class="form-control" name="quantity" placeholder="enter number">
+                  </div>
                   
                 </div>
                 <div class="form-group">
-                  <label for="">Description</label>
+                  <label for=""><strong>Description</strong></label>
                   <input type="text" class="form-control" name="description" placeholder="enter description">
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="">Colour</label>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Colour</strong></label>
                     <select id="inputState" class="form-control" name="colour">
                       <option>black</option>
                       <option>red</option>
@@ -52,14 +56,26 @@
                     </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="">Offer</label>
+                    <label for=""><strong>Size</strong></label>
+                    <select id="inputState" class="form-control" name="Size">
+                      <option selected>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Offer</strong></label>
                     <select id="inputState" class="form-control" name="offer">
                       <option> not</option>
                       <option> yes</option>
                     </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="">Discount</label>
+                    <label for=""><strong>Discount</strong></label>
                     
                     <select id="inputState" class="form-control" name="discount">
                       <option> 0 </option>
@@ -74,12 +90,11 @@
                   
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="">Quantity</label>
-                    <input type="number" class="form-control" name="quantity" placeholder="enter number">
+                  <div class="form-group col-md-2">
+
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="">Genre</label>
+                  <div class="form-group col-md-2">
+                    <label for=""><strong>Genre</strong></label>
                     <select id="inputState" class="form-control" name="genre">
                       <option >Man</option>
                       <option >Woman</option>
@@ -87,7 +102,7 @@
                   </div>
 
                   <div class="form-group col-md-3">
-                    <label for="">Category</label>
+                    <label for=""><strong>Category</strong></label>
                     <select id="inputState" class="form-control" name="category">
                       <option >Shirts</option>
                       <option >T-Shirts</option>
@@ -103,25 +118,20 @@
                   </div>
 
 
+                  
                   <div class="form-group col-md-3">
-                    <label for="">Size</label>
-                    <select id="inputState" class="form-control" name="Size">
-                      <option selected>XS</option>
-                      <option>S</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
-                      <option>XXL</option>
-                      
-                    </select>
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="">Price</label>
+                    <label for=""><strong>Price</strong></label>
                     <input type="number" class="form-control" name="price" placeholder="enter price">
                   </div>
+                  <div class="form-group col-md-2">
+
+                  </div>
+                  
+
+
                 </div>
-                <div class="custom-file">
-                  <label form="">Image</label>
+                <div class="custom-file" id="imageProduct">
+                  <label form=""><strong>Image</strong></label>
                   <input type="file" name="image">
                 </div>
                 <div class="form-row">

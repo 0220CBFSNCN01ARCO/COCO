@@ -1,7 +1,13 @@
 body{
     background-color: #faf6e9;
+    background-image: url("/images/admin.jpg");
+   
+    background-size: 250px;
 }
-
+#imageProduct{
+    text-align: center;
+    margin-top: 20px;
+}
 #cuerpo{
     font-family: "Montserrat";
     overflow: hidden;
