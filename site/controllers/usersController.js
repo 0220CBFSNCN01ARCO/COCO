@@ -24,7 +24,7 @@ let usersController = {
     
     "processLogin" : function(req,res,next){
         let errors = validationResult(req);
-
+        //no tiene el empy
     
         db.User.findOne({
             include: [{association: "category"}],

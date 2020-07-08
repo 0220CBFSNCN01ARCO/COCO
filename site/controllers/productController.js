@@ -3,6 +3,7 @@ const fs = require ('fs');
 const path = require('path');
 let db = require("../database/models");
 const {Op}  = require("sequelize");
+const { check , validationResult , body } = require("express-validator")
 
 const productsPath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
@@ -38,107 +39,113 @@ let productController = {
     },
 
     "create": async function(req,res){
+        let errors = validationResult(req);
 
-        try{
 
-            let OfertResultado = 0
+        if(errors.isEmpty()){
+            try{
 
-            if (req.body.offer == "not") {
-                OfertResultado = 0
-            }else{
-                OfertResultado = 1
+                let OfertResultado = 0
+
+                if (req.body.offer == "not") {
+                    OfertResultado = 0
+                }else{
+                    OfertResultado = 1
+                }
+
+                let offerts = await db.Offer.findOne({
+                    where: {
+                    [Op.and]  : [
+                        { percentage: parseInt(req.body.discount)},
+                        { has : OfertResultado }
+                    ]
+                    }
+                })
+
+
+                let size = await db.Size.findOne({
+                    where: {
+                    name: req.body.Size
+                    }
+                })
+                let Brand = await db.Brand.findOne({
+                    where: {
+                    name: req.body.brand
+                    }
+                })
+                let color = await db.Colour.findOne({
+                    where: {
+                    name: req.body.colour
+                    }
+                })
+
+                let categoryProduct = await db.CategoryProduct.findOne({
+                    where: {
+                    [Op.and]  : [
+                        { genre: req.body.genre},
+                        { name : req.body.category }
+                    ]
+                    }
+                })
+
+                /*
+                console.log("COLOR " + color.id)
+                console.log("TALLE " + size.id)
+                console.log("MARCA " + Brand.id)
+                console.log("OFERTA " + OfertResultado)
+                console.log("CATEGORIA " + categoryProduct.id)
+                */
+
+                await db.Product.create({
+                        
+                    name: req.body.name,
+                    idBrands: parseInt(Brand.id),
+                    description: req.body.description,
+                    image: req.files[0] ? req.files[0].filename : "none.jpg",
+                    price: parseInt(req.body.price) ,
+                    quantity: parseInt(req.body.quantity) ,
+                    idColours: parseInt(color.id) ,
+                    idOffers: parseInt(offerts.id),
+                    idCategoriesProduct: parseInt(categoryProduct.id),
+                    idSizes: parseInt(size.id) ,
+                })
+
+            res.redirect("/product")
+            
+            }catch(error){
+                console.log(error)
+            }
+        
+        }else{
+            console.log(errors)
+            return res.render("productAdd", { errors : errors.errors })
+        }
+            
+            /*let cont = products.length;
+            let ID = cont + 1;
+
+            let prod = {
+                id: ID,
+                name: req.body.name,
+                description: req.body.description,
+                image: req.files[0].filename,
+                brand: req.body.brand,
+                colour: req.body.colour,
+                quantity: req.body.quantity,
+                size: req.body.size,
+                price: req.body.price,
+                offer: req.body.offer,
+                discount: req.body.discount,
+                category: req.body.category
             }
 
-            let offerts = await db.Offer.findOne({
-                where: {
-                [Op.and]  : [
-                    { percentage: parseInt(req.body.discount)},
-                    { has : OfertResultado }
-                ]
-                }
-            })
+            
+            
+            products.push(prod);
+            fs.writeFileSync('data/products.json', JSON.stringify(products));
 
-
-            let size = await db.Size.findOne({
-                where: {
-                name: req.body.Size
-                }
-            })
-            let Brand = await db.Brand.findOne({
-                where: {
-                name: req.body.brand
-                }
-            })
-            let color = await db.Colour.findOne({
-                where: {
-                name: req.body.colour
-                }
-            })
-
-            let categoryProduct = await db.CategoryProduct.findOne({
-                where: {
-                [Op.and]  : [
-                    { genre: req.body.genre},
-                    { name : req.body.category }
-                ]
-                }
-            })
-
-            /*
-            console.log("COLOR " + color.id)
-            console.log("TALLE " + size.id)
-            console.log("MARCA " + Brand.id)
-            console.log("OFERTA " + OfertResultado)
-            console.log("CATEGORIA " + categoryProduct.id)
-            */
-
-            await db.Product.create({
-                    
-                name: req.body.name,
-                idBrands: parseInt(Brand.id),
-                description: req.body.description,
-                image: req.files[0] ? req.files[0].filename : "none.jpg",
-                price: parseInt(req.body.price) ,
-                quantity: parseInt(req.body.quantity) ,
-                idColours: parseInt(color.id) ,
-                idOffers: parseInt(offerts.id),
-                idCategoriesProduct: parseInt(categoryProduct.id),
-                idSizes: parseInt(size.id) ,
-            })
-
-        res.redirect("/product")
-        
-        }catch(error){
-            console.log(error)
-        }
-    
-
-        
-        /*let cont = products.length;
-        let ID = cont + 1;
-
-        let prod = {
-            id: ID,
-            name: req.body.name,
-            description: req.body.description,
-            image: req.files[0].filename,
-            brand: req.body.brand,
-            colour: req.body.colour,
-            quantity: req.body.quantity,
-            size: req.body.size,
-            price: req.body.price,
-            offer: req.body.offer,
-            discount: req.body.discount,
-            category: req.body.category
-        }
-
-        
-        
-        products.push(prod);
-        fs.writeFileSync('data/products.json', JSON.stringify(products));
-
-        res.redirect("/product")*/
-        
+            res.redirect("/product")*/
+            
     },
     
     "productEdit": function(req,res){

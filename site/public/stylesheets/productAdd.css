@@ -11,6 +11,14 @@ body{
 #titulo{
     text-align: center;
 }
+#error{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+}
+#error ul li{
+    list-style: none;
+}
 #cuerpo{
     font-family: "Montserrat";
     overflow: hidden;
