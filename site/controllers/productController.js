@@ -1,3 +1,4 @@
+var express = require('express');
 const fs = require ('fs');
 const path = require('path');
 let db = require("../database/models");
@@ -38,61 +39,80 @@ let productController = {
 
     "create": async function(req,res){
 
-        let OfertResultado = 0
+        try{
 
-        if (req.body.offer == "not") {
-            OfertResultado = 0
-        }else{
-            OfertResultado = 1
-        }
+            let OfertResultado = 0
 
-
-        let size = await db.Size.findOne({
-            where: {
-            name: req.body.Size
+            if (req.body.offer == "not") {
+                OfertResultado = 0
+            }else{
+                OfertResultado = 1
             }
-        })
-        let Brand = await db.Brand.findOne({
-            where: {
-            name: req.body.brand
-            }
-        })
-        let color = await db.Colour.findOne({
-            where: {
-            name: req.body.colour
-            }
-        })
 
-        let categoryProduct = await db.CategoryProduct.findOne({
-            where: {
-            [Op.and]  : [
-                { genre: req.body.genre},
-                { name : req.body.category }
-            ]
-            }
-        })
+            let offers = await db.offer.findOne({
+                where: {
+                [Op.and]  : [
+                    { percentage: parseInt(req.body.discount)},
+                    { has : parseInt(OfertResultado) }
+                ]
+                }
+            })
 
-        console.log("COLOR " + color.id)
-        console.log("TALLE " + size.id)
-        console.log("MARCA " + Brand.id)
-        console.log("OFERTA " + OfertResultado)
-        console.log("CATEGORIA " + categoryProduct.id)
+
+            let size = await db.Size.findOne({
+                where: {
+                name: req.body.Size
+                }
+            })
+            let Brand = await db.Brand.findOne({
+                where: {
+                name: req.body.brand
+                }
+            })
+            let color = await db.Colour.findOne({
+                where: {
+                name: req.body.colour
+                }
+            })
+
+            let categoryProduct = await db.CategoryProduct.findOne({
+                where: {
+                [Op.and]  : [
+                    { genre: req.body.genre},
+                    { name : req.body.category }
+                ]
+                }
+            })
+
+            console.log("COLOR " + color.id)
+            console.log("TALLE " + size.id)
+            console.log("MARCA " + Brand.id)
+            console.log("OFERTA " + OfertResultado)
+            console.log("CATEGORIA " + categoryProduct.id)
+            
+            await db.Product.create({
+                    
+                name: req.body.name,
+                idBrands: parseInt(Brand.id),
+                description: req.body.description,
+                image: req.files[0] ? req.files[0].filename : "default.jpg",
+                price: parseInt(req.body.price) ,
+                quantity: parseInt(req.body.quantity) ,
+                idColours: parseInt(color.id) ,
+
+                idOffers: parseInt(offers.id),
+
+                idCategoriesProduct: parseInt(categoryProduct.id),
+                idSizes: parseInt(size.id) ,
+            })
+
+        res.redirect("/product")
         
-        db.Product.create({
-                
-            name: req.body.name,
-            idBrands: Brand.id,
-            description: req.body.description,
-            image: req.files[0].filename, 
-            price: req.body.price ,
-            quantity: req.body.quantity ,
-            idColours: color.id ,
-            idOffers: OfertResultado,
-            idCategoriesProduct: categoryProduct.id,
-            idSizes: size.id ,
-        })
+        }catch(error){
+            console.log(error)
+        }
+    
 
-    res.redirect("/product")
         
         /*let cont = products.length;
         let ID = cont + 1;
