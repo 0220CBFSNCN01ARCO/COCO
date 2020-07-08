@@ -8,6 +8,9 @@ body{
     text-align: center;
     margin-top: 20px;
 }
+#titulo{
+    text-align: center;
+}
 #cuerpo{
     font-family: "Montserrat";
     overflow: hidden;

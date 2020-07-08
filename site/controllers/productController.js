@@ -84,18 +84,20 @@ let productController = {
                 }
             })
 
+            /*
             console.log("COLOR " + color.id)
             console.log("TALLE " + size.id)
             console.log("MARCA " + Brand.id)
             console.log("OFERTA " + OfertResultado)
             console.log("CATEGORIA " + categoryProduct.id)
-            
+            */
+
             await db.Product.create({
                     
                 name: req.body.name,
                 idBrands: parseInt(Brand.id),
                 description: req.body.description,
-                image: req.files[0] ? req.files[0].filename : "none",
+                image: req.files[0] ? req.files[0].filename : "none.jpg",
                 price: parseInt(req.body.price) ,
                 quantity: parseInt(req.body.quantity) ,
                 idColours: parseInt(color.id) ,
