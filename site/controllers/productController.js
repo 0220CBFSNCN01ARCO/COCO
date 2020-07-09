@@ -183,29 +183,82 @@ let productController = {
         res.render("productEdit", { productToEdit: productToEdit, ID:id})*/
     },
 
-    "Edit": function(req,res,next){
+    "Edit": async function(req,res,next){
 
-        db.Product.update({
-                
-            name: req.body.name,
-            brand: req.body.brand,
-            description: req.body.description,
-            image: req.files[0].filename, 
-            price: req.body.price ,
-            quantity: req.body.quantity ,
-            idColours: req.body.colour ,
-            idOffers: req.body.offer, 
-            idCategoriesProduct: req.body.category,
-            idSizes: req.body.size ,
+        let errors = validationResult(req);
 
+
+        if(errors.isEmpty()){
+            try{
+
+                let OfertResultado = 0
+
+                if (req.body.offer == "not") {
+                    OfertResultado = 0
+                }else{
+                    OfertResultado = 1
+                }
+
+                let offerts = await db.Offer.findOne({
+                    where: {
+                    [Op.and]  : [
+                        { percentage: parseInt(req.body.discount)},
+                        { has : OfertResultado }
+                    ]
+                    }
+                })
+
+
+                let size = await db.Size.findOne({
+                    where: {
+                    name: req.body.Size
+                    }
+                })
+                let Brand = await db.Brand.findOne({
+                    where: {
+                    name: req.body.brand
+                    }
+                })
+                let color = await db.Colour.findOne({
+                    where: {
+                    name: req.body.colour
+                    }
+                })
+
+                let categoryProduct = await db.CategoryProduct.findOne({
+                    where: {
+                    [Op.and]  : [
+                        { genre: req.body.genre},
+                        { name : req.body.category }
+                    ]
+                    }
+                })
+
+
+                await db.Product.update({
+                        
+                    name: req.body.name,
+                    idBrands: parseInt(Brand.id),
+                    description: req.body.description,
+                    image: req.files[0] ? req.files[0].filename : "none.jpg",
+                    price: parseInt(req.body.price) ,
+                    quantity: parseInt(req.body.quantity) ,
+                    idColours: parseInt(color.id) ,
+                    idOffers: parseInt(offerts.id),
+                    idCategoriesProduct: parseInt(categoryProduct.id),
+                    idSizes: parseInt(size.id) ,
+                })
+
+            res.redirect("/product")
             
-    },{
-        where: {
-            id: req.params.id
+            }catch(error){
+                console.log(error)
+            }
+        
+        }else{
+            console.log(errors)
+            return res.render("productEdit", { errors : errors.errors })
         }
-    })
-
-    res.redirect("/product")
 
 
         /*const productId = req.params.id;

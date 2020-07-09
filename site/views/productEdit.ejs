@@ -3,73 +3,176 @@
 <head>
     <% include partials\head.ejs %>
     <link rel="stylesheet" href="/stylesheets/productAdd.css">
-    <title>COCO | edit product</title>
+    <title>COCO | Edit product</title>
 </head>
 <body>
     <% include partials\header.ejs %> 
-       
-    <section class="container-fluid" id="cuerpo">
+      
+ 
+
+    <section class="container" id="cuerpo">
+
+      <div id="error">
+        <% if (typeof errors != "undefined") { %>  
+            <ul>
+                
+                <% for (let i = 0 ; i < errors.length ; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+
+    
       <div class="row">
-          
           <div class="col-12"> 
-            <h2 >Editing Product id <%= ID %></h2>
+            <h3 for="" id="titulo"><strong>Editing Product id <%= ID %></strong></h3>
+          </div>
+          <div class="col-12"> 
+            
             <form action="/product/<%= ID %>?_method=PUT" method="POST">
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" name="name" value="<%= productToEdit.name %>" >
+                    <label for=""><strong>Name</strong></label>
+                    <input type="text" class="form-control" name="name" value="<%= productToEdit.name %>"  required>
+                      <div class="invalid-feedback">
+                      <strong>Please enter a name</strong>
+                      </div>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="">Brand</label>
-                    <input type="text" class="form-control" name="brand" value="<%= productToEdit.brand.name %>">
+
+
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Brand</strong></label>
+                    <select id="inputState" class="form-control" name="brand" value="<%= productToEdit.brand.name %>" required>
+                      <option selected>Coco</option>
+                      <option>Vans</option>
+                      <option>Wemoto</option>
+                      <option>Olend</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Quantity</strong></label>
+                    <input type="number" class="form-control" name="quantity" value="<%= productToEdit.quantity %>" required>
+                    <div class="invalid-feedback">
+                      <strong>Please enter a number</strong>
+                      </div>
                   </div>
                   
                 </div>
                 <div class="form-group">
-                  <label for="">Description</label>
-                  <input type="text" class="form-control" name="description" value="<%= productToEdit.description %>">
+                  <label for=""><strong>Description</strong></label>
+                  <input type="text" class="form-control" name="description" value="<%= productToEdit.description %>" required>
+                  <div class="invalid-feedback">
+                    <strong>Please enter a description</strong>
+                    </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="">Colour</label>
-                    <input type="text" class="form-control" name="colour" value="<%= productToEdit.colour.name %>">
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Colour</strong></label>
+                    <select id="inputState" class="form-control" name="colour" value="<%= productToEdit.colour.name %>" required>
+                      <option>black</option>
+                      <option>red</option>
+                      <option>white</option>
+                      <option>blue</option>
+                      <option>grey</option>
+                      <option>yellow</option>
+                      <option>brown</option>
+                      <option>lightblue</option>
+                      <option>lilac</option>
+                      <option>orange</option>
+                    </select>
                   </div>
                   <div class="form-group col-md-3">
-                    <label for="">Offer</label>
-                    <input type="text" class="form-control" name="offer" value="<%= oferta %>">
+                    <label for=""><strong>Size</strong></label>
+                    <select id="inputState" class="form-control" name="Size" value="<%= productToEdit.sizes.name %>" required>
+                      <option selected>XS</option>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      
+                    </select>
                   </div>
-      
                   <div class="form-group col-md-3">
-                    <label for="">Discount</label>
-                    <input type="number" class="form-control" name="discount" value="<%= productToEdit.offer.percentage %>">
+                    <label for=""><strong>Offer</strong></label>
+                    <select id="inputState" class="form-control" name="offer" value="<%= oferta %>" required>
+                      <option> not</option>
+                      <option> yes</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for=""><strong>Discount</strong></label>
+                    
+                    <select id="inputState" class="form-control" name="discount" value="<%= productToEdit.offer.percentage %>" required> 
+                      <option> 0 </option>
+                      <option> 10</option>
+                      <option> 20</option>
+                      <option> 30</option>
+                      <option> 40</option>
+                      <option> 50</option>
+                      
+                    </select>
                   </div>
                   
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="">Quantity</label>
-                    <input type="number" class="form-control" name="quantity" value="<%= productToEdit.quantity %>">
+                  <div class="form-group col-md-2">
+
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="">Category</label>
-                    <input type="text" class="form-control" name="category" value="<%= productToEdit.categoryProduct.name %>">
+                  <div class="form-group col-md-2">
+                    <label for=""><strong>Genre</strong></label>
+                    <select id="inputState" class="form-control" name="genre" value="<%= productToEdit.categoryProduct.genre" required>
+                      <option >Man</option>
+                      <option >Woman</option>
+                    </select>
                   </div>
+
                   <div class="form-group col-md-3">
-                    <label for="">Size</label>
-                    <input type="text" class="form-control" name="size" value="<%= productToEdit.sizes.name %>">
+                    <label for=""><strong>Category</strong></label>
+                    <select id="inputState" class="form-control" name="category" value="<%= productToEdit.categoryProduct.name %>" required>
+                      <option >Shirts</option>
+                      <option >T-Shirts</option>
+                      <option >Pants</option>
+                      <option >Shoes</option>
+                      <option >Coats</option>
+                      <option >Dresses</option>
+                      <option >Skirts</option>
+                      <option >Belts</option>
+                      <option >Accesories</option>
+
+                    </select>
                   </div>
+
+
+                  
                   <div class="form-group col-md-3">
-                    <label for="">Price</label>
-                    <input type="number" class="form-control" name="price" value="<%= productToEdit.price %>">
+                    <label for=""><strong>Price</strong></label>
+                    <input type="number" class="form-control" name="price" value="<%= productToEdit.price %>" required>
+                    <div class="invalid-feedback">
+                      <strong>Please enter a number</strong>
+                      </div>
                   </div>
+                  <div class="form-group col-md-2">
+
+                  </div>
+                  
+
+
+                </div>
+                <div class="custom-file" id="imageProduct">
+                  <label form=""><strong>Image</strong></label>
+                  <input type="file" name="image" >
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                   <button type="submit" class="btn btn-primary">Confirm</button>
                 </div>
                 <div class="form-group col-md-6">
-                  <a href="/product"><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                  <a href="/product" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
                     Cancel
                     </button>
                 </a>
@@ -90,6 +193,29 @@
       </div>
       
   </section>
+    
+
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+
     <% include partials\script.ejs %> 
 </body>
 <% include partials\footer.ejs %> 
