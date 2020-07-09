@@ -23,7 +23,7 @@
             <div id="datos">
               <br>
               <h5><%= product.name %></h5>
-              <p><b>$<%= Math.trunc(product.price - Math.trunc(product.price * product.offer.percentage / 100)) %></b></p>
+              <p><b>US$ <%= Math.trunc(product.price - Math.trunc(product.price * product.offer.percentage / 100)) %></b></p>
               <p id="precioAnterior"><b><%= product.price %></b></p>
               <div id="imageSale">
                 <img src="/images/iconos/sale.png" alt="Sale">
