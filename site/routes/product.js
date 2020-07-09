@@ -25,8 +25,25 @@ router.post('/create', upload.any(), [
 
         check("name").isLength({min : 5}).withMessage("The product name must contain 5 characters"),
         check("description").isLength({min : 20}).withMessage("The description name must contain 20 characters"),
-        check("quantity").isNumeric({min : 1}).withMessage("The quantity must contain 1 product"),
-        check("price").isNumeric({min : 1}).withMessage("The price has to be greater then 0")
+        check("quantity").isNumeric(),
+        check("price").isNumeric(),
+
+        check("quantity").custom(function(value,{req, loc ,path}){
+              if(value > 0){
+                return true
+              }else{
+                return false
+              }
+        }).withMessage("The quantity must contain 1 product"),
+
+        check("price").custom(function(value,{req, loc ,path}){
+              if(value > 0){
+                return true
+              }else{
+                return false
+              }
+        }).withMessage("The price has to be greater then 0")
+
         ] , productControllers.create);
 
 router.get('/admin/view/:id', productControllers.view);
@@ -39,9 +56,26 @@ router.put("/:id", upload.any(), [
 
   check("name").isLength({min : 5}).withMessage("The product name must contain 5 characters"),
   check("description").isLength({min : 20}).withMessage("The description name must contain 20 characters"),
-  check("quantity").isNumeric({min : 1}).withMessage("The quantity must contrener 1 product"),
-  check("price").isNumeric({min : 1}).withMessage("The price has to be greater then 0")
-  ] ,productControllers.Edit)
+  check("quantity").isNumeric(),
+        check("price").isNumeric(),
+
+        check("quantity").custom(function(value,{req, loc ,path}){
+              if(value > 0){
+                return true
+              }else{
+                return false
+              }
+        }).withMessage("The quantity must contain 1 product"),
+
+        check("price").custom(function(value,{req, loc ,path}){
+              if(value > 0){
+                return true
+              }else{
+                return false
+              }
+        }).withMessage("The price has to be greater then 0")
+
+        ],productControllers.Edit)
 
 router.delete("/admin/view/delete/:id", productControllers.delete)
 

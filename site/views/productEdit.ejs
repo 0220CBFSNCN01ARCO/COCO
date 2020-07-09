@@ -37,7 +37,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for=""><strong>Name</strong></label>
-                    <input type="text" class="form-control" name="name" value="<%= productToEdit.name %>"  required>
+                    <input type="text" class="form-control" name="name" value="<%= productToEdit.name%>"  required>
                       <div class="invalid-feedback">
                       <strong>Please enter a name</strong>
                       </div>
@@ -46,8 +46,8 @@
 
                   <div class="form-group col-md-3">
                     <label for=""><strong>Brand</strong></label>
-                    <select id="inputState" class="form-control" name="brand" value="<%= productToEdit.brand.name %>" required>
-                      <option selected>Coco</option>
+                    <select id="inputState" class="form-control" name="brand" value="<%productToEdit.brand %>"required>
+                      <option >Coco</option>
                       <option>Vans</option>
                       <option>Wemoto</option>
                       <option>Olend</option>
@@ -55,7 +55,7 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for=""><strong>Quantity</strong></label>
-                    <input type="number" class="form-control" name="quantity" value="<%= productToEdit.quantity %>" required>
+                    <input type="number" class="form-control" name="quantity" required>
                     <div class="invalid-feedback">
                       <strong>Please enter a number</strong>
                       </div>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="form-group">
                   <label for=""><strong>Description</strong></label>
-                  <input type="text" class="form-control" name="description" value="<%= productToEdit.description %>" required>
+                  <input type="text" class="form-control" name="description" required>
                   <div class="invalid-feedback">
                     <strong>Please enter a description</strong>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-3">
                     <label for=""><strong>Colour</strong></label>
-                    <select id="inputState" class="form-control" name="colour" value="<%= productToEdit.colour.name %>" required>
+                    <select id="inputState" class="form-control" name="colour"  value="<%= productToEdit.colour.name %>" required>
                       <option>black</option>
                       <option>red</option>
                       <option>white</option>
@@ -87,7 +87,7 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for=""><strong>Size</strong></label>
-                    <select id="inputState" class="form-control" name="Size" value="<%= productToEdit.sizes.name %>" required>
+                    <select id="inputState" class="form-control" name="Size" required>
                       <option selected>XS</option>
                       <option>S</option>
                       <option>M</option>
@@ -99,7 +99,7 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for=""><strong>Offer</strong></label>
-                    <select id="inputState" class="form-control" name="offer" value="<%= oferta %>" required>
+                    <select id="inputState" class="form-control" name="offer" required>
                       <option> not</option>
                       <option> yes</option>
                     </select>
@@ -107,7 +107,7 @@
                   <div class="form-group col-md-3">
                     <label for=""><strong>Discount</strong></label>
                     
-                    <select id="inputState" class="form-control" name="discount" value="<%= productToEdit.offer.percentage %>" required> 
+                    <select id="inputState" class="form-control" name="discount" required> 
                       <option> 0 </option>
                       <option> 10</option>
                       <option> 20</option>
@@ -125,7 +125,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <label for=""><strong>Genre</strong></label>
-                    <select id="inputState" class="form-control" name="genre" value="<%= productToEdit.categoryProduct.genre" required>
+                    <select id="inputState" class="form-control" name="genre" required>
                       <option >Man</option>
                       <option >Woman</option>
                     </select>
@@ -133,7 +133,7 @@
 
                   <div class="form-group col-md-3">
                     <label for=""><strong>Category</strong></label>
-                    <select id="inputState" class="form-control" name="category" value="<%= productToEdit.categoryProduct.name %>" required>
+                    <select id="inputState" class="form-control" name="category" required>
                       <option >Shirts</option>
                       <option >T-Shirts</option>
                       <option >Pants</option>
@@ -151,7 +151,7 @@
                   
                   <div class="form-group col-md-3">
                     <label for=""><strong>Price</strong></label>
-                    <input type="number" class="form-control" name="price" value="<%= productToEdit.price %>" required>
+                    <input type="number" class="form-control" name="price"  required>
                     <div class="invalid-feedback">
                       <strong>Please enter a number</strong>
                       </div>
