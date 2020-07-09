@@ -5,7 +5,7 @@ body{
 
 #cuerpo{
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 #fotulis{
     overflow: hidden;
@@ -46,7 +46,7 @@ body{
     font-size: 15px;
     text-decoration: line-through;
     bottom: 42px;
-    left: 45px;
+    left: 50px;
 }
 #imageSale img{
     height: 50px;

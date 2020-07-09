@@ -47,15 +47,15 @@
                 <li><b>Quantity Available:</b> <%= productID.quantity %> units</li>
                 <li><b>Size:</b> <%= productID.sizes.name %></li>
 
-                <% if(productID.offer === "yes"){ %>
-                <li><b>Price:</b> $<%= Math.trunc(productID.price - valor) %></li>
+                <% if(productID.offer.has == 1){ %>
+                <li><b>Price:</b> US$ <%= Math.trunc(productID.price - valor) %></li>
                 <% } else{ %>
-                  <li><b>Price:</b> $<%= productID.price %></li>
+                  <li><b>Price :</b> US$ <%= productID.price %></li>
                 <% } %>
 
 
                 <% if(productID.offer.has === 1){ %>
-                  <li><b>Discount applied:</b> $<%= valor %></li>
+                  <li><b>Discount applied:</b> US$ <%= valor %></li>
                 <% } %>
                 <a href="/users/bag" >
                   <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" onclick="añadirBag()">
