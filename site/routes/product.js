@@ -54,9 +54,9 @@ router.get('/:id', productControllers.productEdit);
 
 router.put("/:id", upload.any(), [
 
-  check("name").isLength({min : 5}).withMessage("The product name must contain 5 characters"),
-  check("description").isLength({min : 20}).withMessage("The description name must contain 20 characters"),
-  check("quantity").isNumeric(),
+        check("name").isLength({min : 5}).withMessage("The product name must contain 5 characters"),
+        check("description").isLength({min : 20}).withMessage("The description name must contain 20 characters"),
+        check("quantity").isNumeric(),
         check("price").isNumeric(),
 
         check("quantity").custom(function(value,{req, loc ,path}){

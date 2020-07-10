@@ -163,10 +163,10 @@ let productController = {
             }).then((resultado) => {
                 let oferta = 'not'
                 
-                if(resultado.offer.has == 0){
-                   oferta = 'not'
+                if(resultado.offer.has != 0){
+                   oferta = 'yes'
                 } else { 
-                    oferta = 'yes'
+                    oferta = 'not'
                  } 
                 res.render("productEdit",{productToEdit:resultado, ID:ID, oferta: oferta});
 
@@ -186,24 +186,24 @@ let productController = {
     "Edit": async function(req,res,next){
 
         let errors = validationResult(req);
-
+        let ID = req.params.id
 
         if(errors.isEmpty()){
             try{
 
                 let OfertResultado = 0
 
-                if (req.body.offer == "not") {
-                    OfertResultado = 0
-                }else{
+                if (req.body.offer != "not") {
                     OfertResultado = 1
+                }else{
+                    OfertResultado = 0
                 }
 
                 let offerts = await db.Offer.findOne({
                     where: {
                     [Op.and]  : [
                         { percentage: parseInt(req.body.discount)},
-                        { has : OfertResultado }
+                        { has : parseInt(OfertResultado) }
                     ]
                     }
                 })
@@ -234,20 +234,37 @@ let productController = {
                     }
                 })
 
+                console.log("COLOR " + color.id)
+                console.log("TALLE " + size.id)
+                console.log("MARCA " + Brand.id)
+                console.log("OFERTA " + offerts.id)
+                console.log("CATEGORIA " + categoryProduct.id)
+                console.log(req.files[0].filename)
+                
+                
 
-                await db.Product.update({
+               
+            
+                  
+                    await db.Product.update({
                         
-                    name: req.body.name,
-                    idBrands: parseInt(Brand.id),
-                    description: req.body.description,
-                    image: req.files[0] ? req.files[0].filename : "none.jpg",
-                    price: parseInt(req.body.price) ,
-                    quantity: parseInt(req.body.quantity) ,
-                    idColours: parseInt(color.id) ,
-                    idOffers: parseInt(offerts.id),
-                    idCategoriesProduct: parseInt(categoryProduct.id),
-                    idSizes: parseInt(size.id) ,
-                })
+                        name: req.body.name,
+                        idBrands: parseInt(Brand.id),
+                        description: req.body.description,
+                        image: req.files[0].filename,
+                        price: parseInt(req.body.price) ,
+                        quantity: parseInt(req.body.quantity) ,
+                        idColours: parseInt(color.id) ,
+                        idOffers: parseInt(offerts.id),
+                        idCategoriesProduct: parseInt(categoryProduct.id),
+                        idSizes: parseInt(size.id) ,
+                    },{
+                        where: {
+                            id: ID
+                        }
+                    })
+                
+                
 
             res.redirect("/product")
             
