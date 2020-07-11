@@ -11,10 +11,12 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now()  + path.extname(file.originalname));
-    }
+    },
+    
   });
 
-const upload = multer({ storage: storage });
+
+const upload = multer({ storage: storage});
 /* GET users listing. */
 
 router.get('/detail/:id', productControllers.detail );
@@ -42,9 +44,8 @@ router.post('/create', upload.any(), [
               }else{
                 return false
               }
-        }).withMessage("The price has to be greater then 0")
-
-        ] , productControllers.create);
+        }).withMessage("The price has to be greater then 0"), 
+      ] , productControllers.create);
 
 router.get('/admin/view/:id', productControllers.view);
     
