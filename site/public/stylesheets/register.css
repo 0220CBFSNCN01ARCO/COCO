@@ -2,7 +2,6 @@ body{
     background-color: #faf6e9;
     font-family: "Montserrat";
     background-image: url("/images/cover.jpg");
-    overflow: hidden;
     background-size: 380px;
 }
 #titulo{

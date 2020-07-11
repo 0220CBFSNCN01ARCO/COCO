@@ -87,6 +87,7 @@ barra de abajo Copyright
 }
 #texto-inferior{
     text-align: center;
+    font-weight: 600;
 }
 
 @media (max-width:2560px) and (min-width:1441px){

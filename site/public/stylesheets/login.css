@@ -1,8 +1,9 @@
 body{
     background-color: #faf6e9;
     background-image: url("/images/cover.jpg");
-    overflow: hidden;
     background-size: 380px;
+    
+    
 }
 
 #princ{ 
