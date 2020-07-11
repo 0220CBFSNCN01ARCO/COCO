@@ -186,6 +186,16 @@ let productController = {
     "Edit": async function(req,res,next){
 
         let errors = validationResult(req);
+
+        let imagenAnterior = await db.Product.findOne({
+            where:{
+                id : req.params.id
+            }
+        }).then((resultado) => {
+            return resultado.image
+        })
+
+
         let ID = req.params.id
 
         if(errors.isEmpty()){
@@ -239,13 +249,31 @@ let productController = {
                 console.log("MARCA " + Brand.id)
                 console.log("OFERTA " + offerts.id)
                 console.log("CATEGORIA " + categoryProduct.id)
-                console.log(req.files[0].filename)
+                console.log(req.files)
+                console.log(imagenAnterior)
                 
                 
 
                
-            
+                if(req.files[0] == undefined){
                   
+                    await db.Product.update({
+                        
+                        name: req.body.name,
+                        idBrands: parseInt(Brand.id),
+                        description: req.body.description,
+                        price: parseInt(req.body.price) ,
+                        quantity: parseInt(req.body.quantity) ,
+                        idColours: parseInt(color.id) ,
+                        idOffers: parseInt(offerts.id),
+                        idCategoriesProduct: parseInt(categoryProduct.id),
+                        idSizes: parseInt(size.id) ,
+                    },{
+                        where: {
+                            id: ID
+                        }
+                    })
+                }else{
                     await db.Product.update({
                         
                         name: req.body.name,
@@ -263,6 +291,7 @@ let productController = {
                             id: ID
                         }
                     })
+                }
                 
                 
 
