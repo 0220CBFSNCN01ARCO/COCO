@@ -208,7 +208,9 @@ let productController = {
 
         let ID = req.params.id
 
+
         if(errors.isEmpty()){
+            
             try{
 
                 let OfertResultado = 0
@@ -283,7 +285,11 @@ let productController = {
                             id: ID
                         }
                     })
+                    res.redirect("/product")
                 }else{
+
+                    if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg" || req.files[0].mimetype == "image/gif") {
+
                     await db.Product.update({
                         
                         name: req.body.name,
@@ -301,11 +307,13 @@ let productController = {
                             id: ID
                         }
                     })
+                }else{
+                    return res.render("productEdit", { errors : [{msg: "Invalid image"}] })
                 }
-                
-                
 
-            res.redirect("/product")
+                    res.redirect("/product")
+                }
+        
             
             }catch(error){
                 console.log(error)
