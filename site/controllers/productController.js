@@ -40,80 +40,90 @@ let productController = {
 
     "create": async function(req,res){
         let errors = validationResult(req);
+        console.log("CONTROLLER")
+        
 
-
+        let validacionImagen = req.files[0].mimetype
+        console.log(validacionImagen)
+        
         if(errors.isEmpty()){
-            try{
 
-                let OfertResultado = 0
+            if (validacionImagen == "image/png" || validacionImagen == "image/jpg" || validacionImagen == "image/jpeg" || validacionImagen == "image/gif") {
 
-                if (req.body.offer == "not") {
-                    OfertResultado = 0
-                }else{
-                    OfertResultado = 1
+                try{
+
+                    let OfertResultado = 0
+
+                    if (req.body.offer == "not") {
+                        OfertResultado = 0
+                    }else{
+                        OfertResultado = 1
+                    }
+
+                    let offerts = await db.Offer.findOne({
+                        where: {
+                        [Op.and]  : [
+                            { percentage: parseInt(req.body.discount)},
+                            { has : OfertResultado }
+                        ]
+                        }
+                    })
+
+
+                    let size = await db.Size.findOne({
+                        where: {
+                        name: req.body.Size
+                        }
+                    })
+                    let Brand = await db.Brand.findOne({
+                        where: {
+                        name: req.body.brand
+                        }
+                    })
+                    let color = await db.Colour.findOne({
+                        where: {
+                        name: req.body.colour
+                        }
+                    })
+
+                    let categoryProduct = await db.CategoryProduct.findOne({
+                        where: {
+                        [Op.and]  : [
+                            { genre: req.body.genre},
+                            { name : req.body.category }
+                        ]
+                        }
+                    })
+
+                    /*
+                    console.log("COLOR " + color.id)
+                    console.log("TALLE " + size.id)
+                    console.log("MARCA " + Brand.id)
+                    console.log("OFERTA " + OfertResultado)
+                    console.log("CATEGORIA " + categoryProduct.id)
+                    */
+
+                    await db.Product.create({
+                            
+                        name: req.body.name,
+                        idBrands: parseInt(Brand.id),
+                        description: req.body.description,
+                        image: req.files[0] ? req.files[0].filename : "none.jpg",
+                        price: parseInt(req.body.price) ,
+                        quantity: parseInt(req.body.quantity) ,
+                        idColours: parseInt(color.id) ,
+                        idOffers: parseInt(offerts.id),
+                        idCategoriesProduct: parseInt(categoryProduct.id),
+                        idSizes: parseInt(size.id) ,
+                    })
+
+                res.redirect("/product")
+                
+                }catch(error){
+                    console.log(error)
                 }
-
-                let offerts = await db.Offer.findOne({
-                    where: {
-                    [Op.and]  : [
-                        { percentage: parseInt(req.body.discount)},
-                        { has : OfertResultado }
-                    ]
-                    }
-                })
-
-
-                let size = await db.Size.findOne({
-                    where: {
-                    name: req.body.Size
-                    }
-                })
-                let Brand = await db.Brand.findOne({
-                    where: {
-                    name: req.body.brand
-                    }
-                })
-                let color = await db.Colour.findOne({
-                    where: {
-                    name: req.body.colour
-                    }
-                })
-
-                let categoryProduct = await db.CategoryProduct.findOne({
-                    where: {
-                    [Op.and]  : [
-                        { genre: req.body.genre},
-                        { name : req.body.category }
-                    ]
-                    }
-                })
-
-                /*
-                console.log("COLOR " + color.id)
-                console.log("TALLE " + size.id)
-                console.log("MARCA " + Brand.id)
-                console.log("OFERTA " + OfertResultado)
-                console.log("CATEGORIA " + categoryProduct.id)
-                */
-
-                await db.Product.create({
-                        
-                    name: req.body.name,
-                    idBrands: parseInt(Brand.id),
-                    description: req.body.description,
-                    image: req.files[0] ? req.files[0].filename : "none.jpg",
-                    price: parseInt(req.body.price) ,
-                    quantity: parseInt(req.body.quantity) ,
-                    idColours: parseInt(color.id) ,
-                    idOffers: parseInt(offerts.id),
-                    idCategoriesProduct: parseInt(categoryProduct.id),
-                    idSizes: parseInt(size.id) ,
-                })
-
-            res.redirect("/product")
-            
-            }catch(error){
-                console.log(error)
+            }else{
+                return res.render("productAdd", { errors : [{msg: "Invalid image"}] })
             }
         
         }else{

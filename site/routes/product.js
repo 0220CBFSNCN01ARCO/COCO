@@ -5,25 +5,43 @@ const productControllers = require('../controllers/productController.js')
 const multer = require('multer');
 const path = require("path")
 
+
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
+      
       cb(null, 'public/images/indumentaria');
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now()  + path.extname(file.originalname));
     },
+    fileFilter: function (req, file, cb) {
+      if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "application/pdf" || file.mimetype == "image/gif") {
+        cb(null, true);
+      } else {
+        cb(null, false);
+        return cb(new Error('Solamente .png, .jpg .jpeg .gif  formatos permitidos!'));
+      }
+    }
     
   });
+  
 
 
 const upload = multer({ storage: storage});
 /* GET users listing. */
+
+
 
 router.get('/detail/:id', productControllers.detail );
   
 router.get('/create', productControllers.add );
 
 router.post('/create', upload.any(), [
+
+    
+
+
 
         check("name").isLength({min : 5}).withMessage("The product name must contain 5 characters"),
         check("description").isLength({min : 20}).withMessage("The description name must contain 20 characters"),

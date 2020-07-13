@@ -1,0 +1,17 @@
+npm install multer --save
+npm install method-override --save
+npm install bcrypt --save
+npm install express-validator --save
+npm install express-session --save
+npm install sequelize-cli -g --save
+npm install sequelize --save
+npm install mysql2 --save
+
+
+
+elimanar port in use
+netstat -ano | findstr :3000
+>> taskkill /PID n° /F
+
+
+       
