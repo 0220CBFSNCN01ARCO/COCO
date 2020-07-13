@@ -463,18 +463,24 @@ let usersController = {
     },
     "ChangeAvatar" : function(req,res,next){
         let ID = req.params.id
-        db.User.update({
-            avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+        
+        if(req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg" || req.files[0].mimetype == "image/gif") {
+            db.User.update({
+                avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                
+            },{
+                where: {
+                    id: ID
+                }
+            })
+            res.redirect("/users")
             
-        },{
-            where: {
-                id: ID
-            }
-        })
-        res.redirect("/users")
+        }else{
+            return res.render("avatar", { errors : [{msg: "Invalid image"}], ID : ID  })
+        }
 
         
-        }
+    }
 
 };
 

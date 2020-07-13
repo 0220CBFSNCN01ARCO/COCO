@@ -1,0 +1,42 @@
+const ID = req.session.usurioLogueado.id;
+        db.User.findOne({
+            include: [{association: "category"}],
+            where:{
+                id: ID
+            }.then((usuario) => {
+                res.render("profileEdit",{userID : usuario, ID:ID});
+
+            })
+        })
+
+AAVMCTRX02	10.250.40.6 OK
+AAVMCTRX11	10.250.40.19 OK
+AAVMCTRX12	10.250.40.7 OK
+AAVMCTRX16	10.250.40.23 OK
+AAVMCTRX17	10.250.40.11 OK
+AAVMCTRX18	10.250.40.22 OK
+AAVMCTRX21	10.250.40.33 NO ESTA
+AAVMCTRX37	10.204.6.74 OK
+AAVMCTRX39	10.250.40.25 OK
+AAVMCTRX40	10.250.40.15 OTRO NOMBRE CTRX09
+AAVMCTRX44	10.204.24.3 OK
+AAVMCTRX47	10.204.24.4 NO ESTA
+AAVMCTRX48	10.204.24.5 NO ESTA
+AMVMCTRX08	10.250.40.14 OK
+AMVMCTRX35	10.204.6.22 NO ESTA
+AMVMCTRX36	10.250.40.27 OK
+
+
+AAVMCTRX21	10.250.40.33 NO ESTA
+AAVMCTRX40	10.250.40.15 OTRO NOMBRE CTRX09
+AAVMCTRX47	10.204.24.4 NO ESTA
+AAVMCTRX48	10.204.24.5 NO ESTA
+AMVMCTRX35	10.204.6.22 NO ESTA
+
+
+
+
+22 cargarlo  LISTO
+4 cargarlo NO RESPONDE PING
+15 cámbiale el nombre LISTO
+5 y 33 por ahora no los cargues
