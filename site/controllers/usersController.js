@@ -212,18 +212,42 @@ let usersController = {
                         return res.render("register", {errors : [{msg :"The email is already in use"}]})
 
                 }else{
+
+                    if(req.files[0] == undefined){
                     console.log("ESTOY ACAAAAAAAAAAAAAAA")
                     db.User.create({
                         first_Name : req.body.First_name,
                         last_Name : req.body.Last_name,
                         email : req.body.Email,
                         password : bcrypt.hashSync(req.body.Password,10),
-                        avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                        avatar : "default.jpg",
                         idCategories :  2
             
                     })
                     
                     return res.render("login")
+
+                    }else{
+
+                        if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg" || req.files[0].mimetype == "image/gif") {
+
+                            db.User.create({
+                                first_Name : req.body.First_name,
+                                last_Name : req.body.Last_name,
+                                email : req.body.Email,
+                                password : bcrypt.hashSync(req.body.Password,10),
+                                avatar : req.files[0] ? req.files[0].filename : "default.jpg",
+                                idCategories :  2
+                    
+                            })
+                            
+                            return res.render("login")
+                        
+                        }else{
+                            return res.render("register", { errors : [{msg: "Invalid image"}] })
+                        }
+
+                    }
 
                 }
             });

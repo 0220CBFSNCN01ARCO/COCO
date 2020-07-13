@@ -14,7 +14,15 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now()  + path.extname(file.originalname));
-    }
+    },
+    fileFilter: function (req, file, cb) {
+        if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/gif") {
+          cb(null, true);
+        } else {
+          cb(null, false);
+          return cb(new Error('Invalid Image'));
+        }
+      }
   });
 
 const upload = multer({ storage: storage });
