@@ -205,8 +205,8 @@ let productController = {
             return resultado.image
         })
 
-
-        let ID = req.params.id
+        let oferta = "not"
+        const ID = req.params.id
 
 
         if(errors.isEmpty()){
@@ -220,6 +220,16 @@ let productController = {
                 }else{
                     OfertResultado = 0
                 }
+
+
+                if(OfertResultado != 0){
+                    oferta = "yes"
+                 } else { 
+                     oferta = "not"
+                  } 
+
+
+
 
                 let offerts = await db.Offer.findOne({
                     where: {
@@ -261,7 +271,7 @@ let productController = {
                 console.log("MARCA " + Brand.id)
                 console.log("OFERTA " + offerts.id)
                 console.log("CATEGORIA " + categoryProduct.id)
-                console.log(req.files)
+                console.log(req.files[0])
                 console.log(imagenAnterior)
                 
                 
@@ -307,12 +317,33 @@ let productController = {
                             id: ID
                         }
                     })
-                }else{
-                    return res.render("productEdit", { errors : [{msg: "Invalid image"}] })
-                }
 
                     res.redirect("/product")
+
+                }else{
+                    console.log(req.files)
+                    console.log("ENTRE ACA!!!")
+                    db.Product.findOne({
+                    include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+                    where:{
+                        id: ID
+                        
+                    }
+                    }).then((resultado) => {
+                        let oferta = 'not'
+                        
+                        if(resultado.offer.has != 0){
+                           oferta = 'yes'
+                        } else { 
+                            oferta = 'not'
+                         } 
+                         return res.render("productEdit",{productToEdit:resultado, errors : [{msg: "Invalid image"}] ,ID:ID, oferta: oferta});
+        
+                    })
+                        
                 }
+
+            }
         
             
             }catch(error){
@@ -320,8 +351,28 @@ let productController = {
             }
         
         }else{
+            
             console.log(errors)
-            return res.render("productEdit", { errors : errors.errors })
+
+
+            db.Product.findOne({
+                include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+                where:{
+                    id: ID
+                    
+                }
+                }).then((resultado) => {
+                    let oferta = 'not'
+                    
+                    if(resultado.offer.has != 0){
+                       oferta = 'yes'
+                    } else { 
+                        oferta = 'not'
+                     } 
+                    res.render("productEdit",{productToEdit:resultado, errors : errors.errors ,ID:ID, oferta: oferta});
+    
+                })
+      
         }
 
 
