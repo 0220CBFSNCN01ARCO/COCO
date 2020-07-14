@@ -298,7 +298,7 @@ let productController = {
                     res.redirect("/product")
                 }else{
 
-                    if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg" || req.files[0].mimetype == "image/gif") {
+                    if (req.files[0].mimetype == 'image/png' || req.files[0].mimetype == 'image/jpg' || req.files[0].mimetype == 'image/jpeg' || req.files[0].mimetype == 'image/gif') {
 
                     await db.Product.update({
                         
@@ -337,13 +337,14 @@ let productController = {
                         } else { 
                             oferta = 'not'
                          } 
-                         return res.render("productEdit",{productToEdit:resultado, errors : [{msg: "Invalid image"}] ,ID:ID, oferta: oferta});
+                         res.render("productEdit",{productToEdit:resultado, errors : [{msg: "Invalid image"}] ,ID:ID, oferta: oferta});
         
                     })
                         
                 }
 
-            }
+                    
+                }
         
             
             }catch(error){
