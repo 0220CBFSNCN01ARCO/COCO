@@ -6,10 +6,13 @@
     margin-top: 80px;
     width: 100%; 
     margin-bottom: 10px; 
+    
 }
 
 body {
     background: #faf6e9;
+    background-image: url("/images/MenuAdmin.jpg");
+    background-size: 300px;
 }
 
 .container p {
@@ -62,9 +65,13 @@ h5 {
     background-color: #ece8d9;
     
     
+
+    
 }
 #total{
     background-color: #ece8d9;
+    
+    
 }
 
 .card-body {
@@ -75,11 +82,13 @@ h5 {
 }
 
 #tar1 {
-    height: 350px;
+    height: 300px;
+    margin-top: 60px;
 }
 
 #tar2 {
     padding-top: 90px;
+    
 }
 
 #text {
@@ -87,11 +96,12 @@ h5 {
 }
 
 #say {
+    margin-top:10px;
     font-family: "Montserrat";
     font-size: 45px;
 }
 #singout{
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 #singout a button{
     width: 100%;
@@ -100,6 +110,7 @@ h5 {
 .card-img-top{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    transition: all 200ms ease-out;
 }
 
 .card-img-top:hover{
