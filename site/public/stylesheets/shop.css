@@ -73,13 +73,23 @@ body{
     border-color: grey;
 }
 #cuerpoSearch{
-    
     text-align: center;
     padding-top: 80px;
-    height: 540px
+    
+}
+#linea{
+    border-bottom: 1px black solid;
 }
 #busqueda{
     margin-top: 20px;
     margin-bottom: 20px;
+    
+}
+#NoProducts{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    height: 300px;
 }
 

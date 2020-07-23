@@ -7,14 +7,14 @@
 </head>
 <% include partials\header.ejs %> 
 <body>
-    
+    <% const prueba = [] %>
        
     <section class="container" id="cuerpoSearch">
-        <div class="row">
+        <div class="row" id="linea">
             <article class="col-4" id="busqueda">
             
-                    <form class="form-inline">
-                    <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                    <form class="form-inline" action="/product/view/search" method="POST">
+                    <input class="form-control mr-sm-2" name="buscar" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
              
@@ -31,7 +31,65 @@
             </article>
         
         </div>
-  </section>
+    
+
+
+
+
+    
+        <div class="row">
+            <section>
+                <div class="row">
+                  
+                    <% products.forEach(product => { %>
+            
+                      <% if (product.offer.has == 1){ %>
+                        
+                        <article class="col-3" id="fotulis"> 
+                          <div class="photo-container">
+                            <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
+                          
+                          </div>
+                          <div id="datos">
+                            <br>
+                            <h5><%= product.name %></h5>
+                            <p><b>US$ <%= Math.trunc(product.price - Math.trunc(product.price * product.offer.percentage / 100)) %></b></p>
+                            <p id="precioAnterior"><b><%= product.price %></b></p>
+                            <div id="imageSale">
+                              <img src="/images/iconos/sale.png" alt="Sale">
+                            </div>
+                          </div>
+                        </article>
+            
+                    <% }else{ %>
+                      <article class="col-3" id="fotulis"> 
+                        <div class="photo-container">
+                          <a href="/product/detail/<%= product.id %>" id="picture"><img class="photo" src="/images/Indumentaria/<%= product.image %>" alt="pdto 02"></a>
+                        
+                        </div>
+                        <div id="datos">
+                          <br>
+                          <h5><%= product.name %></h5>
+                          <p><b>US$ <%= product.price %></b></p>
+                        </div>
+                      </article>
+                    <% }}) %>
+                </div>
+        
+        
+            </section>
+
+            
+            <% if(!products.length){ %>
+                <div class=col-12 id="NoProducts">
+               no products found
+                </div>
+            <% } %>
+            
+    
+        </div>
+    </section>
+    
     <% include partials\script.ejs %> 
 </body>
 <% include partials\footer.ejs %> 

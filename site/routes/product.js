@@ -34,6 +34,8 @@ const upload = multer({ storage: storage});
 
 router.get("/view/search", productControllers.search);
 
+router.post("/view/search", productControllers.searchProduct);
+
 router.get('/detail/:id', productControllers.detail );
   
 router.get('/create', productControllers.add );

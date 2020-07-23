@@ -13,6 +13,25 @@ let productController = {
     "search": function(req,res){
         res.render("search")
     },
+    searchProduct: function(req,res){
+
+        let search = req.body.buscar
+       
+
+        db.Product.findAll({
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+            where:{
+                name: {
+                   [Op.like] : "%" + search + "%"
+                }
+            }
+        }).then(products => {
+            console.log(products)
+            res.render("search", { products : products })
+        })
+
+
+    },
     "detail" : function(req,res){
       
         const ID = req.params.id;
