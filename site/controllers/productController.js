@@ -10,6 +10,9 @@ const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 let productController = {
 
+    "search": function(req,res){
+        res.render("search")
+    },
     "detail" : function(req,res){
       
         const ID = req.params.id;
@@ -482,7 +485,8 @@ let productController = {
         
         
         
-    }
+    },
+    
 };
 
 module.exports = productController;

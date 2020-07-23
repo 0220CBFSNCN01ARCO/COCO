@@ -32,6 +32,7 @@ const upload = multer({ storage: storage});
 /* GET users listing. */
 
 
+router.get("/view/search", productControllers.search);
 
 router.get('/detail/:id', productControllers.detail );
   
@@ -101,5 +102,7 @@ router.delete("/admin/view/delete/:id", productControllers.delete)
 router.get('/view/shop', productControllers.shop)
 
 router.get('/view/sale', productControllers.sale)
+
+
 
 module.exports = router;

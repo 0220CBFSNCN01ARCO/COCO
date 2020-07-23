@@ -56,3 +56,30 @@ body{
     bottom: 80px;
     right: 70px;
 }
+.form-control{
+    border-color: grey;
+    width: 100%;
+}
+.form-control:enabled{
+    box-shadow: none;
+    border-color: grey;
+}
+.btn-outline-success{
+    border-color: #204051;
+    color: #204051;
+}
+.btn-outline-success:hover{
+    background-color: #204051;
+    border-color: grey;
+}
+#cuerpoSearch{
+    
+    text-align: center;
+    padding-top: 80px;
+    height: 540px
+}
+#busqueda{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
