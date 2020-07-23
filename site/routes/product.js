@@ -32,9 +32,9 @@ const upload = multer({ storage: storage});
 /* GET users listing. */
 
 
-router.get("/view/search", productControllers.search);
+router.get("/search", productControllers.search);
 
-router.post("/view/search", productControllers.searchProduct);
+router.post("/search", productControllers.searchProduct);
 
 router.get('/detail/:id', productControllers.detail );
   

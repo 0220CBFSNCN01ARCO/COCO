@@ -7,13 +7,14 @@
 </head>
 <% include partials\header.ejs %> 
 <body>
-    <% const prueba = [] %>
+    
+    
        
     <section class="container" id="cuerpoSearch">
         <div class="row" id="linea">
             <article class="col-4" id="busqueda">
             
-                    <form class="form-inline" action="/product/view/search" method="POST">
+                    <form class="form-inline" action="/product/search" method="POST">
                     <input class="form-control mr-sm-2" name="buscar" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>

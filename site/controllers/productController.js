@@ -11,7 +11,8 @@ const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 let productController = {
 
     "search": function(req,res){
-        res.render("search")
+        let obj = []
+        res.render("search", {products : obj})
     },
     searchProduct: function(req,res){
 
