@@ -8,10 +8,11 @@ body{
     padding-top: 100px;
 }
 #fotulis{
-    overflow: hidden;
-    
-    
-    
+    overflow: hidden; 
+}
+#imagen{
+    background-image: url("/images/search.jpg");
+    background-size: 200px;
 }
 #picture{
     overflow: hidden;
@@ -19,14 +20,17 @@ body{
     
 }
 #fotulis:hover{
-    opacity: 0.7;
+    opacity: 0.9;
 }
 .photo-container img{
     border-radius: 5px;
     width: 100%;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+  
 
+}
+.photo-container img:hover{
+    border-top: 3px solid white;
+    border-left: 3px solid white;  
 }
 
 #datos{

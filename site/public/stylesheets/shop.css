@@ -18,17 +18,21 @@ body{
 
 }
 #fotulis:hover{
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .photo-container img{
     border-radius: 5px;
     width: 100%;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+}
+
+.photo-container img:hover{
+    border-top: 3px solid white;
+    border-left: 3px solid white;  
+}
+
     
 
-}
 
 #datos{
     width: 100%;
@@ -76,6 +80,10 @@ body{
     text-align: center;
     padding-top: 80px;
     
+}
+#imagen{
+    background-image: url("/images/search.jpg");
+    background-size: 200px;
 }
 #linea{
     border-bottom: 1px black solid;
