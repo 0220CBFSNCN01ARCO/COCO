@@ -14,7 +14,7 @@ let productController = {
         let obj = []
         res.render("search", {products : obj})
     },
-    searchProduct: function(req,res){
+    "searchProduct": function(req,res){
 
         let search = req.body.buscar
        
