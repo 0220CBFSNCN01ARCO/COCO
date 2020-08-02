@@ -17,7 +17,9 @@ let productController = {
             include: [{association: "brand"}, {association: "colour"},{association: "offer"},{association: "sizes"}],
         })
             .then(function(products){
-                res.render("shop", { productsList: products });
+
+                let respuesta = products
+                res.send(respuesta);
             })
         
         /*res.render("shop" , { productsList: products });*/
