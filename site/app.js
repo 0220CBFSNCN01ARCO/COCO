@@ -12,6 +12,7 @@ var productRouter = require('./routes/product');
 var retailersRouter = require('./routes/retailers');
 var contactRouter = require('./routes/contact');
 var apiProductRouter = require('./routes/api/apiProduct')
+var apiUserRouter = require('./routes/api/apiUser')
 var session = require("express-session")
 var cookieAuthMiddleware = require("./middleware/cookieAuthMiddleware")
 
@@ -40,6 +41,7 @@ app.use('/product', productRouter);
 app.use('/retailers', retailersRouter);
 app.use('/contact', contactRouter);
 app.use('/api/product', apiProductRouter);
+app.use('/api/user', apiUserRouter);
 
 
 
