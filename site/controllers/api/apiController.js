@@ -18,11 +18,40 @@ let productController = {
         })
             .then(function(products){
 
-                let respuesta = products
-                res.send(respuesta);
+                for (let i = 0; i < products.length; i++){
+                    products[i].setDataValue("endpoint", "/api/product/" + products[i].id)
+                }
+
+
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: products.length,
+                        url: "/api/product",
+
+                    },
+                    data: products
+                    
+                };
+                res.json(respuesta);
             })
         
         /*res.render("shop" , { productsList: products });*/
+    },
+    "find" : function(req,res){
+      
+        const ID = req.params.id;
+
+        db.Product.findOne({
+            include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+            where:{
+                id: ID
+                
+            }
+            }).then((resultado) => {
+                res.json(resultado)
+
+            })
     },
 };
 
