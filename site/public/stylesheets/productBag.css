@@ -11,6 +11,9 @@
     font-size: 30px;
      
 }
+#compra{
+    padding-bottom: 50px;
+}
 #cuerpo2{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -27,14 +30,27 @@
 }
 #cuerpo2 img:hover{
     opacity: 0.7;
+    border-radius: 30px;
 }
 #text{
-    padding-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     list-style: none;
+    border-left: 1px solid grey;
 }
 #text li{
     text-decoration: none
 }
+#pago{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    transition: all 500ms;
+}
+#pago:hover{
+    transform: translateX(-30px);
+}
+
 #notProd{
     text-align: center;
     margin-bottom: 10px;
@@ -47,7 +63,7 @@
     background-color:#494949 ;
     border: #494949;
     width: 100%;
-    margin-bottom: 110px;
+    margin-bottom: 10px;
 }
 .btn:hover{
     background-color: gray;

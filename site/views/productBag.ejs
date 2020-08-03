@@ -18,6 +18,8 @@
             
         </div>
 
+        <% let precioIntermedio = 0 %>
+        <% let precioFinal = 0 %>
 
         <% if(productos.length != 0){ %>
 
@@ -35,17 +37,42 @@
                             <li><b>Colour:</b> <%= productos[i].colour.name %></li>
                             <% if(productos[i].offer.has == 1){ %>
                                 <li><b>Price:</b> US$ <%= Math.trunc(productos[i].price - valor) %></li>
+                                <% precioIntermedio = Math.trunc(productos[i].price - valor) %>
+                                <% precioFinal += Math.abs(precioIntermedio) %>
                                 <% } else{ %>
                                   <li><b>Price :</b> US$ <%= productos[i].price %></li>
+                                  <% precioFinal += Math.abs(productos[i].price) %>
                                 <% } %>
                         </ul>
                     </div>
 
                 </div>
 
+                
+
 
                 
             <% } %>
+            <div class="row" id="pago">
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+                    
+                </div>
+                <div class="col-4">
+                    <h2>Total: US$<%= precioFinal %></h2>
+                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                        Buy
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                        Cancel
+                    </button>
+                </div>
+                
+
+            </div>
+            
 
         <% }else{ %>
 
@@ -60,7 +87,7 @@
         <div class="row">
             <div class="col-4">
             </div>
-            <div class="col-4">
+            <div class="col-4" id="compra">
                 <a href="/product/view/shop" ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
                     Add products
                     </button>
