@@ -1,7 +1,7 @@
 #PrdBag{
     background: white;
     font-family: "Montserrat";
-    padding-top:100px;
+    padding-top:90px;
 }
 
 #cuerpo{
@@ -10,6 +10,30 @@
     border-bottom: 1px solid black;
     font-size: 30px;
      
+}
+#cuerpo2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+#cuerpo2 img{
+    max-width: 60%;
+    margin: auto;
+    display: block; 
+    transition: all 300ms;
+}
+#cuerpo2 img:hover{
+    opacity: 0.7;
+}
+#text{
+    padding-top: 50px;
+    list-style: none;
+}
+#text li{
+    text-decoration: none
 }
 #notProd{
     text-align: center;

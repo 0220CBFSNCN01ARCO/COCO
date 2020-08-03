@@ -23,15 +23,16 @@
 
             <% for(let i=0; i < productos.length; i++){ %>
 
-                <div class="row">
+                <div class="row" id="cuerpo2">
                     <div class="col-5">
-                        <img class="d-block w-100" src="/images/Indumentaria/<%= productos[i].image %>" alt="First slide">
+                        <a href="/product/detail/<%= productos[i].id %>"><img class="d-block w-100" src="/images/Indumentaria/<%= productos[i].image %>" alt="First slide"></a>
                     </div>
                     <div class="col-7">
                         <% let valor = Math.trunc(((productos[i].price * productos[i].offer.percentage) / 100)) %>
-                        <ul>
-                            <li><h3><b><%= productos[i].name %></b></h3></li>
+                        <ul id="text">
+                            <li><h4><b><%= productos[i].name %></b></h4></li>
                             <li><b>Size:</b> <%= productos[i].sizes.name %></li>
+                            <li><b>Colour:</b> <%= productos[i].colour.name %></li>
                             <% if(productos[i].offer.has == 1){ %>
                                 <li><b>Price:</b> US$ <%= Math.trunc(productos[i].price - valor) %></li>
                                 <% } else{ %>
