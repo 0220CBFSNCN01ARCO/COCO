@@ -16,9 +16,11 @@ body{
     background-color:#494949 ;
     border: #494949;
     width: 100%;
+    transition: all 300ms;
 }
 .btn:hover{
     background-color: gray;
+    transform: translateY(5px);
 }
 #boton-abajo{
     margin-top: 20px;

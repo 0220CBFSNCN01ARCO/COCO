@@ -32,7 +32,6 @@ body{
 }
 #cuerpo{
     
-    overflow: hidden;
     margin-top:110px;
     width: 100%;
     margin-bottom: 50px;
@@ -50,9 +49,11 @@ body{
     width: 100%;
     margin-top: 20px;
     position: relative;
+    transition: all 300ms;
 }
 .btn:hover{
     background-color: gray;
+    transform: translateY(5px);
 }
 .custom-file{
     margin-top: 20px;
