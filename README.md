@@ -96,3 +96,16 @@ Link: [https://fonts.google.com/specimen/PT+Sans?preview.text=coco&preview.text_
 
 * Trello: [https://trello.com/b/iyIYclYD/grupo-2-proyecto-integrador](https://trello.com/b/iyIYclYD/grupo-2-proyecto-integrador)
 
+## Instalar antes de ejecutar
+
+Dentro de la carpeta **Site** instalar los siguientes comandos
+ 
+- npm install multer --save
+- npm install method-override --save
+- npm install bcrypt --save
+- npm install express-validator --save
+- npm install express-session --save
+- npm install sequelize-cli -g --save
+- npm install sequelize --save
+- npm install mysql2 --save
+
