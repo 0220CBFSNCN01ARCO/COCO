@@ -197,10 +197,11 @@ let usersController = {
     "bag" : function(req,res){
 
         
-        let id = req.params.id;
+        let algo = req.params.id;
         
-        if (id != undefined){
-            card.push(id)
+        if (algo != undefined){
+            let ID = Math.abs(req.params.id);
+            card.push(ID)
         }
 
         console.log(card)
@@ -208,7 +209,7 @@ let usersController = {
         if (card != undefined){
 
                 db.Product.findAll({
-                    include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+                    include: [{association: "colour"},{association: "offer"},{association: "sizes"}],
                     where:{
                         id: card
                     }

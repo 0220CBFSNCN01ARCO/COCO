@@ -18,6 +18,37 @@
             
         </div>
 
+
+        <% if(productos.length != 0){ %>
+
+            <% for(let i=0; i < productos.length; i++){ %>
+
+                <div class="row">
+                    <div class="col-5">
+                        <img class="d-block w-100" src="/images/Indumentaria/<%= productos[i].image %>" alt="First slide">
+                    </div>
+                    <div class="col-7">
+                        <% let valor = Math.trunc(((productos[i].price * productos[i].offer.percentage) / 100)) %>
+                        <ul>
+                            <li><h3><b><%= productos[i].name %></b></h3></li>
+                            <li><b>Size:</b> <%= productos[i].sizes.name %></li>
+                            <% if(productos[i].offer.has == 1){ %>
+                                <li><b>Price:</b> US$ <%= Math.trunc(productos[i].price - valor) %></li>
+                                <% } else{ %>
+                                  <li><b>Price :</b> US$ <%= productos[i].price %></li>
+                                <% } %>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                
+            <% } %>
+
+        <% }else{ %>
+
+
         <div class="row">
             <div class="col-12" id="notProd">
                 <img src="/images/sadBag.jpg" alt="">
@@ -37,7 +68,8 @@
             <div class="col-4">
             </div>
         </div>
-        <%= productos %>
+        <% } %>
+        
     </div>
                     
     <% include partials\script.ejs %> 
