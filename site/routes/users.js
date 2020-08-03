@@ -54,7 +54,9 @@ router.post('/register', upload.any(), [
     }).withMessage("Passwords entered are not the same")
 ], usersController.create);
 
-router.get('/bag',authMiddleware,usersController.bag);
+router.get('/bag/',authMiddleware,usersController.bag);
+
+router.get('/bag/:id',authMiddleware,usersController.bag);
 
 router.get('/profile/:id', usersController.profile);
 

@@ -11,6 +11,9 @@ let sequelize = db.sequelize;
 const usersPath = path.join(__dirname, '../data/users.json');
 const usersList = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 
+
+let card = []
+
 let usersController = {
 
     "login" : function(req,res){
@@ -192,7 +195,33 @@ let usersController = {
         res.render('register');
     } ,
     "bag" : function(req,res){
-        res.render('productBag');
+
+        
+        let id = req.params.id;
+        
+        if (id != undefined){
+            card.push(id)
+        }
+
+        console.log(card)
+
+        if (card != undefined){
+
+                db.Product.findAll({
+                    include: [{association: "brand"}, {association: "colour"},{association: "offer"}, {association: "sizes"}, {association: "categoryProduct"}],
+                    where:{
+                        id: card
+                    }
+            }).then((resultado) => {
+                console.log(resultado)
+                res.render('productBag', {productos:resultado})
+
+            })
+             
+        }else{
+            res.render('productBag');
+        }
+        
     },
     "create" : function(req,res,next){
         let errors = validationResult(req)
@@ -389,6 +418,8 @@ let usersController = {
 
         req.session.destroy();
         res.clearCookie("remember");
+
+        card = []
 
         res.redirect('/');
         
