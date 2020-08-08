@@ -3,10 +3,15 @@
     margin-bottom: 85px;
 
 }
+#cuerpo1{
+    margin-top: 140px;
+    margin-bottom: 130px;
+
+}
 body{
     background-color: #faf6e9;
     background-image: url("/images/MenuAdmin.jpg");
-    background-size: 300px;
+    background-size: 350px;
 }
 .btn{
     background-color:#494949 ;
